@@ -732,6 +732,13 @@ def revision_numbers(p, p_all, t, n):
     # papers without any verified setting count in every denominator but in no setting-based category
     no_set = n - t["settings"]["doi"].nunique()
     num("papersNoSetting", fmt_int(no_set))
+    # underwater platforms: share of their settings with a known habitat that are marine (the rest are rivers,
+    # lakes and artificial waters such as fish passes and aquarium tanks)
+    st = t["settings"]
+    uw = st[st["platform"].isin(["Stationary underwater camera", "Remotely operated underwater vehicle (ROV)",
+                                   "Autonomous Underwater Vehicle (AUV)"])
+            & ~st["habitat"].isin(["Not reported", "Other"])]
+    num("underwaterMarinePct", f"{100 * (uw['habitat'] == 'Marine').mean():.0f}")
     num("papersNoSettingPct", f"{100 * no_set / n:.1f}")
     # domestic forms among the targets
     tg = t["target"]
