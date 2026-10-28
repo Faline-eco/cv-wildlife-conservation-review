@@ -110,7 +110,9 @@ def barh(c, name, xlabel_n, top=None, italic=False, hatch=None):
                 b.set_hatch("///")
                 b.set_facecolor(sns.color_palette("tab10")[7])
     for b, n in zip(bars, c["papers"].values[::-1]):
-        ax.text(b.get_width() + 0.3, b.get_y() + b.get_height() / 2, fmt_int(n), va="center", fontsize=8)
+        # gap as a fixed share of the axis, so that it looks the same in every chart
+        ax.text(b.get_width() + 0.008 * 115 * c["share"].max(), b.get_y() + b.get_height() / 2, fmt_int(n),
+                va="center", fontsize=8)
     if italic:
         for t in ax.get_yticklabels():
             t.set_fontstyle("italic")
