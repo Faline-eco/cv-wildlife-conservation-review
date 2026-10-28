@@ -372,75 +372,88 @@ def prisma_figure(p_all):
     num("prismaNotRetrieved", fmt_int(not_retrieved))
     num("prismaAssessed", fmt_int(assessed))
     num("prismaOldNotRefound", fmt_int(len(old)))
-    # papers of the earlier search that went to full text without re-screening (already known): found by hand
-    # (manual arm) or by the earlier automated citation search; how many of the latter the new searches found again
+    # papers of the earlier search that went to full text without re-screening (already known). Found by hand: own
+    # column straight into the full-text assessment. Found by the earlier automated search: counted with the present
+    # search that found them again (index, then library, then citation search; not found again -> citation search,
+    # where they came from) and passed on to the full texts without a second screening.
     manual = {norm_doi(d) for d in pd.read_parquet(ROOT / "review_output" / "gapminder" / "2026130_manual.parquet")
               ["doi"] if isinstance(d, str)}
     old_manual = old[old["doi"].isin(manual)]
     old_auto = old[~old["doi"].isin(manual)]
-    found = set()
-    for f in ("records.csv", "library_records.csv"):
-        found |= {norm_doi(d) for d in pd.read_csv(V2 / "search" / f, usecols=["doi"], low_memory=False)["doi"]
-                  if isinstance(d, str)}
+    in_index = {norm_doi(d) for d in pd.read_csv(V2 / "search" / "records.csv", usecols=["doi"], low_memory=False)
+                ["doi"] if isinstance(d, str)}
+    in_library = {norm_doi(d) for d in pd.read_csv(V2 / "search" / "library_records.csv", usecols=["doi"],
+                                                   low_memory=False)["doi"] if isinstance(d, str)}
+    in_citation = set()
     for hop in ("hop1", "hop2"):
-        found |= {norm_doi(json.loads(x).get("doi") or "") for x in
-                  open(V2 / "citations" / hop / "works.jsonl", encoding="utf-8")}
+        in_citation |= {norm_doi(json.loads(x).get("doi") or "") for x in
+                        open(V2 / "citations" / hop / "works.jsonl", encoding="utf-8")}
+    arm = old_auto["doi"].map(lambda d: "index" if d in in_index else "library" if d in in_library else
+                              "citation" if d in in_citation else "citation_only_earlier")
+    known = arm.value_counts()
+    k_index, k_library = int(known.get("index", 0)), int(known.get("library", 0))
+    k_citation = int(known.get("citation", 0)) + int(known.get("citation_only_earlier", 0))
     num("prismaKnownManual", fmt_int(len(old_manual)))
     num("prismaKnownAuto", fmt_int(len(old_auto)))
-    num("prismaKnownAutoRefound", fmt_int(old_auto["doi"].isin(found).sum()))
+    num("prismaKnownAutoRefound", fmt_int((arm != "citation_only_earlier").sum()))
+    num("prismaKnownAutoNotRefound", fmt_int((arm == "citation_only_earlier").sum()))
     num("prismaCheckSample", fmt_int(len(check)))
+    num("prismaSought", fmt_int(len(passed) + len(old_auto)))
     label = {"scopus": "Scopus", "openalex": "OpenAlex", "pubmed": "PubMed", "ieee": "IEEE Xplore",
              "sciencedirect": "ScienceDirect", "wiley": "Wiley", "acm": "ACM"}
     n_excl_ft = len(p_all) - p_all["eligible"].sum()
-    # three columns: sources and additions (left), main flow (centre), exclusions and losses (right)
-    W, XL, XC, XR = 0.297, 0.197, 0.52, 0.843
+    # four columns: manual search, index search, main flow (library exports), citation search and exclusions
+    W, X1, X2, XC, XR = 0.222, 0.155, 0.392, 0.629, 0.866
     SRC, MAIN, EXCL, INCL = "#dbe8f5", "#ffffff", "#eeeeee", "#dcefd6"
     boxes = {   # key: (x centre, y centre, height, fill, heading, details)
-        "index": (XL, 0.905, 0.15, SRC, "Index search, 2014–2026",
+        "manual": (X1, 0.68, 0.61, SRC, "Manual search",
+                   "Hand search of the\ndigital libraries,\n2014–2024\n\n"
+                   f"Papers found and\ncoded by hand: {fmt_int(len(old_manual))}"),
+        "index": (X2, 0.905, 0.15, SRC, "Index search, 2014–2026",
                   "\n".join(f"{label.get(k, k)}: {fmt_int(v)}" for k, v in src.items())
-                  + f"\nAfter de-duplication: {fmt_int(runs.get('index_2014_2026', 0))}"),
+                  + f"\nAfter de-duplication: {fmt_int(runs.get('index_2014_2026', 0))}"
+                  + f"\nAlready known: {fmt_int(k_index)}"),
         "library": (XC, 0.905, 0.15, SRC, "Library exports, 2024–2026",
                     "\n".join(f"{label.get(k, k)}: {fmt_int(v)}" for k, v in libs.items())
-                    + f"\nNew records to screen: {fmt_int(runs.get('libraries_2024_2026', 0))}"),
+                    + f"\nNew records: {fmt_int(runs.get('libraries_2024_2026', 0))}"
+                    + f"\nAlready known: {fmt_int(k_library)}"),
         "citation": (XR, 0.905, 0.15, SRC, "Citation search",
                      f"OpenAlex, two hops\n"
-                     f"Hop 1: {fmt_int(seeds)} seeds, {fmt_int(works)} works\n"
-                     f"Hop 2: {fmt_int(seeds2)} seeds, {fmt_int(works2)} new\n"
-                     f"To screen: {fmt_int(runs.get('citations_hop1', 0))} + "
-                     f"{fmt_int(runs.get('citations_hop2', 0))}"),
-        "screen": (XC, 0.70, 0.095, MAIN, "Title/abstract screening",
-                   f"Two LLM screeners, adjudicator\nfor disagreements\nRecords screened: {fmt_int(len(ta))}"),
-        "excluded": (XR, 0.70, 0.075, EXCL, "Excluded", f"{fmt_int((ta['final'] == 'exclude').sum())} records\n"
-                                                        f"({fmt_int(len(check))} coded in full text as a check)"),
-        "sought": (XC, 0.565, 0.07, MAIN, "Full texts sought",
-                   f"{fmt_int(len(passed))} (include {fmt_int((ta['final'] == 'include').sum())}, "
-                   f"unclear {fmt_int((ta['final'] == 'fulltext').sum())})"),
-        "notret": (XR, 0.565, 0.06, EXCL, "Not retrieved", f"{fmt_int(not_retrieved)} records"),
-        "auto": (XL, 0.575, 0.118, SRC, "Earlier automated\ncitation search",
-                 f"Known papers, not re-screened:\n{fmt_int(len(old_auto))} "
-                 f"({fmt_int(old_auto['doi'].isin(found).sum())} found again\nby the new searches)"),        "manual": (XL, 0.41, 0.085, SRC, "Earlier hand search",
-                   f"Papers found and coded\nby hand: {fmt_int(len(old_manual))}"),
-        "assessed": (XC, 0.43, 0.07, MAIN, "Full texts assessed and coded",
-                     f"Frozen extraction protocol: {fmt_int(assessed)}"),
-        "exft": (XR, 0.40, 0.23, EXCL, f"Excluded at full text: {fmt_int(n_excl_ft)}",
+                     f"Hop 1: {fmt_int(seeds)} seeds,\n{fmt_int(works)} works\n"
+                     f"Hop 2: {fmt_int(seeds2)} seeds,\n{fmt_int(works2)} new works\n"
+                     f"New records: {fmt_int(runs.get('citations_hop1', 0) + runs.get('citations_hop2', 0))}\n"
+                     f"Already known: {fmt_int(k_citation)}"),
+        "screen": (XC, 0.70, 0.11, MAIN, "Title/abstract screening",
+                   f"Two LLM screeners,\nadjudicator for disagreements\nRecords screened: {fmt_int(len(ta))}\n"
+                   f"Already known, passed on: {fmt_int(len(old_auto))}"),
+        "excluded": (XR, 0.70, 0.09, EXCL, "Excluded", f"{fmt_int((ta['final'] == 'exclude').sum())} records\n"
+                                                       f"({fmt_int(len(check))} coded in full\ntext as a check)"),
+        "sought": (XC, 0.555, 0.09, MAIN, "Full texts sought",
+                   f"{fmt_int(len(passed) + len(old_auto))}\n(include {fmt_int((ta['final'] == 'include').sum())}, "
+                   f"unclear {fmt_int((ta['final'] == 'fulltext').sum())},\nknown {fmt_int(len(old_auto))})"),
+        "notret": (XR, 0.555, 0.06, EXCL, "Not retrieved", f"{fmt_int(not_retrieved)} records"),
+        "assessed": (XC, 0.42, 0.085, MAIN, "Full texts assessed\nand coded",
+                     f"Frozen extraction\nprotocol: {fmt_int(assessed)}"),
+        "exft": (XR, 0.39, 0.23, EXCL, f"Excluded at full text:\n{fmt_int(n_excl_ft)}",
                  "\n".join(f"{names.get(k, k)}: {fmt_int(v)}" for k, v in excl.items())),
         "included": (XC, 0.215, 0.07, INCL, f"Included: {fmt_int(p_all['eligible'].sum())}",
-                     f"wild {fmt_int(p_all['eligible_strict'].sum())}, captive added "
+                     f"wild {fmt_int(p_all['eligible_strict'].sum())},\ncaptive added "
                      f"{fmt_int((p_all['eligible'] & ~p_all['eligible_strict']).sum())}"),
     }
-    fig, ax = plt.subplots(figsize=(7.6, 7.4))
+    fig, ax = plt.subplots(figsize=(9.2, 7.6))
     ax.axis("off")
     ax.set_xlim(0, 1)
     ax.set_ylim(0.165, 1)
     for x, y, h, fill, head, body in boxes.values():
         ax.add_patch(mpatches.FancyBboxPatch((x - W / 2, y - h / 2), W, h, boxstyle="round,pad=0,rounding_size=0.008",
                                              facecolor=fill, edgecolor="#333333", lw=0.8))
-        top = y + h / 2 - 0.012
+        # text block at the top of the box; in the tall manual-search box centred vertically
+        top = y + 0.021 * (head.count("\n") + body.count("\n") + 2) / 2 if h > 0.4 else y + h / 2 - 0.012
         ax.text(x, top, head, ha="center", va="top", fontsize=7.8, fontweight="bold", linespacing=1.15)
         ax.text(x, top - 0.021 * (head.count("\n") + 1), body, ha="center", va="top", fontsize=7.4,
                 linespacing=1.25)
     # PRISMA phases on the left
-    for y0, y1, name in ((0.825, 0.985, "Identification"), (0.26, 0.75, "Screening"), (0.175, 0.255, "Included")):
+    for y0, y1, name in ((0.825, 0.985, "Identification"), (0.26, 0.76, "Screening"), (0.175, 0.255, "Included")):
         ax.add_patch(mpatches.FancyBboxPatch((0.005, y0), 0.03, y1 - y0, boxstyle="round,pad=0,rounding_size=0.006",
                                              facecolor="#9fb8d3", edgecolor="none"))
         ax.text(0.02, (y0 + y1) / 2, name, rotation=90, ha="center", va="center", fontsize=7.8,
@@ -457,7 +470,7 @@ def prisma_figure(p_all):
                     arrowprops={"arrowstyle": "-|>", "lw": 0.9, "color": "#333333", "shrinkA": 0, "shrinkB": 0})
 
     top_screen = edge("screen", "top")[1]
-    for k, dx in (("index", -0.07), ("citation", 0.07)):
+    for k, dx in (("index", -0.06), ("citation", 0.06)):
         x0, y0 = edge(k, "bottom")
         arrow((x0, y0), (x0, 0.795), (XC + dx, 0.795), (XC + dx, top_screen))
     arrow(edge("library", "bottom"), (XC, top_screen))
@@ -465,9 +478,7 @@ def prisma_figure(p_all):
     arrow(edge("screen", "bottom"), edge("sought", "top"))
     arrow(edge("sought", "right"), edge("notret", "left"))
     arrow(edge("sought", "bottom"), edge("assessed", "top"))
-    gap = (XL + W / 2 + XC - W / 2) / 2   # vertical lane between the left and the centre column
-    arrow(edge("auto", "right"), (gap, boxes["auto"][1]), (gap, 0.45), (XC - W / 2, 0.45))
-    arrow(edge("manual", "right"), (XC - W / 2, boxes["manual"][1]))
+    arrow((X1 + W / 2, boxes["assessed"][1]), edge("assessed", "left"))
     arrow(edge("assessed", "right"), (XR - W / 2, boxes["assessed"][1]))
     arrow(edge("assessed", "bottom"), edge("included", "top"))
     save(fig, "prisma")
