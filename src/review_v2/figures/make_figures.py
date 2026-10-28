@@ -734,6 +734,15 @@ def revision_numbers(p, p_all, t, n):
     # papers without any verified setting count in every denominator but in no setting-based category
     no_set = n - t["settings"]["doi"].nunique()
     num("papersNoSetting", fmt_int(no_set))
+    # how the comparison sample of check 2 arises from the papers coded by hand in the manual search
+    man = {norm_doi(d) for d in pd.read_parquet(ROOT / "review_output" / "gapminder" / "2026130_manual.parquet")
+           ["doi"] if isinstance(d, str)}
+    pm = p_all[p_all["doi"].isin(man)]
+    num("agreeManualWithDoi", fmt_int(len(man)))
+    num("agreeManualCodedFT", fmt_int(len(pm)))
+    num("agreeManualNotEligible", fmt_int((~pm["eligible"]).sum()))
+    num("agreeManualNotEligibleLab", fmt_int((~pm["eligible"] & (pm["criterion"] == "E-LAB")).sum()))
+    num("agreeManualNotEligibleAgri", fmt_int((~pm["eligible"] & (pm["criterion"] == "E-AGRI")).sum()))
     # underwater platforms: share of their settings with a known habitat that are marine (the rest are rivers,
     # lakes and artificial waters such as fish passes and aquarium tanks)
     st = t["settings"]
