@@ -393,19 +393,19 @@ def prisma_figure(p_all):
     label = {"scopus": "Scopus", "openalex": "OpenAlex", "pubmed": "PubMed", "ieee": "IEEE Xplore",
              "sciencedirect": "ScienceDirect", "wiley": "Wiley", "acm": "ACM"}
     n_excl_ft = len(p_all) - p_all["eligible"].sum()
-    # four columns: manual search, index search, main flow (library exports), exclusions; the citation search
-    # (initial and follow-up search) sits below the manual and the index search
-    W, X1, X2, XC, XR = 0.21, 0.163, 0.391, 0.645, 0.87
+    # four columns: manual search with the citation search (initial and follow-up search) below it, main flow
+    # under the index search, library search and exclusions on the right
+    W, X1, X2, XC, XR = 0.205, 0.195, 0.42, 0.645, 0.87
     SRC, MAIN, EXCL, INCL, GROUP = "#dbe8f5", "#ffffff", "#eeeeee", "#dcefd6", "#f3f7fb"
     boxes = {   # key: (x centre, y centre, height, fill, heading, details)
         "manual": (X1, 0.915, 0.135, SRC, "Manual search",
-                   f"Library search 2014–2024,\nscreened by hand\nRecords: {fmt_int(MANUAL_RECORDS)}, "
+                   f"Library search 2014–2024,\nby hand\nRecords: {fmt_int(MANUAL_RECORDS)}, "
                    f"included: {fmt_int(MANUAL_INCLUDED)}"),
-        "index": (X2, 0.915, 0.135, SRC, "Index search, 2014–2026",
+        "index": (XC, 0.915, 0.135, SRC, "Index search, 2014–2026",
                   "\n".join(f"{label.get(k, k)}: {fmt_int(v)}" for k, v in src.items())
                   + f"\nAfter de-duplication: {fmt_int(runs.get('index_2014_2026', 0))}"),
-        "library": (XC, 0.915, 0.135, SRC, "Library exports, 2024–2026",
-                    "\n".join(f"{label.get(k, k)}: {fmt_int(v)}" for k, v in libs.items())
+        "library": (XR, 0.915, 0.135, SRC, "Library search, 2024–2026",
+                    "Crawled exports\n" + "\n".join(f"{label.get(k, k)}: {fmt_int(v)}" for k, v in libs.items())
                     + f"\nNew records: {fmt_int(runs.get('libraries_2024_2026', 0))}"),
         "initial": (X1, 0.685, 0.145, SRC, "Initial search",
                     f"OpenCitations, forward\nand backward, 2014–2024\nIncluded: {fmt_int(len(initial))}"),
@@ -413,18 +413,19 @@ def prisma_figure(p_all):
                      f"OpenAlex, two hops\nHop 1: {fmt_int(seeds)} seeds,\n{fmt_int(works)} works\n"
                      f"Hop 2: {fmt_int(seeds2)} seeds,\n{fmt_int(works2)} new works\nNew records: "
                      f"{fmt_int(runs.get('citations_hop1', 0) + runs.get('citations_hop2', 0))}"),
-        "screen": (XC, 0.49, 0.1, MAIN, "Title/abstract\nscreening",
-                   f"Two LLM screeners,\nadjudicator for disagreements\nRecords: {fmt_int(len(ta))}"),
-        "excluded": (XR, 0.49, 0.09, EXCL, "Excluded", f"{fmt_int((ta['final'] == 'exclude').sum())} records\n"
+        "screen": (XC, 0.485, 0.12, MAIN, "Title/abstract\nscreening",
+                   f"Two LLM screeners,\nadjudicator for disagreements\nRecords: {fmt_int(len(ta))}\n"
+                   f"+ {fmt_int(len(old_auto))} from the initial search"),
+        "excluded": (XR, 0.485, 0.09, EXCL, "Excluded", f"{fmt_int((ta['final'] == 'exclude').sum())} records\n"
                                                        f"({fmt_int(len(check))} coded in full\ntext as a check)"),
-        "sought": (XC, 0.365, 0.085, MAIN, "Full texts sought",
-                   f"{fmt_int(len(passed) + len(old_auto))} (include "
-                   f"{fmt_int((ta['final'] == 'include').sum())},\nunclear "
-                   f"{fmt_int((ta['final'] == 'fulltext').sum())}, initial\nsearch {fmt_int(len(old_auto))})"),
-        "notret": (XR, 0.365, 0.06, EXCL, "Not retrieved", f"{fmt_int(not_retrieved)} records"),
+        "sought": (XC, 0.36, 0.075, MAIN, "Full texts sought",
+                   f"{fmt_int(len(passed) + len(old_auto))}\n(include "
+                   f"{fmt_int((ta['final'] == 'include').sum() + len(old_auto))}, unclear "
+                   f"{fmt_int((ta['final'] == 'fulltext').sum())})"),
+        "notret": (XR, 0.36, 0.06, EXCL, "Not retrieved", f"{fmt_int(not_retrieved)} records"),
         "assessed": (XC, 0.245, 0.085, MAIN, "Full texts assessed\nand coded",
                      f"{fmt_int(assessed)} (incl. {fmt_int(len(old_manual))}\nfrom the manual search)"),
-        "exft": (XR, 0.215, 0.2, EXCL, f"Excluded at full text:\n{fmt_int(n_excl_ft)}",
+        "exft": (XR, 0.205, 0.235, EXCL, f"Excluded at full text:\n{fmt_int(n_excl_ft)}",
                  "\n".join(f"{names.get(k, k)}: {fmt_int(v)}" for k, v in excl.items())),
         "included": (XC, 0.095, 0.07, INCL, f"Included: {fmt_int(p_all['eligible'].sum())}",
                      f"wild {fmt_int(p_all['eligible_strict'].sum())},\ncaptive added "
@@ -435,7 +436,7 @@ def prisma_figure(p_all):
     ax.set_xlim(0, 1)
     ax.set_ylim(0.05, 1)
     # the citation search groups the initial and the follow-up search
-    g0, g1 = X1 - W / 2 - 0.008, X2 + W / 2 + 0.008
+    g0, g1 = X1 - W / 2 - 0.007, X2 + W / 2 + 0.007
     ax.add_patch(mpatches.FancyBboxPatch((g0, 0.6), g1 - g0, 0.21, boxstyle="round,pad=0,rounding_size=0.01",
                                          facecolor=GROUP, edgecolor="#333333", lw=0.8, ls="--"))
     ax.text((g0 + g1) / 2, 0.8, "Citation search", ha="center", va="top", fontsize=7.8, fontweight="bold")
@@ -463,14 +464,14 @@ def prisma_figure(p_all):
         ax.annotate("", xy=pts[-1], xytext=pts[-2],
                     arrowprops={"arrowstyle": "-|>", "lw": 0.9, "color": "#333333", "shrinkA": 0, "shrinkB": 0})
 
-    lane = (X2 + W / 2 + XC - W / 2) / 2          # between index column and main column
     top_screen = edge("screen", "top")[1]
     arrow(edge("manual", "bottom"), edge("initial", "top"))                              # seeds of the initial search
-    arrow(edge("index", "right"), (lane, boxes["index"][1]), (lane, 0.57), (XC - 0.06, 0.57), (XC - 0.06, top_screen))
-    arrow(edge("library", "bottom"), (XC, top_screen))
+    arrow(edge("initial", "right"), edge("followup", "left"))                           # seeds of the follow-up search
+    arrow(edge("index", "bottom"), (XC, top_screen))
+    x0, y0 = edge("library", "bottom")
+    arrow((x0, y0), (x0, 0.575), (XC + 0.06, 0.575), (XC + 0.06, top_screen))
     arrow(edge("followup", "bottom"), (X2, boxes["screen"][1]), edge("screen", "left"))
-    arrow(edge("initial", "bottom"), (X1, boxes["sought"][1]), edge("sought", "left"))
-    xm = X1 - W / 2 - 0.013                                                              # left lane for the manual search
+    xm = X1 - W / 2 - 0.03                                                              # left lane for the manual search
     arrow(edge("manual", "left"), (xm, boxes["manual"][1]), (xm, boxes["assessed"][1]), edge("assessed", "left"))
     arrow(edge("screen", "right"), edge("excluded", "left"))
     arrow(edge("screen", "bottom"), edge("sought", "top"))
