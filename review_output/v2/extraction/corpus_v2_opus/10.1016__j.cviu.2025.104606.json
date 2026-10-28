@@ -1,0 +1,223 @@
+{
+ "doi": "10.1016/j.cviu.2025.104606",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "a5af99d677ce5f617333497a212beb9587a9ddd75861d4679bd6036ac5dffb60",
+  "extracted_at": "2026-10-22T07:11:22.387927+00:00",
+  "cost_usd": 0.260396
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-HUMAN",
+   "subject_type": "livestock_or_pet",
+   "paper_type": "method",
+   "reason": "The detected classes are humans, dogs, cars, boats and trains. No wild animals are detected or analysed; the targets are mainly people and vehicles, and the only animal is the domestic dog.",
+   "page": 4,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 4,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Other",
+    "countries": [
+     "Spain"
+    ],
+    "location_detail": "Terrestrial and marine scenes in three Catalan natural parks: Aiguamolls de l'Empordà, Delta de l'Ebre and Cap de Creus",
+    "species": [
+     "dogs"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "dogs",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "related"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv8n",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CSPDarknet",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Otsu's method",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Niblack's method",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Static thresholding",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

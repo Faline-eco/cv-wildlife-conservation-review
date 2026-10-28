@@ -1,0 +1,305 @@
+{
+ "doi": "10.3390/rs15061593",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "9277aadc2d88c65c01201228640ef5b2af32436a1b11dfbb70ca0c8fe3a9b417",
+  "extracted_at": "2026-10-12T16:19:36.168222+00:00",
+  "cost_usd": 0.217372
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-AGRI",
+   "subject_type": "livestock_or_pet",
+   "paper_type": "method",
+   "reason": "The paper detects and counts grazing livestock (cattle, horses, sheep) in UAV imagery of a pasture; no wild, non-domestic animals are analysed.",
+   "page": 4,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 4,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 4,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 4,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Grassland",
+    "countries": [
+     "China"
+    ],
+    "location_detail": "Hadatu Pasture, Hulunbuir City, Inner Mongolia",
+    "species": [
+     "cattle",
+     "horse",
+     "sheep"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "cattle",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "horse",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "sheep",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "field_deployment",
+    "page": 23,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 23,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "auxiliary",
+    "page": 21,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 21,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "GLDM",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOX-nano",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Enhanced CSPDarknet (ECSP)",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Weighted aggregation feature re-extraction pyramid (WAFR)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CSPDarknet",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Faster R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "RetinaNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv3",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FCOS",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOX-x",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

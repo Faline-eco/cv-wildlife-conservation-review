@@ -1,0 +1,271 @@
+{
+ "doi": "10.3390/s17081784",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "96c530f8ab94325cb9a78073dcd7b36a33e773ea8cd322aad9491c53f617b7a6",
+  "extracted_at": "2026-10-15T09:32:05.914997+00:00",
+  "cost_usd": 0.167912
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-GENERIC",
+   "subject_type": "not_reported",
+   "paper_type": "method",
+   "reason": "Generic underwater salient object detection method for man-made and natural objects; animals are only one type of target and wildlife is not the stated subject or application.",
+   "page": 2,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 2,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 2,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 2,
+       "section": "introduction"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "YouTube underwater videos; ocean scenes including bright shallow ocean, seabed, polar ocean and tropical ocean",
+    "species": [
+     "aquatic animals"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 2,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 2,
+       "section": "introduction"
+      }
+     }
+    ],
+    "habitat": "Wetlands (inland)",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "YouTube underwater videos of inland lake water",
+    "species": [
+     "aquatic animals"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "aquatic animals",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "web_scraped",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Global contrast ROI detection with dark channel transmission estimation",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Otsu",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Otsu",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Saliency (Itti model)",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Compatible color",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Contour segmentation",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PCNN",
+    "type": "other",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

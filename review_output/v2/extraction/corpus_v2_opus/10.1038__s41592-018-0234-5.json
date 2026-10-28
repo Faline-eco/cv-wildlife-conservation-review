@@ -1,0 +1,333 @@
+{
+ "doi": "10.1038/s41592-018-0234-5",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "e63c1637c311d3444ecd4eb1121b18e9057bffcf32874a348a035f3c3ac0f1de",
+  "extracted_at": "2026-10-12T11:47:12.056272+00:00",
+  "cost_usd": 0.236008
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "method",
+   "reason": "Pose estimation method developed and evaluated only on laboratory fruit flies and laboratory mice filmed in indoor arenas; no wild or free-ranging animals.",
+   "page": 8,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 8,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Laboratory circular arenas (100-mm and 30-mm diameter) filmed from above",
+    "species": [
+     "fruit fly"
+    ],
+    "datasets": [
+     "Dataset of 59 adult male Drosophila",
+     "Second fly dataset (42 videos of pairs of fruit flies)"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "Near Infrared (NIR)",
+      "source": "text",
+      "page": 8,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 8,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "United States"
+    ],
+    "location_detail": "Open field arena with clear acrylic floor, Princeton University (Princeton Neuroscience Institute)",
+    "species": [
+     "mouse"
+    ],
+    "datasets": [
+     "Mouse dataset"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fruit fly",
+    "scientific_name": "Drosophila melanogaster",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "mouse",
+    "scientific_name": "Mus musculus",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Dataset of 59 adult male Drosophila",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Second fly dataset (42 videos of pairs of fruit flies)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "captive_or_lab",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Mouse dataset",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "captive_or_lab",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Pose Estimation",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Activity Recognition",
+    "role": "auxiliary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "LEAP (15-layer fully convolutional neural network)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Stacked hourglass network",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Background subtraction",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PCA",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "k-means clustering",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Hidden Markov model (HMM)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "t-SNE",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Watershed transform",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

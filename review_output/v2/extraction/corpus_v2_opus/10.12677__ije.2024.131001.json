@@ -1,0 +1,264 @@
+{
+ "doi": "10.12677/ije.2024.131001",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "ed965974f5436c63d910f2b423532184a201964e6814ecfbabc2fe11eb8eb45b",
+  "extracted_at": "2026-10-25T08:27:47.411611+00:00",
+  "cost_usd": 0.186096
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "application",
+   "reason": "Applies object-based image analysis and supervised classification to UAV RGB images to extract burrows (direct signs) of wild plateau rodents in alpine grassland.",
+   "page": 7,
+   "evidence": {
+    "status": "none",
+    "score": 0,
+    "page": 7,
+    "section": null
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 4,
+      "evidence": {
+       "status": "none",
+       "score": 0,
+       "page": 4,
+       "section": null
+      }
+     }
+    ],
+    "habitat": "Grassland",
+    "countries": [
+     "China"
+    ],
+    "location_detail": "Ruoergai (Zoige) County alpine grassland, Aba Prefecture, northern Sichuan; 24 sampling points, e.g. Hongxing township; May 2021",
+    "species": [
+     "Plateau pika",
+     "Plateau zokor"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "abstract"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Plateau pika",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 3,
+     "section": null
+    }
+   },
+   {
+    "name": "Plateau zokor",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "abstract"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "abstract"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "abstract"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 6,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 6,
+     "section": null
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 7,
+     "section": null
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "KNN (object-based nearest neighbour classification)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "abstract"
+    }
+   },
+   {
+    "name": "Multi-scale segmentation (ESP tool, eCognition)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "abstract"
+    }
+   },
+   {
+    "name": "GLCM texture features",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 4,
+     "section": null
+    }
+   },
+   {
+    "name": "Bayes",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "abstract"
+    }
+   },
+   {
+    "name": "Random Tree",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "abstract"
+    }
+   },
+   {
+    "name": "CART decision tree",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "abstract"
+    }
+   },
+   {
+    "name": "Random Forest",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "abstract"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

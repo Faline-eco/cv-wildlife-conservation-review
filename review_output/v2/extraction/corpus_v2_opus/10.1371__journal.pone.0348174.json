@@ -1,0 +1,226 @@
+{
+ "doi": "10.1371/journal.pone.0348174",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "c625061a62aedc9da26bdd077f6c126ad872fc2a6eb3440b7b8fd071305a8d92",
+  "extracted_at": "2026-10-13T17:29:07.156577+00:00",
+  "cost_usd": 0.281204
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Primary study that develops and validates a deep learning segmentation pipeline on drone imagery of free-swimming wild white sharks to extract morphometrics.",
+   "page": 3,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 3,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 5,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 5,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "United States"
+    ],
+    "location_detail": "Monterey Bay National Marine Sanctuary, central California coast: New Brighton State Beach, Marina State Beach and Año Nuevo Island",
+    "species": [
+     "white shark"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "white shark",
+    "scientific_name": "Carcharodon carcharias",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "U-Net",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-34",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "skeletonization",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "largest connected component (contour detection)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "morphological dilation",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

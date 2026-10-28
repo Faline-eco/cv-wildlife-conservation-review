@@ -1,0 +1,313 @@
+{
+ "doi": "10.3390/jmse6020042",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "ad78eed6fa99969e6d2456098bf5290a03ff1ec0bc4bf7af21f3190ff3440651",
+  "extracted_at": "2026-10-24T10:58:16.515054+00:00",
+  "cost_usd": 0.237772
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "method",
+   "reason": "Photogrammetric 3D reconstruction and measurement of wild red coral colonies photographed in situ by divers; some dead colonies from collections also modelled.",
+   "page": 13,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 13,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 8,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 8,
+       "section": "introduction"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "France"
+    ],
+    "location_detail": "Scandola, Corsica, Mediterranean Sea; rocky substrata and cave ceilings, scuba diver-operated DSLR in housing with strobes",
+    "species": [
+     "Red coral"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "introduction"
+    }
+   },
+   {
+    "platform": "Other",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 19,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 19,
+       "section": "introduction"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Underwater plenoptic (light field) camera acquisitions; location not specified",
+    "species": [
+     "Red coral"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 21,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 21,
+     "section": "introduction"
+    }
+   },
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 18,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 18,
+       "section": "introduction"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Dead coral colonies in lab, collections or a shop",
+    "species": [
+     "Red coral"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "introduction"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Red coral",
+    "scientific_name": "Corallium rubrum",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "mixed",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "introduction"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Reconstruction",
+    "role": "primary",
+    "page": 14,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.1,
+     "page": 14,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "introduction"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Tsai's camera calibration with Levenberg–Marquardt optimization",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "AprilTags-based marker detection",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "PhotoScan photogrammetry",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Dijkstra's algorithm",
+    "type": "other",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Geodesic algorithm (Darboux frame)",
+    "type": "other",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Non-photorealistic rendering (NPR)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Cell-complex thinning skeletonization (Liu et al.)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Plenoptic depth map stereo matching (RxLive)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "introduction"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

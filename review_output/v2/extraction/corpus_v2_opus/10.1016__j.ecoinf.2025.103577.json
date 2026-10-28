@@ -1,0 +1,297 @@
+{
+ "doi": "10.1016/j.ecoinf.2025.103577",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "1d68aeed7b56393647ebb32d8893aeb0d797f072d161b58b7bfa57a8163d49ee",
+  "extracted_at": "2026-10-15T07:50:50.927083+00:00",
+  "cost_usd": 0.264592
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "application",
+   "reason": "Applies CNN-based detectors and classifiers to towed underwater camera imagery of wild Atlantic sea scallops on fishing grounds to study habitat and swimming behaviour.",
+   "page": 2,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 2,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 10,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 10,
+       "section": "back"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "United States"
+    ],
+    "location_detail": "Scallop grounds on Georges Bank and in the Mid-Atlantic Bight (incl. Nantucket Lightship), US East Coast; HabCam V3 towed stereo camera vehicle",
+    "species": [
+     "Atlantic sea scallop",
+     "sea stars",
+     "sand dollars",
+     "bryozoans"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)",
+     "NEFSC HabCam V4 surveys"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.4,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Atlantic sea scallop",
+    "scientific_name": "Placopecten magellanicus",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.2,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "sea stars",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "sand dollars",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "bryozoans",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "back"
+    }
+   },
+   {
+    "name": "NEFSC HabCam V4 surveys",
+    "role": "public_wildlife_dataset",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Activity Recognition",
+    "role": "primary",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "auxiliary",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Cascade R-CNN",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv7",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "HR-Net",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EfficientNetV2",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "weighted box fusion",
+    "type": "other",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

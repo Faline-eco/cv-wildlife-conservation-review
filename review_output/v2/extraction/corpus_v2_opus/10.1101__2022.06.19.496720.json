@@ -1,0 +1,263 @@
+{
+ "doi": "10.1101/2022.06.19.496720",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "525b637c4facdcbc28431d99ae7d8d12ff6a43d56cd720ad4017a64c5adfa130",
+  "extracted_at": "2026-10-24T10:16:55.450809+00:00",
+  "cost_usd": 0.140436
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "specimen",
+   "paper_type": "method",
+   "reason": "Pipeline for extracting shape and colour pattern data from 2D images of butterfly specimens photographed for museum collections; no images of live free-ranging animals.",
+   "page": 2,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 97.6,
+    "page": 2,
+    "section": "abstract"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 8,
+      "evidence": {
+       "status": "fuzzy",
+       "score": 94.7,
+       "page": 8,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Specimens of the Tirumala mimicry ring, endemic to the Western Ghats, India; location of photography not stated",
+    "species": [
+     "butterflies",
+     "Tirumala models",
+     "Pareronia hippia",
+     "Pareronia ceylanica",
+     "Papilio clytia f. dissimilis"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.7,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "butterflies",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.6,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Tirumala models",
+    "scientific_name": "Tirumala",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.6,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Pareronia hippia",
+    "scientific_name": "Pareronia hippia",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Pareronia ceylanica",
+    "scientific_name": "Pareronia ceylanica",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Papilio clytia f. dissimilis",
+    "scientific_name": "Papilio clytia",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.5,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "captive_or_lab",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.6,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.2,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.9,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "elliptical Fourier analysis (cleqEFA, Momocs)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "not_found",
+     "score": 89.2,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "supervised RGB thresholding (patternize)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "affine image registration (RNiftyReg)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.4,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "phylogenetic PCA",
+    "type": "other",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.2,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

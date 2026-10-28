@@ -1,0 +1,270 @@
+{
+ "doi": "10.52202/079017-2606",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "51bed28a9f230f6743e84e82379811ad174b22c7a0af14bd0bcf1ef407084d2a",
+  "extracted_at": "2026-10-25T14:07:47.591227+00:00",
+  "cost_usd": 0.198596
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "dataset",
+   "reason": "Introduces a UAV video dataset of wild blackbuck antelopes on a lek for detection, multi-object tracking and re-identification, with benchmark results.",
+   "page": 1,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 1,
+    "section": "abstract"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 15,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 15,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Blackbuck lekking arena (~250 m x 300 m); location not stated",
+    "species": [
+     "Blackbuck"
+    ],
+    "datasets": [
+     "BuckTales"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Blackbuck",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "BuckTales",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Tracking",
+    "role": "primary",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Re-Identification",
+    "role": "auxiliary",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv8",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Fast-RCNN (Detectron2)",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ByteTrack",
+    "type": "other",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "OC-SORT",
+    "type": "other",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "BoT-SORT",
+    "type": "other",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "osnet_x0_25",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "osnet_x1_0",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "osnet_ain_x1_0",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "lmbn_n",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

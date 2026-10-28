@@ -1,0 +1,327 @@
+{
+ "doi": "10.1109/jstars.2026.3657742",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "63bfbcdaf803f9daf19bc78fd08f1eb09b7e432a83135599b7b4d3a51f934502",
+  "extracted_at": "2026-10-13T16:55:12.404272+00:00",
+  "cost_usd": 0.30748
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Primary study applying onboard detection, multi-object tracking and visual localization to UAV imagery of wild spotted seals at haul-out sites to drive adaptive coverage path planning.",
+   "page": 13,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 13,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 10,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 10,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "China"
+    ],
+    "location_detail": "Liaohe Estuary National Nature Reserve, Panjin, Liaoning Province (Liaodong Bay, Bohai Sea); intertidal haul-out sites",
+    "species": [
+     "spotted seal"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Not reported",
+    "species": [],
+    "datasets": [
+     "DroneVehicle"
+    ],
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "spotted seal",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DroneVehicle",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "primary",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv11",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ByteTrack",
+    "type": "other",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Spatial noise filtering (SNF)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Genetic algorithm (GA)",
+    "type": "other",
+    "role": "proposed",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Visual localization (pinhole model coordinate transformation)",
+    "type": "other",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv10",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv8",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv5",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv9",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv12",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Rectangular flight pattern (Rect Path)",
+    "type": "other",
+    "role": "baseline",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

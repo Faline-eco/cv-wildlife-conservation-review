@@ -1,0 +1,63 @@
+{
+ "doi": "10.1109/cvprw63382.2024.00129",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0632389,
+ "items": [
+  {
+   "doi": "10.1109/cvprw63382.2024.00129",
+   "field": "habitat",
+   "value": "Marine",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Underwater ROV/AUV deep-sea imagery by MBARI, marine."
+  },
+  {
+   "doi": "10.1109/cvprw63382.2024.00129",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Standard camera video images; RGB implied, no other modality."
+  },
+  {
+   "doi": "10.1109/cvprw63382.2024.00129",
+   "field": "task",
+   "value": "Classification",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Primary task is object detection (localization plus classification pipeline), per title and abstract."
+  },
+  {
+   "doi": "10.1109/cvprw63382.2024.00129",
+   "field": "algorithm",
+   "value": "PAWS",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "PAWS semi-supervised pre-training used and compared."
+  },
+  {
+   "doi": "10.1109/cvprw63382.2024.00129",
+   "field": "algorithm",
+   "value": "ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ResNet50 used for all supervised components."
+  },
+  {
+   "doi": "10.1109/cvprw63382.2024.00129",
+   "field": "algorithm",
+   "value": "SimCLR",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SimCLR self-supervised pre-training compared."
+  },
+  {
+   "doi": "10.1109/cvprw63382.2024.00129",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Uses existing methods (YOLOv5, ResNet, PAWS, SimCLR), no novel model proposed."
+  }
+ ]
+}

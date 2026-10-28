@@ -1,0 +1,226 @@
+{
+ "doi": "10.1109/mcg.2022.3189034",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "5b0fd4601ca90c62f7500ec45b6a8dc349564d2c5915fe458fa6819aa84875a1",
+  "extracted_at": "2026-10-12T13:13:06.172954+00:00",
+  "cost_usd": 0.198752
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "captive_or_zoo",
+   "paper_type": "application",
+   "reason": "Two live reptiles are photogrammetrically scanned and motion-captured inside a purpose-built enclosure to build a 3-D virtual museum; no images of free-ranging animals are analysed.",
+   "page": 7,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 7,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 6,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 6,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Purpose-built capture enclosure with added objects to replicate a natural environment; species are Cypriot, but the capture location is not stated",
+    "species": [
+     "snake",
+     "lizard"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "snake",
+    "scientific_name": "Dolichophis jugularis",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "lizard",
+    "scientific_name": "Stellagama stellio",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Reconstruction",
+    "role": "primary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Pose Estimation",
+    "role": "primary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "COLMAP",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Poisson Surface Reconstruction",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "triangulation",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FABRIK",
+    "type": "other",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "back"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

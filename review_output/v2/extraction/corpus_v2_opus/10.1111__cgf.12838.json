@@ -1,0 +1,274 @@
+{
+ "doi": "10.1111/cgf.12838",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "78b461ca55e807ccbc51299d6f53c170793970d250e7a914fd2f6d32528252b2",
+  "extracted_at": "2026-10-12T13:36:17.788820+00:00",
+  "cost_usd": 0.207824
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-AGRI",
+   "subject_type": "livestock_or_pet",
+   "paper_type": "method",
+   "reason": "Graphics/vision method that deforms 3D template meshes to fit user-clicked Internet images of cats and horses (pets/livestock); no wild or free-ranging animals are stated as subjects.",
+   "page": 5,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 5,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 5,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 5,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Not reported",
+    "species": [
+     "cats",
+     "horses"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Synthetic images rendered by projecting 3D cat models (no physical location)",
+    "species": [
+     "cats"
+    ],
+    "datasets": [
+     "TOSCA"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "cats",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "horses",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "web_scraped",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "TOSCA",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "synthetic",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Reconstruction",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "related"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "auxiliary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Locally bounded volumetric deformation with learned local stiffness (SDP)",
+    "type": "other",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Unbounded (volumetric ARAP energy)",
+    "type": "other",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Uniform bound [KABL14]",
+    "type": "other",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Cashman et al. [CF13] morphable model",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "direct linear transform with sparse bundle adjustment",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "normalized cuts",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

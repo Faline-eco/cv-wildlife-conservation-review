@@ -1,0 +1,234 @@
+{
+ "doi": "10.1038/srep45127",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "86857ebecf29c93d69407899b7072e204b7f2c7e309fb893ede6f3062ff51112",
+  "extracted_at": "2026-10-12T11:56:24.750032+00:00",
+  "cost_usd": 0.140688
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Primary study applying an automated image-analysis workflow to UAS thermal imagery of wild grey seals at breeding colonies to detect, classify and count them.",
+   "page": 2,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 2,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "Long-wave Infrared / Thermal (LWIR)",
+      "source": "text",
+      "page": 2,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 2,
+       "section": "body"
+      }
+     },
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 2,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 2,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Canada"
+    ],
+    "location_detail": "Hay Island and Saddle Island grey seal breeding colonies, Gulf of St. Lawrence, Nova Scotia; rock, beach and frozen ground",
+    "species": [
+     "grey seal"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "grey seal",
+    "scientific_name": "Halichoerus grypus",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "seal detection model (ArcGIS model builder)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "spectral thresholds and pixel cluster size sorting",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "polygon/convex hull ratio",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "high pass filter",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

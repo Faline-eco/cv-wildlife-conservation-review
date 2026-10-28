@@ -1,0 +1,223 @@
+{
+ "doi": "10.1002/rse2.240",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "5065e5382785511648dd34340ccf4a4f6781880279c2513838e8c9568446703b",
+  "extracted_at": "2026-10-13T15:51:57.339947+00:00",
+  "cost_usd": 0.157468
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Primary study proposing a CNN segmentation model for guano stains (a direct sign) of wild Adelie penguin colonies in high-resolution satellite imagery of Antarctica.",
+   "page": 2,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 2,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Satellite",
+    "spectra": [
+     {
+      "value": "Multispectral",
+      "source": "text",
+      "page": 3,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 3,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Penguin colonies around Antarctica (e.g. Paulet Island, Cape Crozier, Arthurson Ridge, Beagle Island, Heroina Island, Hope Bay, Cape Bird)",
+    "species": [
+     "Adelie penguin"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Adelie penguin",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "auxiliary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "PenguinNet",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "U-Net",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Baseline U-Net",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "No prior (Le et al., 2019)",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Stacking prior masks on top of input images (no separated CNN branch)",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "patch-level classification CNN",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

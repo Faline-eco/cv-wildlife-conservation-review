@@ -1,0 +1,176 @@
+{
+ "doi": "10.1109/cvaui.2014.16",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "1b1d9b4b98d4c4cfa962be26f29ba4300a58b5131a5f829e58d0861ab7890c86",
+  "extracted_at": "2026-10-15T08:03:54.242922+00:00",
+  "cost_usd": 0.09418
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a foreground extraction method for underwater monitoring videos of free-swimming fish.",
+   "page": 3,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 3,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Stationary underwater camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "caption",
+      "page": 4,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 4,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Underwater monitoring videos from the Underwater Benchmark Dataset (Fish4Knowledge); location not stated",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "Underwater Benchmark Dataset For Target Detection Against Complex Background"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "introduction"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Underwater Benchmark Dataset For Target Detection Against Complex Background",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.2,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Principal Component Pursuit (PCP)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "inexact augmented Lagrangian multiplier (IALM)",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "adaptive threshold",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "introduction"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

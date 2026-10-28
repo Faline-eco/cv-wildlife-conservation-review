@@ -1,0 +1,356 @@
+{
+ "doi": "10.1109/sec.2018.00019",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "60c874d55b5b89e86f6a52901cec25c6ab0b7ab68863b2a9be9be4688ec3a3fb",
+  "extracted_at": "2026-10-15T09:03:59.528996+00:00",
+  "cost_usd": 0.297456
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a drone/edge video analytics pipeline for search tasks, including wildlife conservation. It is evaluated on aerial videos that include a task of detecting elephants in their natural habitat.",
+   "page": 6,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 6,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 6,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 6,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Aerial-view YouTube videos of elephants in natural habitat; location not stated",
+    "species": [
+     "Elephants"
+    ],
+    "datasets": [
+     "YouTube collection (elephants)"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 6,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 6,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Aerial YouTube videos of rafts in flooding scenes",
+    "species": [],
+    "datasets": [
+     "YouTube collection (rafts)"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Stanford Drone Dataset, moving cars",
+    "species": [],
+    "datasets": [
+     "Stanford Drone Dataset"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Okutama Action Dataset, people in scenes of daily life (aerial viewpoint)",
+    "species": [],
+    "datasets": [
+     "Okutama Action Dataset"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Elephants",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "YouTube collection (elephants)",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YouTube collection (rafts)",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Stanford Drone Dataset",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Okutama Action Dataset",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "MobileNet V1 (EarlyDiscard filter)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Linear SVM (JITL filter)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "HSV color filter",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Faster R-CNN ResNet101",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Faster R-CNN Inception V2",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SSD MobileNet V1",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "SSD Inception V2",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "ResNet101 V1",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

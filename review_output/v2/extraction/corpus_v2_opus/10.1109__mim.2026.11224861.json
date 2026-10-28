@@ -1,0 +1,257 @@
+{
+ "doi": "10.1109/mim.2026.11224861",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "ca5bb1021324d996442f9ee41b0de97596b3f8bbafe1c0bfdfa6de0d05984293",
+  "extracted_at": "2026-10-15T08:56:44.483811+00:00",
+  "cost_usd": 0.160808
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "application",
+   "reason": "Detects mosquitoes, Culicoides and flies in images taken under microscope in a laboratory and in a public dataset of specimens shot under controlled lighting. None of the data shows free-ranging animals in the field.",
+   "page": 3,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 3,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Kaggle public dataset; images captured under controlled lighting and uniform backgrounds",
+    "species": [
+     "Aedes mosquitoes"
+    ],
+    "datasets": [
+     "Aedes Mosquitos Dataset"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "Thailand"
+    ],
+    "location_detail": "National Institute of Animal Health, Thailand (NIAH); microscope-assisted laboratory imaging",
+    "species": [
+     "mosquitoes",
+     "Culicoides midges",
+     "flies"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Aedes mosquitoes",
+    "scientific_name": "Aedes",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "mosquitoes",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Culicoides midges",
+    "scientific_name": "Culicoides",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "flies",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Aedes Mosquitos Dataset",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "captive_or_lab",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv8",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv11",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv8-OBB",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

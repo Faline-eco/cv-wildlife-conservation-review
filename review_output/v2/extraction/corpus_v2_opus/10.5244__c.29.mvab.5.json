@@ -1,0 +1,300 @@
+{
+ "doi": "10.5244/c.29.mvab.5",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "3aebeeca80b0663815bcfc9e1a401c2d9a58ec4d74a29ff36ef632c370738e3a",
+  "extracted_at": "2026-10-25T14:08:01.836645+00:00",
+  "cost_usd": 0.122044
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes an image representation for species classification of butterflies and reef fish from internet images, which the paper describes as taken in the wild.",
+   "page": 2,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 2,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 3,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 3,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Internet images, location not stated",
+    "species": [
+     "butterflies"
+    ],
+    "datasets": [
+     "Butterfly dataset (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 3,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 3,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Internet images of reef fish, location not stated",
+    "species": [
+     "reef fish"
+    ],
+    "datasets": [
+     "Reef fish dataset (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "butterflies",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 30,
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "reef fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 30,
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Butterfly dataset (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "web_scraped",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Reef fish dataset (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "web_scraped",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "TIWAH (triplets of identical words angles histogram)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Linear SVM with Hellinger kernel",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Multi-scale SIFT",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Scale-less SIFT (SLS)",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DoG SIFT",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DIP SIFT",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "BoVWs",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PIWAH",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

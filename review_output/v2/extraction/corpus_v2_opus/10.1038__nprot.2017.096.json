@@ -1,0 +1,210 @@
+{
+ "doi": "10.1038/nprot.2017.096",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "1ab87fa397bf2fc4bb1c291e64f5bbfbcdb8f93adb72b89a1e0614915213b48d",
+  "extracted_at": "2026-10-12T11:44:30.850416+00:00",
+  "cost_usd": 0.19232
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "method",
+   "reason": "Laboratory protocol for machine-vision tracking of individually housed Drosophila in a 3D-printed chamber inside an incubator; no wild or free-ranging animals.",
+   "page": 5,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 5,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "Near Infrared (NIR)",
+      "source": "text",
+      "page": 5,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 5,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Laboratory incubator; flies individually housed in a 3D-printed ARC chamber with infrared backlighting",
+    "species": [
+     "Drosophila"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Drosophila",
+    "scientific_name": "Drosophila",
+    "rank": "genus",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Tracking",
+    "role": "primary",
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "abstract"
+    }
+   },
+   {
+    "task": "Activity Recognition",
+    "role": "primary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Activity Recording CAFE (ARC)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "back"
+    }
+   },
+   {
+    "name": "background subtraction",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "threshold scanning (contour outlining)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "background estimation / adaptive thresholding",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

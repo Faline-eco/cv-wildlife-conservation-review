@@ -1,0 +1,376 @@
+{
+ "doi": "10.1016/j.inffus.2023.102188",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "56e15b07f47d97e840fa256e5d1893c7c515408bcea6a82c5ac5c0cda53d8550",
+  "extracted_at": "2026-10-12T11:37:26.522346+00:00",
+  "cost_usd": 0.225588
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "method",
+   "reason": "Proposes a semi-supervised classification method with pairwise constraints for individual animal re-identification from video; data include free-ranging pigeons (square, pavement, curb) together with koi fish and pigs, so wild animals appear alongside domestic/captive ones.",
+   "page": 2,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 2,
+    "section": "abstract"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 19,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 19,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Not reported",
+    "species": [
+     "Koi fish",
+     "Pigeons",
+     "Pigs"
+    ],
+    "datasets": [
+     "Animal re-identification database (five videos)"
+    ],
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Koi fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "abstract"
+    }
+   },
+   {
+    "name": "Pigeons",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 25,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 25,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Pigs",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Animal re-identification database (five videos)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Re-Identification",
+    "role": "primary",
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Semi-supervised Classification with Constraints, A: Feature fusion",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Semi-supervised Classification with Constraints, B: Probability fusion",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Restricted Set Classification (RSC)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Linear Discriminant Analysis",
+    "type": "classical_machine_learning",
+    "role": "backbone",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Logistic Regression",
+    "type": "classical_machine_learning",
+    "role": "backbone",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Extra Tree Ensemble",
+    "type": "classical_machine_learning",
+    "role": "backbone",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Calibrated CV (linear SVM)",
+    "type": "classical_machine_learning",
+    "role": "backbone",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MobileNetV2",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Autoencoder",
+    "type": "other",
+    "role": "backbone",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "HOG",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "LBP",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Co-Forest",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Tri-training",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 21,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 21,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Label Propagation",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 21,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 21,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Seeded cop-kmeans",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 22,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 22,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

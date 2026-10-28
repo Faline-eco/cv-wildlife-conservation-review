@@ -1,0 +1,272 @@
+{
+ "doi": "10.48550/arxiv.2108.11727",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "9b5f5b8537fbea6b13e8df2c854c77c2cf85f6e31895341f94e7fb36d9582dce",
+  "extracted_at": "2026-10-14T15:01:19.351791+00:00",
+  "cost_usd": 0.165848
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a semantic segmentation method and dataset for real-scene underwater images of marine organisms (sea cucumber, sea urchin, scallop, starfish). The paper does not say the animals are farmed, so they are coded as free-ranging.",
+   "page": 4,
+   "evidence": {
+    "status": "none",
+    "score": 0,
+    "page": 4,
+    "section": null
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Real underwater scenes; images taken with different capture devices (location not stated)",
+    "species": [
+     "holothurian (sea cucumber)",
+     "echinus (sea urchin)",
+     "scallop",
+     "starfish"
+    ],
+    "datasets": [
+     "DUT-USEG"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "holothurian (sea cucumber)",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 3,
+     "section": null
+    }
+   },
+   {
+    "name": "echinus (sea urchin)",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 3,
+     "section": null
+    }
+   },
+   {
+    "name": "scallop",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 3,
+     "section": null
+    }
+   },
+   {
+    "name": "starfish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 3,
+     "section": null
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "DUT-USEG",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "PASCAL VOC 2012",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "front"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 2,
+     "section": null
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "auxiliary",
+    "page": 6,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 6,
+     "section": null
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "US-Net",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 6,
+     "section": null
+    }
+   },
+   {
+    "name": "Class activation map (CAM)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 4,
+     "section": null
+    }
+   },
+   {
+    "name": "Boundary detection network",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 5,
+     "section": null
+    }
+   },
+   {
+    "name": "Conditional random field",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 6,
+     "section": null
+    }
+   },
+   {
+    "name": "GrabCut",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "front"
+    }
+   },
+   {
+    "name": "GGANet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "front"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

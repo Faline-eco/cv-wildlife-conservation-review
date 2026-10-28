@@ -1,0 +1,296 @@
+{
+ "doi": "10.18653/v1/w17-2003",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "ee4f4db7838e64a9dd97bc9eb51a336ac296aa04c67827daee7bd36a10b1f97c",
+  "extracted_at": "2026-10-13T17:32:24.977053+00:00",
+  "cost_usd": 0.14064
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Primary study developing weakly supervised animal recognition models from wildlife documentary key frames and evaluating transfer to Snapshot Serengeti camera-trap images of wild animals.",
+   "page": 6,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 6,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "BBC wildlife documentary video 'Great Wildlife Moments'; filming locations not stated",
+    "species": [
+     "Animals (documentary species)",
+     "Lion",
+     "Zebra",
+     "Hippopotamus"
+    ],
+    "datasets": [
+     "Great Wildlife Moments"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Camera Trap",
+    "spectra": [],
+    "habitat": "Savanna",
+    "countries": [],
+    "location_detail": "Serengeti (as in the dataset name); country not stated",
+    "species": [
+     "Lion",
+     "Zebra",
+     "Hippopotamus"
+    ],
+    "datasets": [
+     "Snapshot Serengeti"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Animals (documentary species)",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 19,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Lion",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Zebra",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Hippopotamus",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Great Wildlife Moments",
+    "role": "public_wildlife_dataset",
+    "availability": "not_stated",
+    "origin": "not_stated",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Snapshot Serengeti",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "related"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "related"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Naive Bayes on bag-of-activations (discretized)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "related"
+    }
+   },
+   {
+    "name": "Naive Bayes (continuous, Gaussian)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Linear SVM",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "VGG CNN-M-128",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "related"
+    }
+   },
+   {
+    "name": "CNN-M-128 (ImageNet output probabilities)",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Shot cut detection",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,273 @@
+{
+ "doi": "10.4018/ijcini.2020100101",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "cada4f6f565626bf9970f72ce7d79f82163d66db33946b344cd55e6fdb67a2bf",
+  "extracted_at": "2026-10-14T14:59:11.038073+00:00",
+  "cost_usd": 0.242992
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes an MRF/EM-based method for segmenting and detecting moving underwater animals (whale sharks, chimera) in video of free-ranging animals.",
+   "page": 16,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 16,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [
+     "Philippines"
+    ],
+    "location_detail": "Southern Leyte, Philippines; underwater video",
+    "species": [
+     "Whale shark"
+    ],
+    "datasets": [
+     "Whalesharks in Philippines southern Leyte, Underwater video"
+    ],
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Underwater video from Nautilus live; location not stated",
+    "species": [
+     "Chimera"
+    ],
+    "datasets": [
+     "Creepy chimera/Nautilus live video"
+    ],
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Whale shark",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Chimera",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Whalesharks in Philippines southern Leyte, Underwater video",
+    "role": "public_wildlife_dataset",
+    "availability": "not_stated",
+    "origin": "not_stated",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Creepy chimera/Nautilus live video",
+    "role": "public_wildlife_dataset",
+    "availability": "not_stated",
+    "origin": "not_stated",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Spatio Temporal MRF (ST-MRF) in EM framework",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Simulated annealing and ICM",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Improved Harris corner detection",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Steerable pyramid filter",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Stolkin's E-MRF",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Liu et al. (background subtraction and three frame difference)",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Prabowo et al. (adaptive background modelling)",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

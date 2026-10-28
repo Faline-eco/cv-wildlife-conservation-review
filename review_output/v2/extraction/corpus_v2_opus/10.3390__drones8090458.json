@@ -1,0 +1,215 @@
+{
+ "doi": "10.3390/drones8090458",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "0b9637d39b3b0f46551806130a270d9cf323990c6bc4244e9e35b5b982ea1b22",
+  "extracted_at": "2026-10-13T17:10:12.395098+00:00",
+  "cost_usd": 0.148584
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "method",
+   "reason": "YOLOv5 object detection of giant clams in drone orthomosaics on the Great Barrier Reef; training data from a protected clam garden (former nursery), transfer tested on wild clams at other reefs.",
+   "page": 4,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 4,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 6,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 6,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Australia"
+    ],
+    "location_detail": "'Clam garden' in Pioneer Bay, Goolboddi (Orpheus) Island, Palm Islands region, north Queensland, Great Barrier Reef; plus two sites on Ribbon Reef and one on Hastings Reef",
+    "species": [
+     "Giant clams"
+    ],
+    "datasets": [
+     "GeoNadir drone orthomosaics",
+     "Detecting giant clams from drone imagery on the Great Barrier Reef"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Giant clams",
+    "scientific_name": "Tridacninae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.6,
+     "page": 3,
+     "section": "introduction"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "GeoNadir drone orthomosaics",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Detecting giant clams from drone imagery on the Great Barrier Reef",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "auxiliary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv5s",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SAHI (Slicing Aided Hyper Inference)",
+    "type": "other",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "GREEDYNMM",
+    "type": "other",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Tiling and reconstructing (discrete tiles)",
+    "type": "other",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,325 @@
+{
+ "doi": "10.1016/j.ecoinf.2025.103590",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "b689c7d9a52c86e351423b78c5706f553aed704d5ebc4228073b8484bdf1a949",
+  "extracted_at": "2026-10-25T06:53:47.905944+00:00",
+  "cost_usd": 0.277268
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-GENERIC",
+   "subject_type": "not_reported",
+   "paper_type": "method",
+   "reason": "Generic underwater image enhancement method evaluated on general underwater image benchmarks (UIEB, LSUI). Animals are not the subject of the analysis and only appear incidentally in example images.",
+   "page": 8,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 99.2,
+    "page": 8,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 11,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 11,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Underwater scenes from public UIEB and LSUI datasets; location not stated",
+    "species": [
+     "fish",
+     "corals"
+    ],
+    "datasets": [
+     "UIEB",
+     "LSUI"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "corals",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 11,
+    "evidence": {
+     "status": "not_found",
+     "score": 78.8,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "UIEB",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "LSUI",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "auxiliary",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "LMF (lightweight Mamba-frequency fusion)",
+    "type": "other",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Mamba block (SS2D)",
+    "type": "other",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.3,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MambaUIE",
+    "type": "other",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.7,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "UGAN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "WaterNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FunieGAN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "RAUNE",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CTM",
+    "type": "other",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DDformer",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "USUIR",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CLAHE",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "not_found",
+     "score": 80.0,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "UDCP",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

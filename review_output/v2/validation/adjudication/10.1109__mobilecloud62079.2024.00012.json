@@ -1,0 +1,71 @@
+{
+ "doi": "10.1109/mobilecloud62079.2024.00012",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0525009,
+ "items": [
+  {
+   "doi": "10.1109/mobilecloud62079.2024.00012",
+   "field": "habitat",
+   "value": "Forest",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Habitats not stated; iWildCam spans varied sites, MDC images unspecified; grassland mentioned only."
+  },
+  {
+   "doi": "10.1109/mobilecloud62079.2024.00012",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Standard camera trap RGB images; optical flow uses RGB maps."
+  },
+  {
+   "doi": "10.1109/mobilecloud62079.2024.00012",
+   "field": "task",
+   "value": "Detection",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Animal detection with MegaDetector bounding boxes is the core task."
+  },
+  {
+   "doi": "10.1109/mobilecloud62079.2024.00012",
+   "field": "task",
+   "value": "Classification",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Animal existence is binary but derived from detection; classification not the primary task."
+  },
+  {
+   "doi": "10.1109/mobilecloud62079.2024.00012",
+   "field": "algorithm",
+   "value": "RAFT",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "RAFT is used to generate optical flow examples alongside PWC-Net."
+  },
+  {
+   "doi": "10.1109/mobilecloud62079.2024.00012",
+   "field": "algorithm",
+   "value": "morphological operations",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "MBcheck applies erosion and dilation morphological opening."
+  },
+  {
+   "doi": "10.1109/mobilecloud62079.2024.00012",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Proposes OPcheck and MBcheck as own methods."
+  },
+  {
+   "doi": "10.1109/mobilecloud62079.2024.00012",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Uses iWildCam 2022 public dataset subset."
+  }
+ ]
+}

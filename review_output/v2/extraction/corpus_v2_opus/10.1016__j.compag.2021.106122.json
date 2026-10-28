@@ -1,0 +1,213 @@
+{
+ "doi": "10.1016/j.compag.2021.106122",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "69c858ed8465f908e7af6f6c15e5b41c967c2df2bb244b87a8c9126073b88c58",
+  "extracted_at": "2026-10-26T15:42:39.143841+00:00",
+  "cost_usd": 0.17724
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a small-sample, fine-grained CNN classification method for 220 insect species from real-world images taken in natural scenes (crawled from iNaturalist).",
+   "page": 2,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 2,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 6,
+      "evidence": {
+       "status": "fuzzy",
+       "score": 99.1,
+       "page": 6,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Images crawled from iNaturalist; complex natural scenes, no location given",
+    "species": [
+     "insects"
+    ],
+    "datasets": [
+     "Unnamed insect dataset (crawled from iNaturalist)"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "insects",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 220,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed insect dataset (crawled from iNaturalist)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "citizen_science",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.1,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Prototypical network with salient-region detection and center neighbor loss",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Prototypical network",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "VGG19",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-18",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  }
+ }
+}

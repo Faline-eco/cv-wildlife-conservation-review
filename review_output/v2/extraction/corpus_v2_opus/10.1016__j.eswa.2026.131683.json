@@ -1,0 +1,410 @@
+{
+ "doi": "10.1016/j.eswa.2026.131683",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "4291dc661906159844f0e50f70978d532e3ce57cf0fed4cea05b84973b379c77",
+  "extracted_at": "2026-10-25T06:55:24.314130+00:00",
+  "cost_usd": 0.305272
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a real-time instance segmentation network evaluated on URPC, real underwater images of marine organisms (sea cucumbers, starfish, shells, sea urchins) captured in real marine environments.",
+   "page": 7,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 7,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 13,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 13,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Real marine environments (URPC dataset); location not stated",
+    "species": [
+     "sea cucumbers",
+     "starfish",
+     "shells",
+     "sea urchins"
+    ],
+    "datasets": [
+     "URPC"
+    ],
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 8,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 8,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Aquatic",
+    "countries": [],
+    "location_detail": "Laboratory pool with underwater biological models and other objects",
+    "species": [],
+    "datasets": [
+     "UPSeg"
+    ],
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "sea cucumbers",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "starfish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "shells",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "sea urchins",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "URPC",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "UPSeg",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "captive_or_lab",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "UPinst",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "RTMDet",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CSPNeXt",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PAGAT (graph attention, GATv2)",
+    "type": "other",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.4,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Mask2Former-T",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "USIS-SAM",
+    "type": "foundation_model",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "UIS-Mamba",
+    "type": "other",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv8-s",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "WaterMask",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SOLOv2",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLACT++",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv5-s",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SE",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CBAM",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  }
+ }
+}

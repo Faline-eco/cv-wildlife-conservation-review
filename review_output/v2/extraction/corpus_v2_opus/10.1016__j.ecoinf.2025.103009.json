@@ -1,0 +1,269 @@
+{
+ "doi": "10.1016/j.ecoinf.2025.103009",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "379e42edc6a2a4c5865c82a48b6868eb2bf20a3a31ecb8b75f18e5b2db278f73",
+  "extracted_at": "2026-10-22T07:20:30.963138+00:00",
+  "cost_usd": 0.176732
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Develops YOLOv7 detection and BoT-SORT tracking/counting of wild green turtles in drone footage of Japanese coastal areas.",
+   "page": 1,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 1,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 2,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 2,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Japan"
+    ],
+    "location_detail": "Seagrass bed at Fukido River mouth, Ishigakijima Island, Yaeyama Islands (training 2022; testing 2023)",
+    "species": [
+     "Green turtle"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 2,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 2,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Japan"
+    ],
+    "location_detail": "Futami Bay, Chichijima Island, Ogasawara Islands",
+    "species": [
+     "Green turtle"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 4,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 4,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Japan"
+    ],
+    "location_detail": "Five seagrass bed sites, Kumejima Island, Ryukyu Islands (test footage)",
+    "species": [
+     "Green turtle"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Green turtle",
+    "scientific_name": "Chelonia mydas",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "back"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 2,
+    "evidence": {
+     "status": "not_found",
+     "score": 74.7,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv7",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "BoT-SORT",
+    "type": "other",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,307 @@
+{
+ "doi": "10.1109/iccv51070.2023.02041",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "a596bb7b3b45267a9b49efa03841be9881c91d472a1117d56364ad26bc07e68f",
+  "extracted_at": "2026-10-12T12:58:15.628043+00:00",
+  "cost_usd": 0.208628
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-GENERIC",
+   "subject_type": "not_reported",
+   "paper_type": "method",
+   "reason": "Generic active learning method (TiDAL) evaluated on general image classification benchmarks; iNaturalist2018 is used only as an imbalanced benchmark and wildlife is not the stated subject or application.",
+   "page": 9,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 9,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Not reported",
+    "species": [],
+    "datasets": [
+     "iNaturalist2018"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [],
+  "datasets": [
+   {
+    "name": "iNaturalist2018",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "citizen_science",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CIFAR10",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CIFAR100",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FashionMNIST",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SVHN",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "TiDAL",
+    "type": "other",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "ResNet-18",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Random sampling",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Entropy sampling",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "BALD",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CoreSet",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "LLoss",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CAL",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "VAAL",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "TA-VAAL",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

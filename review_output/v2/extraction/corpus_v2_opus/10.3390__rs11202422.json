@@ -1,0 +1,269 @@
+{
+ "doi": "10.3390/rs11202422",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "97153066cc328601659214dbfa0f770048345ede22aa5bfc94a89f0cb53fac7a",
+  "extracted_at": "2026-10-12T16:18:43.855789+00:00",
+  "cost_usd": 0.280852
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Primary study that compares sun glint correction methods and applies SVM pixel-based classification to UAV multispectral imagery to map wild live coral classes (corals are animals) on a reef in Malaysia. Borderline with habitat mapping, but live coral taxa are the mapped subject.",
+   "page": 10,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 10,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "Multispectral",
+      "source": "text",
+      "page": 3,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 3,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Malaysia"
+    ],
+    "location_detail": "West coast of Pulau Bidong (Site-1 Pantai Pasir Cina, Site-2 Pantai Vietnam), off Terengganu, Peninsular Malaysia, South China Sea",
+    "species": [
+     "Acropora",
+     "Montipora",
+     "corals"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Acropora",
+    "scientific_name": "Acropora",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Montipora",
+    "scientific_name": "Montipora",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "corals",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Lyzenga et al. sun glint correction (Strategy-2, glinted area only)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SVM",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "decision tree (rule-based approach)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "depth-invariant bottom index (DII)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Hedley et al. sun glint correction",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Joyce sun glint correction",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Goodman et al. sun glint correction",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

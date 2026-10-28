@@ -1,0 +1,421 @@
+{
+ "doi": "10.1007/s10115-021-01643-8",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "f2d5c18d325bc41020dff4f1519db718941a2b69a65433f26fdf9758ffc22a0b",
+  "extracted_at": "2026-10-12T11:17:28.995723+00:00",
+  "cost_usd": 0.266188
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "method",
+   "reason": "Proposes an adversarial training framework for fish species classification from underwater images, including footage from underwater observatories in Taiwan (free-ranging fish) alongside web-collected and other fish image datasets.",
+   "page": 4,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 4,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Stationary underwater camera",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [
+     "Taiwan"
+    ],
+    "location_detail": "Underwater observatories at Nanwan, Lanyu, and Houbi Lake",
+    "species": [
+     "fish (Fish4Knowledge)"
+    ],
+    "datasets": [
+     "Fish4Knowledge"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Not reported",
+    "species": [
+     "fish (WildFish)"
+    ],
+    "datasets": [
+     "WildFish"
+    ],
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Not reported",
+    "species": [
+     "fish (QUTFish)"
+    ],
+    "datasets": [
+     "QUTFish"
+    ],
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fish (Fish4Knowledge)",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 23,
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "fish (QUTFish)",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 468,
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "fish (WildFish)",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1000,
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Fish4Knowledge",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "QUTFish",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "WildFish",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "AdvFish",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "AdaFGSM",
+    "type": "other",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EfficientNet-B3",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-18",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-34",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EfficientNet-B1",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EfficientNet-B2",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Center loss",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DeepFish",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CNN+Processing",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Local ISV",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FGSM",
+    "type": "other",
+    "role": "baseline",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PGD",
+    "type": "other",
+    "role": "baseline",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "AdaPGD",
+    "type": "other",
+    "role": "baseline",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   }
+  }
+ }
+}

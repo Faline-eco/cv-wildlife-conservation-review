@@ -1,0 +1,168 @@
+{
+ "doi": "10.1111/2041-210x.70408",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "e43d4a94b91d3f4d25b99574918f14372a0b04afd1cc8eefd4b3328729da70d3",
+  "extracted_at": "2026-10-23T06:07:07.886942+00:00",
+  "cost_usd": 0.11786
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "specimen",
+   "paper_type": "application",
+   "reason": "Browser-based annotation tool with SAM2 segmentation for morphological annotation of museum specimen images from GBIF and taxonomic literature; it does not work on live wild animals.",
+   "page": 2,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 99.2,
+    "page": 2,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Specimen images retrieved from GBIF and the Zenodo Biodiversity Literature Repository (BioSysLit); museum specimens (e.g. USNM)",
+    "species": [
+     "Tetramorium kelleri"
+    ],
+    "datasets": [
+     "GBIF specimen images",
+     "Zenodo Biodiversity Literature Repository (BioSysLit)"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Tetramorium kelleri",
+    "scientific_name": "Tetramorium kelleri",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "GBIF specimen images",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 2,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Zenodo Biodiversity Literature Repository (BioSysLit)",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "SAM2",
+    "type": "foundation_model",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Contour extraction, Ramer–Douglas–Peucker simplification and Chaikin smoothing",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.5,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

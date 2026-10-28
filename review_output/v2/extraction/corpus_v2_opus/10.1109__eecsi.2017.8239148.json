@@ -1,0 +1,175 @@
+{
+ "doi": "10.1109/eecsi.2017.8239148",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "04aee28b904b0fc4e0dd0b85c1dfd64d2c732c187c44c2c053cee89d1ca224ac",
+  "extracted_at": "2026-10-25T07:09:20.571957+00:00",
+  "cost_usd": 0.090972
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a background-subtraction method to detect moving objects (the paper's motivation is counting fish around a fish caller lamp) in underwater video recorded in open water. It is not aquaculture, but the paper never says outright what the detected objects are.",
+   "page": 1,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 1,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 1,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 1,
+       "section": "introduction"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Underwater; static action camera on a tripod placed under water; recorded in the morning and afternoon in water that was not calm",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "introduction"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "introduction"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "introduction"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "adaptive background modeling with background subtraction",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "morphological closing",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,258 @@
+{
+ "doi": "10.1002/rse2.424",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "91b1140b92caa9b36fd28744d06e6df8610dc6702d6f7ef154c8a9670ba5a56f",
+  "extracted_at": "2026-10-13T15:52:48.602048+00:00",
+  "cost_usd": 0.282996
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Primary study counting wild king penguins from drone and satellite imagery. The automated count uses filtering, thresholding and clustering on a photogrammetric DSM raster derived from the drone images. The authors themselves describe the approach as 'neither manual nor computer vision-based', so inclusion is a judgement call (alternative: E-NOCV).",
+   "page": 4,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 4,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 2,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 2,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "South Georgia and the South Sandwich Islands"
+    ],
+    "location_detail": "Six king penguin colonies in South Georgia: Fortuna Bay, Gold Harbour, Right Whale Bay, Salisbury Plain, Sea Leopard Fjord, St Andrews Bay",
+    "species": [
+     "King penguin"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Satellite",
+    "spectra": [
+     {
+      "value": "Panchromatic",
+      "source": "text",
+      "page": 6,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 6,
+       "section": "body"
+      }
+     },
+     {
+      "value": "Multispectral",
+      "source": "text",
+      "page": 6,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 6,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "South Georgia and the South Sandwich Islands"
+    ],
+    "location_detail": "Sea Leopard Fjord and Salisbury Plain colonies, South Georgia",
+    "species": [
+     "King penguin"
+    ],
+    "datasets": [
+     "Maxar WorldView III satellite images"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "King penguin",
+    "scientific_name": "Aptenodytes patagonicus",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "back"
+    }
+   },
+   {
+    "name": "Maxar WorldView III satellite images",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Reconstruction",
+    "role": "auxiliary",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Semi-automated DSM count (high-pass filter and threshold binarisation)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Density-based clustering (self-adjusting)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Agisoft Metashape photogrammetry",
+    "type": "other",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "back"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

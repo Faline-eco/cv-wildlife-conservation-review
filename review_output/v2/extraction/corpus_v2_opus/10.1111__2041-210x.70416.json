@@ -1,0 +1,185 @@
+{
+ "doi": "10.1111/2041-210x.70416",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "b773240bec4d3dff828a978955f6804390a7b79e0f6ca89a17aae798f626c499",
+  "extracted_at": "2026-10-14T14:29:15.371375+00:00",
+  "cost_usd": 0.19962
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-PLANT",
+   "subject_type": "no_animals",
+   "paper_type": "method",
+   "reason": "The paper presents automated landmark detection and geometric morphometrics on Erysimum flower images (plants). No animals are analysed.",
+   "page": 4,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 4,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Not reported; Erysimum flower photographs (2048 × 1536)",
+    "species": [],
+    "datasets": [
+     "Erysimum flower landmark dataset (1190 images)",
+     "Held-out validation set (268 specimens)",
+     "COCO"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [],
+  "datasets": [
+   {
+    "name": "Erysimum flower landmark dataset (1190 images)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "back"
+    }
+   },
+   {
+    "name": "Held-out validation set (268 specimens)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.5,
+     "page": 11,
+     "section": "back"
+    }
+   },
+   {
+    "name": "COCO",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 5,
+     "section": "introduction"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Pose Estimation",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.4,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 4,
+     "section": "introduction"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv8-Medium pose",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "YOLOv8-Nano",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 4,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Generalized procrustes analysis / PCA",
+    "type": "other",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,468 @@
+{
+ "doi": "10.3389/fmars.2026.1850912",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "adb848a960b1e8d28ad28445e28fde1c5140619deafa60374499aa8fe3d1c631",
+  "extracted_at": "2026-10-14T14:56:42.065795+00:00",
+  "cost_usd": 0.332616
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "method",
+   "reason": "Computer vision pipeline (segmentation, tracking, stereo reconstruction) for fish length estimation. It is validated on post-mortem and captive fish in tanks and deployed in open-sea conditions on wild fish off Cabrera, Spain.",
+   "page": 15,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 15,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Stationary underwater camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 4,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 4,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Aquatic",
+    "countries": [],
+    "location_detail": "Water tank / controlled pool with post-mortem market fish",
+    "species": [
+     "European seabass",
+     "Atlantic mackerel",
+     "Bogue",
+     "Blue whiting"
+    ],
+    "datasets": [
+     "Dataset A"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Stationary underwater camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 4,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 4,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Aquatic",
+    "countries": [],
+    "location_detail": "Controlled pool, with collaboration of LIMIA Institute",
+    "species": [
+     "European seabass"
+    ],
+    "datasets": [
+     "Dataset B"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Stationary underwater camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 4,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 4,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Spain"
+    ],
+    "location_detail": "Coastal areas of the Spanish Mediterranean, off the coast of Cabrera; including night-time with LED lighting",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Extended underwater dataset from prior work used to fine-tune segmentation model",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "Extended underwater dataset (Muntaner-Gonzalez et al., 2025)"
+    ],
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "European seabass",
+    "scientific_name": "Dicentrarchus labrax",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Atlantic mackerel",
+    "scientific_name": "S. scombrus",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Bogue",
+    "scientific_name": "B. boops",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Blue whiting",
+    "scientific_name": "M. poutassou",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Dataset A",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Dataset B",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Extended underwater dataset (Muntaner-Gonzalez et al., 2025)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "not_stated",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Reconstruction",
+    "role": "auxiliary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv11m-seg",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "BoT-SORT",
+    "type": "other",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Semi-Global Block Matching (SGBM)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Weighted Least Squares (WLS) filter",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CLAHE",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Statistical Outlier Removal (SOR)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "HDBSCAN",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PCA",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "back"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

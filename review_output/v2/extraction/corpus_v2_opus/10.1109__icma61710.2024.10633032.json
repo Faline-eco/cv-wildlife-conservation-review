@@ -1,0 +1,244 @@
+{
+ "doi": "10.1109/icma61710.2024.10633032",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "464789e817d7a44ec9ad21ef7bd9425130389dec335916029986f187990cbe6d",
+  "extracted_at": "2026-10-12T13:03:52.867907+00:00",
+  "cost_usd": 0.132528
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "method",
+   "reason": "Pose estimation of laboratory mice in a foot fault test apparatus, trained on synthetic renders and tested on real laboratory video frames; no wild or free-ranging animals.",
+   "page": 4,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 4,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Laboratory foot fault test apparatus (wire mesh in a photography box), also replicated as a virtual environment for synthetic renders",
+    "species": [
+     "mouse"
+    ],
+    "datasets": [
+     "cgm1",
+     "cgm2",
+     "cgm2a",
+     "Test Data A",
+     "Test Data B"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "mouse",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "cgm1",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "synthetic",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "cgm2",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "synthetic",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "cgm2a",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "synthetic",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Test Data A",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "synthetic",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Test Data B",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "captive_or_lab",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "COCO",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Pose Estimation",
+    "role": "primary",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Synthesis",
+    "role": "auxiliary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv8s-Pose",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Weighted linear method (triangulation)",
+    "type": "other",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Linear method (triangulation, SVD)",
+    "type": "other",
+    "role": "baseline",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

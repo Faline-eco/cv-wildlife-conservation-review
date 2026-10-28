@@ -1,0 +1,225 @@
+{
+ "doi": "10.1016/j.cub.2026.09.018",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "f868932cade36c72cd911275ec9ced4813739cb3d92b1db10c12a4ab862eee1b",
+  "extracted_at": "2026-10-15T07:50:22.169823+00:00",
+  "cost_usd": 0.285684
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "captive_or_zoo",
+   "paper_type": "application",
+   "reason": "Drone video of captive lions attacking a mechanized lure inside a 1.3-hectare enclosure at a safari park; no wild free-ranging animals are analysed.",
+   "page": 11,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 11,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 11,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 11,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "United States"
+    ],
+    "location_detail": "1.3-hectare lion enclosure at Lion Country Safari, West Palm Beach, Florida; drone flown above 70 m AGL, nadir view",
+    "species": [
+     "Lion"
+    ],
+    "datasets": [
+     "Lion–lure world-coordinate tracking data"
+    ],
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Lion",
+    "scientific_name": "Panthera leo",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Lion–lure world-coordinate tracking data",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Tracking",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Pose Estimation",
+    "role": "auxiliary",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "SLEAP",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "RANSAC homography estimation (OpenCV)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PP + PN guidance law",
+    "type": "other",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Proportional pursuit (PP)",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Proportional navigation (PN)",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Savitzky-Golay filter with PCHIP interpolation",
+    "type": "other",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

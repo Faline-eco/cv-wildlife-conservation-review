@@ -1,0 +1,267 @@
+{
+ "doi": "10.1101/2024.02.09.579637",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "79e2fd42fec7ede6f3cccba56e35ced703c256ba32c3988bb7d2091bda9b9da0",
+  "extracted_at": "2026-10-13T05:47:48.332028+00:00",
+  "cost_usd": 0.334204
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-NOCV",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "application",
+   "reason": "Drone images of wild marine iguanas are detected and counted by online citizen-science volunteers and experts; no automated image analysis is applied. The only algorithms (DBSCAN, HDBSCAN, median, mode, vote thresholds) aggregate volunteer point marks, not pixels. Machine learning is named only as future work.",
+   "page": 9,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 9,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 6,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 6,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Ecuador"
+    ],
+    "location_detail": "Galápagos Archipelago: rocky coastline of marine iguana colonies on San Cristobal, Santa Fe, Española, Floreana, Genovesa, Marchena and Pinta islands",
+    "species": [
+     "Galápagos marine iguana",
+     "sea lions",
+     "crabs",
+     "Green Turtles",
+     "sea birds"
+    ],
+    "datasets": [
+     "Iguanas from Above (Zooniverse project images)",
+     "Gold-Standard (GS) dataset"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Galápagos marine iguana",
+    "scientific_name": "Amblyrhynchus cristatus",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "sea lions",
+    "scientific_name": "Zalophus wollebaeki",
+    "rank": "species",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "crabs",
+    "scientific_name": "Grapsus grapsus",
+    "rank": "species",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Green Turtles",
+    "scientific_name": "Chelonia mydas",
+    "rank": "species",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "sea birds",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Iguanas from Above (Zooniverse project images)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Gold-Standard (GS) dataset",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "HDBSCAN",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DBSCAN",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "majority vote",
+    "type": "other",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 26,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 26,
+     "section": "back"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

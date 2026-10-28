@@ -1,0 +1,95 @@
+{
+ "doi": "10.1098/rsos.231678",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.1319331,
+ "items": [
+  {
+   "doi": "10.1098/rsos.231678",
+   "field": "platform",
+   "value": "Non-specialized Camera",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Fixed observatory camera and ROV camera; neither is a non-specialized camera."
+  },
+  {
+   "doi": "10.1098/rsos.231678",
+   "field": "platform",
+   "value": "Autonomous Underwater Vehicle (AUV)",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Only a fixed observatory and an ROV used; AUV only mentioned generally."
+  },
+  {
+   "doi": "10.1098/rsos.231678",
+   "field": "task",
+   "value": "Segmentation",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "RootPainter segments pixels to extract sponge surface area."
+  },
+  {
+   "doi": "10.1098/rsos.231678",
+   "field": "task",
+   "value": "Detection",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Primary task is segmentation, not detection."
+  },
+  {
+   "doi": "10.1098/rsos.231678",
+   "field": "taxon_species",
+   "value": "Desmophyllum pertusum",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Target species is Mycale lingua; the coral is only background."
+  },
+  {
+   "doi": "10.1098/rsos.231678",
+   "field": "taxon_genus",
+   "value": "Desmophyllum",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Desmophyllum is not a studied target; sponges are analysed."
+  },
+  {
+   "doi": "10.1098/rsos.231678",
+   "field": "taxon_class",
+   "value": "Anthozoa",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Analysed animals are sponges (Demospongiae); corals are not analysed."
+  },
+  {
+   "doi": "10.1098/rsos.231678",
+   "field": "algorithm",
+   "value": "U-Net",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "RootPainter uses a U-Net variant."
+  },
+  {
+   "doi": "10.1098/rsos.231678",
+   "field": "algorithm",
+   "value": "roofpainter",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "RootPainter is the tool used."
+  },
+  {
+   "doi": "10.1098/rsos.231678",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors' team collected ROV video; observatory images were also obtained for the study."
+  },
+  {
+   "doi": "10.1098/rsos.231678",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Data are their own observatory/ROV images, not a named public benchmark."
+  }
+ ]
+}

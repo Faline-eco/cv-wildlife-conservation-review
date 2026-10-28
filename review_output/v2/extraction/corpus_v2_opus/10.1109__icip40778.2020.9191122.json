@@ -1,0 +1,329 @@
+{
+ "doi": "10.1109/icip40778.2020.9191122",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "79c551ef9f67c7f9474f5cfdec9098dee760a3b5bd5149c08aeb0eba3fee1a04",
+  "extracted_at": "2026-10-12T13:02:36.706839+00:00",
+  "cost_usd": 0.110404
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-GENERIC",
+   "subject_type": "mixed",
+   "paper_type": "method",
+   "reason": "Generic weakly supervised localization/counting method evaluated on dense-scene benchmarks (pedestrians, vehicles, mall crowd, penguins); wildlife is not the stated subject or application, penguins appear only as one benchmark dataset.",
+   "page": 3,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 3,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Antarctica",
+    "species": [
+     "penguins"
+    ],
+    "datasets": [
+     "Penguins"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Pedestrian walkway",
+    "species": [],
+    "datasets": [
+     "UCSD"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Roads (traffic surveillance)",
+    "species": [],
+    "datasets": [
+     "Trancos"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Shopping mall",
+    "species": [],
+    "datasets": [
+     "Mall"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "penguins",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "benchmark_class",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Penguins",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "UCSD",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Trancos",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Mall",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "LOOC",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "LC-FCN",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "selective search",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "non-maximum suppression",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "TopK",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Glance",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

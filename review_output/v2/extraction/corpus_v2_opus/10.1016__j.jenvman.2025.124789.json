@@ -1,0 +1,246 @@
+{
+ "doi": "10.1016/j.jenvman.2025.124789",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "3f08c9904f2b64fe88749f8a5f282050872aa6957c9a6dbf67babf933c662e6e",
+  "extracted_at": "2026-10-25T06:56:29.918873+00:00",
+  "cost_usd": 0.192652
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Field study that combines drone imagery, in which image recognition locates burrow entrances of wild plateau pikas, with GPR to reconstruct burrow systems in 3D. Burrows count as direct signs of animals. The computer-vision part is small and borderline, but drone images are analysed.",
+   "page": 4,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 4,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 4,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 4,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Grassland",
+    "countries": [
+     "China"
+    ],
+    "location_detail": "Zoige County, Sichuan Province, eastern edge of the Qinghai-Tibetan Plateau; moderately and severely degraded alpine grasslands, ~3420 m a.s.l.",
+    "species": [
+     "Plateau pika"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Other",
+    "spectra": [
+     {
+      "value": "Radar / Synthetic-Aperture Radar (SAR)",
+      "source": "text",
+      "page": 3,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 3,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Grassland",
+    "countries": [
+     "China"
+    ],
+    "location_detail": "10 x 10 m GPR sampling sites in MDM and SDM grasslands, Zoige County, Sichuan",
+    "species": [
+     "Plateau pika"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Plateau pika",
+    "scientific_name": "Ochotona curzoniae",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.0,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "field_deployment",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "back"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Reconstruction",
+    "role": "primary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "auxiliary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Pika burrow trajectory searching method",
+    "type": "other",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Wavelet transform denoising",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Threshold-based defect identification",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Image recognition software",
+    "type": "other",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

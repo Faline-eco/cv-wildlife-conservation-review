@@ -1,0 +1,237 @@
+{
+ "doi": "10.7717/peerj.12413",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "4c9055a2b6cecb6dfc4811b266e863362a057944441409b7dc8b72a303cb400c",
+  "extracted_at": "2026-10-13T21:25:11.947037+00:00",
+  "cost_usd": 0.206188
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "application",
+   "reason": "Primary study applying supervised pixel classification to satellite imagery to map live coral cover (corals are wild animals) on natural reefs. Borderline with benthic habitat mapping, but live coral is the stated subject.",
+   "page": 7,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 7,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Satellite",
+    "spectra": [
+     {
+      "value": "Multispectral",
+      "source": "text",
+      "page": 3,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 3,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Viet Nam"
+    ],
+    "location_detail": "Son Tra Peninsula and Cu Lao Cham Island, South-Central Coast; shallow fringing reefs",
+    "species": [
+     "corals"
+    ],
+    "datasets": [
+     "Planetscope imagery"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 4,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 4,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Viet Nam"
+    ],
+    "location_detail": "Son Tra Peninsula and Cu Lao Cham Island; diver-taken underwater quadrat photographs and 360 video transects used as ground truth",
+    "species": [
+     "corals"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "corals",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Planetscope imagery",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Maximum Likelihood Classifier",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Sun glint correction (deglinting)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Lyzenga water column correction (depth-invariant index)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "3x3 focal majority filter",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

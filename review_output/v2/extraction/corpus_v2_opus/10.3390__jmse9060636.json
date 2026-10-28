@@ -1,0 +1,358 @@
+{
+ "doi": "10.3390/jmse9060636",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "7256ce0cfb82a42c37007fb6549b7a2a62e82a8608a6cddd9e8865cb6fed8899",
+  "extracted_at": "2026-10-25T08:40:18.494962+00:00",
+  "cost_usd": 0.190792
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a CycleGAN augmentation plus densely connected YOLOv3 for detecting and classifying marine plankton taxa in images from the WHOI-Plankton dataset (Imaging FlowCytobot). Borderline: the analysed taxa are mostly phytoplankton/protists.",
+   "page": 1,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 1,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "WHOI-Plankton dataset imaged with an Imaging FlowCytobot (IFCB) by Woods Hole Oceanographic Institution since 2006; exact location not stated",
+    "species": [
+     "Cerataulina",
+     "Cylindrotheca",
+     "Dino30",
+     "Dinobryon",
+     "Guinardia delicatula",
+     "Guinardia striata",
+     "Pennate",
+     "Prorocentrum"
+    ],
+    "datasets": [
+     "WHOI-Plankton"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Cerataulina",
+    "scientific_name": "Cerataulina",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Cylindrotheca",
+    "scientific_name": "Cylindrotheca",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Dino30",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Dinobryon",
+    "scientific_name": "Dinobryon",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Guinardia delicatula",
+    "scientific_name": "Guinardia delicatula",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Guinardia striata",
+    "scientific_name": "Guinardia striata",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Pennate",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Prorocentrum",
+    "scientific_name": "Prorocentrum",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "WHOI-Plankton",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Synthesis",
+    "role": "auxiliary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOV3-dense",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CycleGAN",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DenseNet",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Darknet-53",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOV3",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOV3-tiny",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Faster RCNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-101",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

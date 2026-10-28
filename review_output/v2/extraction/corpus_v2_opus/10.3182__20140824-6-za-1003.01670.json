@@ -1,0 +1,225 @@
+{
+ "doi": "10.3182/20140824-6-za-1003.01670",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "4c8e67113dd046873dd67455f9c147b9cbeaaf380ed93c191d697d9305e49616",
+  "extracted_at": "2026-10-25T14:06:46.555655+00:00",
+  "cost_usd": 0.175984
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-NOCV",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "other",
+   "reason": "Wild bats were filmed with thermal cameras, but a technician annotated their positions by hand and the 3D tracks came from camera calibration (DLT). The paper's contribution is analysing flight trajectories and a control-theoretic steering law; it develops or evaluates no automated computer vision on the animal images.",
+   "page": 4,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 4,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "Long-wave Infrared / Thermal (LWIR)",
+      "source": "text",
+      "page": 3,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 3,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Forest",
+    "countries": [
+     "United States"
+    ],
+    "location_detail": "Bamberger Ranch Preserve near Johnson City, Texas; flight corridor along a forest fragment margin over a paved ranch road, near an artificial cave roost",
+    "species": [
+     "Cave myotis"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Cave myotis",
+    "scientific_name": "Myotis velifer",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Reconstruction",
+    "role": "primary",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Virtual loom based steering law",
+    "type": "other",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Direct linear transformation (DLT)",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Cubic spline smoothing",
+    "type": "other",
+    "role": "backbone",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "back"
+    }
+   },
+   {
+    "name": "FREAK",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Lucas-Kanade optical flow",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Classical pursuit / constant bearing / motion camouflage",
+    "type": "other",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

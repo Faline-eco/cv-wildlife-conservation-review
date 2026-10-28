@@ -1,0 +1,346 @@
+{
+ "doi": "10.1007/s10015-022-00837-9",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "888121a68ea659b33bbedcccd970ee9552bdfb7d861c195578dea68accfd2204",
+  "extracted_at": "2026-10-13T16:00:34.182349+00:00",
+  "cost_usd": 0.183344
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Develops a deep-learning detection and tracking system for free-ranging Japanese macaques filmed in their natural forest habitat.",
+   "page": 6,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 6,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [],
+    "habitat": "Forest",
+    "countries": [
+     "Japan"
+    ],
+    "location_detail": "Kinkazan island, Miyagi, northeastern side of mainland Honshu",
+    "species": [
+     "Japanese macaque"
+    ],
+    "datasets": [
+     "Kinkazan"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 6,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 6,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Not reported",
+    "species": [
+     "Japanese macaque"
+    ],
+    "datasets": [
+     "Youtube"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Not reported",
+    "species": [
+     "Japanese macaque",
+     "rhesus macaque"
+    ],
+    "datasets": [
+     "MacaquePose"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Japanese macaque",
+    "scientific_name": "Macaca fuscata",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "not_found",
+     "score": 76.8,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "rhesus macaque",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Kinkazan",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Youtube",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "web_scraped",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MacaquePose",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MS COCO",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Tracking",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv4-S+M (YOLOv4 with SAM and Mish)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "YOLOv4-B",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "YOLOv4-M",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "YOLOv4-S",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "CSPDarknet-53",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "SuperGlue",
+    "type": "other",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Murty's algorithm",
+    "type": "other",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Curriculum learning (3-stage)",
+    "type": "other",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "introduction"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

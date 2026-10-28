@@ -1,0 +1,353 @@
+{
+ "doi": "10.1109/icassp55912.2026.11465102",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "063d39ba1987d231eb1fd8c79b789960d5d4c050f6f324f0ae1714a56c75d15b",
+  "extracted_at": "2026-10-15T08:16:16.559114+00:00",
+  "cost_usd": 0.129244
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "captive_or_zoo",
+   "paper_type": "method",
+   "reason": "Diffusion-based image synthesis for individual identification. The authors' own dataset shows red pandas in captivity. The paper does not say where the iPanda-50 giant panda images come from, so no data is stated to show wild animals.",
+   "page": 3,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 3,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Red pandas in captivity; place not stated",
+    "species": [
+     "Red panda"
+    ],
+    "datasets": [
+     "RedPanda-43"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Not reported",
+    "species": [
+     "Giant panda"
+    ],
+    "datasets": [
+     "iPanda-50"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.4,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Red panda",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Giant panda",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.4,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "RedPanda-43",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "captive_or_lab",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "iPanda-50",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.4,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Synthesis",
+    "role": "primary",
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "abstract"
+    }
+   },
+   {
+    "task": "Re-Identification",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Pose Estimation",
+    "role": "auxiliary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "CDiff",
+    "type": "other",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "VQGAN (LDM vq-f4)",
+    "type": "other",
+    "role": "backbone",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Segment Anything Model (SAM)",
+    "type": "foundation_model",
+    "role": "backbone",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "LaMa",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DenseNet-121",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "HRNet-32",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EfficientNet",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Swin",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 4,
+     "section": null
+    }
+   },
+   {
+    "name": "IDiff-Face",
+    "type": "other",
+    "role": "baseline",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "IPAIG",
+    "type": "other",
+    "role": "baseline",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "LDM",
+    "type": "other",
+    "role": "baseline",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  }
+ }
+}

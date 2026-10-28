@@ -1,0 +1,238 @@
+{
+ "doi": "10.1111/2041-210x.13844",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "e4be0f5070836f784b072d1fc61fe77da4af7e11cefa47b3e7d21e4f117f105a",
+  "extracted_at": "2026-10-22T15:51:55.362358+00:00",
+  "cost_usd": 0.217296
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "specimen",
+   "paper_type": "application",
+   "reason": "Computer vision is applied to digitised images of pinned museum specimens (NHM iCollections), not to live wild animals; museum specimens are excluded under E-CAPTIVE.",
+   "page": 2,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 97.2,
+    "page": 2,
+    "section": "abstract"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "United Kingdom"
+    ],
+    "location_detail": "Natural History Museum (London) digitised collection of British butterfly specimens collected 1803-2006 on Great Britain",
+    "species": [
+     "butterflies"
+    ],
+    "datasets": [
+     "NHM iCollections",
+     "ImageNet"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.8,
+     "page": 8,
+     "section": "introduction"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "butterflies",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 60,
+    "page": 15,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.1,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "NHM iCollections",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.0,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.5,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.1,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Mothra",
+    "type": "other",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.6,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "U-Net",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.5,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-34",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.5,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Otsu threshold",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "not_found",
+     "score": 87.6,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Fast Fourier Transform",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.2,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

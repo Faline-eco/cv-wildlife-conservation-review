@@ -1,0 +1,71 @@
+{
+ "doi": "10.1109/cvpr52729.2023.02038",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0821009,
+ "items": [
+  {
+   "doi": "10.1109/cvpr52729.2023.02038",
+   "field": "habitat",
+   "value": "Artificial Aquatic",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Indoor mo-cap lab enclosure, not farm/zoo/aquaculture; not aquatic; pigeons walking on jute fabric."
+  },
+  {
+   "doi": "10.1109/cvpr52729.2023.02038",
+   "field": "country",
+   "value": "Germany",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Konstanz University/Max Planck facility; German ethics license; Germany."
+  },
+  {
+   "doi": "10.1109/cvpr52729.2023.02038",
+   "field": "task",
+   "value": "Tracking",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Dataset for 2D-3D tracking of birds; tracking is central task."
+  },
+  {
+   "doi": "10.1109/cvpr52729.2023.02038",
+   "field": "algorithm",
+   "value": "DeepLabCut",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "DLC 2D keypoint models trained and used."
+  },
+  {
+   "doi": "10.1109/cvpr52729.2023.02038",
+   "field": "algorithm",
+   "value": "bundle adjustment",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Sparse bundle adjustment used for triangulation."
+  },
+  {
+   "doi": "10.1109/cvpr52729.2023.02038",
+   "field": "algorithm",
+   "value": "outlier detection",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "GESD outlier analysis used to filter annotations."
+  },
+  {
+   "doi": "10.1109/cvpr52729.2023.02038",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "unclear",
+   "reason": "Vague; paper trains DLC models, no clearly novel proposed architecture."
+  },
+  {
+   "doi": "10.1109/cvpr52729.2023.02038",
+   "field": "algorithm",
+   "value": "dlcmodel",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "'dlcmodel' is ambiguous; duplicate of DeepLabCut, not a distinct family."
+  }
+ ]
+}

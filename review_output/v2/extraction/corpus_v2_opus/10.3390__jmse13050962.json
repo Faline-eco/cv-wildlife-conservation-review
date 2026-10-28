@@ -1,0 +1,289 @@
+{
+ "doi": "10.3390/jmse13050962",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "914369e8798c6a35903bff5ff2d3d2c1bf4f5b77f4339ad3885c6291d8673efe",
+  "extracted_at": "2026-10-15T09:29:53.738300+00:00",
+  "cost_usd": 0.246284
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "captive_or_zoo",
+   "paper_type": "method",
+   "reason": "All analysed video comes from cameras mounted above dolphin pools at an ocean park, so only captive animals are studied.",
+   "page": 8,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 8,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 10,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 10,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Aquatic",
+    "countries": [
+     "Taiwan"
+    ],
+    "location_detail": "Dolphin pools at Farglory Ocean Park, Hualien; overhead fixed network cameras",
+    "species": [
+     "dolphins",
+     "sea lion"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "dolphins",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "sea lion",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "captive_or_lab",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Activity Recognition",
+    "role": "primary",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Pose Estimation",
+    "role": "auxiliary",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "DA-EWC",
+    "type": "other",
+    "role": "proposed",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "BiLSTM",
+    "type": "other",
+    "role": "proposed",
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DeepLabCut",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Navier–Stokes-based inpainting, gamma correction and CLAHE",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Standard EWC",
+    "type": "other",
+    "role": "baseline",
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Compressive Tracking",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "body"
+    }
+   },
+   {
+    "name": "OpenPose",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Faster R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ADD-LSTM",
+    "type": "other",
+    "role": "baseline",
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

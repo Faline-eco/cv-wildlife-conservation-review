@@ -1,0 +1,210 @@
+{
+ "doi": "10.1101/2024.02.21.581483",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "d5c92984a7c64ef312494b0d52b0ffb25639e4fbc34b62acdbe5c7fe2622d77a",
+  "extracted_at": "2026-10-12T12:21:03.415344+00:00",
+  "cost_usd": 0.232412
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "application",
+   "reason": "Laboratory-housed naked mole-rat colonies recorded in an open field arena and tube test; pose tracking and behaviour segmentation applied to laboratory animals, no wild or free-ranging animals.",
+   "page": 15,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 15,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "Grayscale",
+      "source": "text",
+      "page": 17,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 17,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Indoor laboratory open field arena (circular tank with black sand), tube test and social preference chamber; climate-controlled room, Columbia University",
+    "species": [
+     "Naked mole-rat"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Naked mole-rat",
+    "scientific_name": "Heterocephalus glaber",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "captive_or_lab",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "back"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Pose Estimation",
+    "role": "auxiliary",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Activity Recognition",
+    "role": "primary",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "SLEAP",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "keypoint-MoSeq",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ANY-maze",
+    "type": "other",
+    "role": "proposed",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "elastic net regression",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

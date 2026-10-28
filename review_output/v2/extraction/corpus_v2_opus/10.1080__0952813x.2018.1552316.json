@@ -1,0 +1,273 @@
+{
+ "doi": "10.1080/0952813x.2018.1552316",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "04ab7419bf37e4a4303443691e3d4700c4948874e45c951b7a80495b988974fd",
+  "extracted_at": "2026-10-13T16:28:10.879555+00:00",
+  "cost_usd": 0.2023
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "captive_or_zoo",
+   "paper_type": "method",
+   "reason": "Elephant images E1-E4 were taken in elephant camps with keepers placing the animals inside the sensor unit; the only other data are 604 images from unspecified net sources. No wild or free-ranging animals are stated in the analysed data, although the intended application is human-elephant conflict.",
+   "page": 11,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 11,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Camera Trap",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "India"
+    ],
+    "location_detail": "Elephant camps at Hosur, Bannerghatta, Shimoga (Sakrebailu) and Dubare; Tamil Nadu and Karnataka forest borders; test bed at Dubarey Elephant Camp",
+    "species": [
+     "Elephants"
+    ],
+    "datasets": [
+     "Elephant dataset (E1-E4)",
+     "Background dataset"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 11,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 11,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Not reported",
+    "species": [
+     "Elephants"
+    ],
+    "datasets": [
+     "E5 (Net Sources)"
+    ],
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Elephants",
+    "scientific_name": "",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Elephant dataset (E1-E4)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "captive_or_lab",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "E5 (Net Sources)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "web_scraped",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Background dataset",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "BSDL (Boundary Sense Deep Learning)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Background subtraction",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "VGG16",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "GoogLenet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

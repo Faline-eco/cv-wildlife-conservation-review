@@ -1,0 +1,421 @@
+{
+ "doi": "10.1007/s11263-016-0939-9",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "34ec375218cd718998fa0f4dd19621c3a63286b4ced4313ee924821e963ea953",
+  "extracted_at": "2026-10-13T05:41:25.145705+00:00",
+  "cost_usd": 0.39466
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "method",
+   "reason": "Computer vision method (behavior discovery and spatial alignment) on animal video: tigers from documentaries plus domestic horses and dogs from YouTube. Borderline: the paper is framed around generic articulated object classes and never states whether the tigers are wild or captive.",
+   "page": 13,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 13,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 13,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 13,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "National Geographic documentary footage filmed by professionals; location not stated",
+    "species": [
+     "tiger"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 13,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 13,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Amateur YouTube videos; location not stated",
+    "species": [
+     "horse",
+     "dog"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)",
+     "YouTube-objects"
+    ],
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "tiger",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "horse",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "dog",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YouTube-objects",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "KTH",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Activity Recognition",
+    "role": "primary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Pairs of trajectories (PoTs) descriptor",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Temporal thin plate splines (TTPS)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Homography from trajectory matches (TM) with RANSAC",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Hierarchical clustering with complete-linkage",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "k-means codebook (bag-of-words)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "TPS-RPM",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Fast video segmentation (Papazoglou and Ferrari 2013)",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Edge detector (Dollar and Zitnick 2013)",
+    "type": "classical_machine_learning",
+    "role": "backbone",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "R-CNN person detector",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "IDTFs (improved dense trajectory features)",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SIFT Flow",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SIFT matching with homography",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "HOG",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

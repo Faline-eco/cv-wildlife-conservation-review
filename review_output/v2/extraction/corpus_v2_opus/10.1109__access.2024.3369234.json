@@ -1,0 +1,372 @@
+{
+ "doi": "10.1109/access.2024.3369234",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "3c68158962cf8d2299eea4524b30ac7fea6ac4e9ea79af7f6c9509b98f61fa0e",
+  "extracted_at": "2026-10-24T10:20:03.926125+00:00",
+  "cost_usd": 0.232264
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes GAN/diffusion-based generative models to synthesise images of sea anemones (wild marine animals), trained on underwater images from EUVP field data and web sources.",
+   "page": 7,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 7,
+    "section": "related"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 8,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 8,
+       "section": "related"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Underwater anemone images from Flickr and YouTube",
+    "species": [
+     "sea anemones",
+     "clownfish"
+    ],
+    "datasets": [
+     "SA datasets (sea anemone datasets)"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "related"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Images selected from the public EUVP underwater dataset",
+    "species": [
+     "sea anemones"
+    ],
+    "datasets": [
+     "SA datasets (sea anemone datasets)",
+     "EUVP"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "not_found",
+     "score": 86.8,
+     "page": 8,
+     "section": "related"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Existing small-scale fish datasets, source not described",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "Unnamed small-scale fish datasets"
+    ],
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "sea anemones",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "related"
+    }
+   },
+   {
+    "name": "clownfish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "related"
+    }
+   },
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "SA datasets (sea anemone datasets)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "mixed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "related"
+    }
+   },
+   {
+    "name": "EUVP",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "related"
+    }
+   },
+   {
+    "name": "Unnamed small-scale fish datasets",
+    "role": "public_wildlife_dataset",
+    "availability": "not_stated",
+    "origin": "not_stated",
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Synthesis",
+    "role": "primary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "DWBG-Stylegan2",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DWBG-Stylegan2-ADA",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Diffusion-Stylegan2-R2",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "WBG-Stylegan2",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DWBG-Stylegan2-R2",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DWBG-Stylegan2-GP",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Diffusion-Stylegan2",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Stylegan2",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "GAN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Stylegan2-ADA",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Diffusion-Stylegan2-ADA",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

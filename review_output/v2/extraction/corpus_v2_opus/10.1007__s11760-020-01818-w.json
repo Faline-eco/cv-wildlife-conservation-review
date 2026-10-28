@@ -1,0 +1,281 @@
+{
+ "doi": "10.1007/s11760-020-01818-w",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "71e54140c9b23c0a7c4550a06d448066ff91dd6ca51ecbcd2cbd14f4a4450bed",
+  "extracted_at": "2026-10-14T14:03:08.862744+00:00",
+  "cost_usd": 0.15552
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a CNN detector (M-ResNet) for detecting fish in underwater video, using the public Fish4Knowledge dataset and the authors' own underwater-drone footage.",
+   "page": 5,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 5,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Fish4Knowledge Ground-Truth dataset; 17 videos under different environmental conditions",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "Fish4 Knowledge Ground-Truth dataset (F4K dataset)"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Remotely operated underwater vehicle (ROV)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 6,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 6,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "8 underwater fish videos, each covering a different underwater environment",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.8,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Fish4 Knowledge Ground-Truth dataset (F4K dataset)",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "M-ResNet",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.7,
+     "page": 3,
+     "section": "related"
+    }
+   },
+   {
+    "name": "ResNet-50/101/152",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Feature pyramid network (FPN)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.4,
+     "page": 3,
+     "section": "related"
+    }
+   },
+   {
+    "name": "GAN (image correction)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "related"
+    }
+   },
+   {
+    "name": "YOLOv4",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv3",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SSD300",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Faster R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Deep R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,310 @@
+{
+ "doi": "10.1016/j.atech.2025.101149",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "d3cd3482467e39be73a2e626ded1ba0cf48517f5bf7b866d9b5dee977730f67a",
+  "extracted_at": "2026-10-25T06:52:08.547774+00:00",
+  "cost_usd": 0.206436
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Applies deep-learning object detection to UAV images of burrows (holes) and bare patches made by wild plateau pikas in alpine meadows. Burrows are direct signs of wild animals.",
+   "page": 2,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 2,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 2,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 2,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Grassland",
+    "countries": [
+     "China"
+    ],
+    "location_detail": "Maqu County, Ruoergai County and Henan County, eastern Qingzang Plateau; alpine meadows; flight altitude 20 m; images taken in May, June and July",
+    "species": [
+     "Plateau pika"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Plateau pika",
+    "scientific_name": "Ochotona curzoniae",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "field_deployment",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "GS-YOLO",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.3,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv5s",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "GAM",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Focal-EIOU",
+    "type": "other",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "K-means clustering",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv5n",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv7-tiny",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOX",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv9",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Faster R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "RetinaNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SSD300",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv5s-CBAM",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv5s-SE",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

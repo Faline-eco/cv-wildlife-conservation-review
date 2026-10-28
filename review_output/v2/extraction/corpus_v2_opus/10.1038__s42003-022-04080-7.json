@@ -1,0 +1,249 @@
+{
+ "doi": "10.1038/s42003-022-04080-7",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "5ca1626ff12235e7016ff456ac98855368dc635f2d0abd51905e615115b454c4",
+  "extracted_at": "2026-10-12T11:55:39.787911+00:00",
+  "cost_usd": 0.323536
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "method",
+   "reason": "Unsupervised behaviour segmentation method demonstrated on transgenic and wildtype laboratory mice filmed in an open-field arena; no wild or free-ranging animals.",
+   "page": 12,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 12,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "Near Infrared (NIR)",
+      "source": "text",
+      "page": 12,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 12,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "Germany"
+    ],
+    "location_detail": "Indoor laboratory open-field arena (circular plexiglas arena, camera fixed 35 cm below); procedures approved by the state government of North Rhine-Westphalia",
+    "species": [
+     "mouse"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "mouse",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "back"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Activity Recognition",
+    "role": "primary",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Pose Estimation",
+    "role": "auxiliary",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "VAME",
+    "type": "other",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Hidden-Markov-Model (HMM)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DeepLabCut",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "AR-HMM",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MotionMapper",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "k-means",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "gaussian emission HMM",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

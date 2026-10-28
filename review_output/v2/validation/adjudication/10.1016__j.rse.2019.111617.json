@@ -1,0 +1,103 @@
+{
+ "doi": "10.1016/j.rse.2019.111617",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0724709,
+ "items": [
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "country",
+   "value": "Antarctic",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Imagery is of the Antarctic coastline and pack ice."
+  },
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "taxon_species",
+   "value": "Aptenodytes forsteri",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Emperor penguins are annotated as training classes, but the target is seals."
+  },
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "taxon_species",
+   "value": "Leptonychotes weddellii",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Weddell seals on fast ice are a training class and detection target."
+  },
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "taxon_species",
+   "value": "Lobodon carcinophaga",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Crabeater seals are the main target on pack ice."
+  },
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "taxon_genus",
+   "value": "Aptenodytes",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Emperor penguins are only a background/non-target class, not a studied species."
+  },
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "taxon_genus",
+   "value": "Leptonychotes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Weddell seals (Leptonychotes) are studied."
+  },
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "taxon_genus",
+   "value": "Lobodon",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Crabeater seals (Lobodon) are studied."
+  },
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "taxon_class",
+   "value": "Aves",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Emperor penguins appear only as non-target training classes; target animals are seals (Mammalia)."
+  },
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "algorithm",
+   "value": "Wide ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "WideResNet architecture is used for the counting branch."
+  },
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "algorithm",
+   "value": "resenet",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "ResNet family (WideResNet) is used; 'resenet' is a typo."
+  },
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors annotated WV03 imagery themselves, although the imagery is commercial."
+  },
+  {
+   "doi": "10.1016/j.rse.2019.111617",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "They built their own training set; no public named dataset is used."
+  }
+ ]
+}

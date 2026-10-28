@@ -1,0 +1,270 @@
+{
+ "doi": "10.1016/j.ecoinf.2020.101121",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "b6da15b549c027243abfab2fca019d77756a0a86ed33639851d76734cb6db65b",
+  "extracted_at": "2026-10-22T07:14:13.381870+00:00",
+  "cost_usd": 0.17148
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a deep learning instance segmentation framework for fish in underwater videos of marine environments (Fish4Knowledge and YouTube videos of seas/oceans).",
+   "page": 2,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 2,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Fish4Knowledge underwater videos of the marine ecosystem; location not stated",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "Fish4Knowledge"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "YouTube underwater videos depicting seas, oceans or marine complexes",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "YouTube underwater videos"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Fish4Knowledge",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "YouTube underwater videos",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "web_scraped",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Improved ResNet",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Improved RPN / Faster R-CNN",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Modified FCN",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Constant luminance method with sharpness correction",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Mask R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLACT",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CASCADE R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet101",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

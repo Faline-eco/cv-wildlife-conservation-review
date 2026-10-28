@@ -1,0 +1,203 @@
+{
+ "doi": "10.1111/eea.70163",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "7f4434ca79baec5149b5f002554cf19cdfe1aed6580eb1500ca6d609f14a9e92",
+  "extracted_at": "2026-10-24T10:27:02.313792+00:00",
+  "cost_usd": 0.220432
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-AGRI",
+   "subject_type": "livestock_or_pet",
+   "paper_type": "application",
+   "reason": "Wing images of honeybees sampled from managed beekeeping colonies and imaged under a stereomicroscope; beekeeping falls under E-AGRI, and the data includes no wild free-ranging animals.",
+   "page": 16,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 99.0,
+    "page": 16,
+    "section": "back"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 3,
+      "evidence": {
+       "status": "fuzzy",
+       "score": 99.4,
+       "page": 3,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "Turkey"
+    ],
+    "location_detail": "Right forewings from bees collected in seven Turkish provinces (Ankara, Ardahan, Artvin, Bitlis, Hatay, Kırklareli, Muğla), mounted on slides and imaged under a stereomicroscope",
+    "species": [
+     "Western honeybee"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Western honeybee",
+    "scientific_name": "Apis mellifera",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "captive_or_lab",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "back"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "EfficientNetB0",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.2,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet34",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.5,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DenseNet121",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.4,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MobileNetV3-Small",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 16,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.7,
+     "page": 16,
+     "section": "back"
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.5,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  }
+ }
+}

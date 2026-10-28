@@ -1,0 +1,452 @@
+{
+ "doi": "10.1016/j.asoc.2026.116036",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "f9ffdf6f5b7aff16bc4347eff9fe305320cb9cebedcbed08f06c3b590f9cd87f",
+  "extracted_at": "2026-10-25T06:51:50.520840+00:00",
+  "cost_usd": 0.334512
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a CNN-based detector (HPW-YOLO) for underwater seafood/benthic organisms (sea cucumber, scallop, sea urchin, starfish) in real seabed images from URPC and RUOD. The paper never says these animals are farmed, so they are coded as free-ranging marine animals.",
+   "page": 7,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 99.4,
+    "page": 7,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "URPC underwater robot target grasping competition dataset; seabed scenes",
+    "species": [
+     "sea cucumber",
+     "scallop",
+     "sea urchin",
+     "starfish"
+    ],
+    "datasets": [
+     "URPC"
+    ],
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.3,
+     "page": 7,
+     "section": "front"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "RUOD real underwater scenes; location not stated",
+    "species": [
+     "underwater biological targets"
+    ],
+    "datasets": [
+     "RUOD"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "front"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Offshore areas of the Sea of Japan",
+    "species": [
+     "underwater biological targets (TrashCan)"
+    ],
+    "datasets": [
+     "TrashCan"
+    ],
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 13,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "sea cucumber",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.7,
+     "page": 7,
+     "section": "front"
+    }
+   },
+   {
+    "name": "scallop",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.7,
+     "page": 7,
+     "section": "front"
+    }
+   },
+   {
+    "name": "sea urchin",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.7,
+     "page": 7,
+     "section": "front"
+    }
+   },
+   {
+    "name": "starfish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.7,
+     "page": 7,
+     "section": "front"
+    }
+   },
+   {
+    "name": "underwater biological targets",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "front"
+    }
+   },
+   {
+    "name": "underwater biological targets (TrashCan)",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "benchmark_class",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 13,
+     "section": "front"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "URPC",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "front"
+    }
+   },
+   {
+    "name": "RUOD",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "front"
+    }
+   },
+   {
+    "name": "TrashCan",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 13,
+     "section": "front"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "HPW-YOLO",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "YOLOv10s",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Parallel Perception Enhancement Module (MHSA + CGLU)",
+    "type": "transformer",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.4,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Sobel operator",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Haar wavelet transform (WDFM)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 6,
+     "section": "front"
+    }
+   },
+   {
+    "name": "YOLOv12s",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "name": "YOLOv9s",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "name": "YOLOv8s",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "name": "YOLOv5s",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Faster R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "name": "SSD",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "name": "DETR",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "front"
+    }
+   },
+   {
+    "name": "RT-DETR",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Swin Transformer",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "name": "EfficientDet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

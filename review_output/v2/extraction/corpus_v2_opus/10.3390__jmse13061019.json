@@ -1,0 +1,384 @@
+{
+ "doi": "10.3390/jmse13061019",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "8f014a5b4b86938f5f44209cbb49d0aeb06144e2fa56dc457e9a387afe3c6621",
+  "extracted_at": "2026-10-25T08:39:28.787767+00:00",
+  "cost_usd": 0.281428
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a lightweight CNN for fish species classification and evaluates it on underwater images of wild reef fish from Fish4Knowledge (Taiwan).",
+   "page": 5,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 5,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 10,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 10,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Taiwan"
+    ],
+    "location_detail": "Underwater video from Fish4Knowledge project; Kenting National Park; coral environments",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "Fish4Knowledge"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 10,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 10,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "ImageNet-1K generic benchmark",
+    "species": [
+     "hammerhead shark"
+    ],
+    "datasets": [
+     "ImageNet-1K"
+    ],
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 23,
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "hammerhead shark",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "benchmark_class",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 21,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 21,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Fish4Knowledge",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet-1K",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 90.7,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "X-ray dataset",
+    "role": "generic_benchmark",
+    "availability": "not_stated",
+    "origin": "not_stated",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Strawberry dataset",
+    "role": "generic_benchmark",
+    "availability": "not_stated",
+    "origin": "not_stated",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "LatentResNet",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "LiteAE",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DeepResNet block",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "VGG16",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MobileNetV3",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "GhostNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MicroNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "TinyNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FishNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CNN-SENet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ConvFishNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MobileNetV2 (knowledge distillation)",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Score-CAM",
+    "type": "other",
+    "role": "proposed",
+    "page": 21,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 21,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 21,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 21,
+     "section": "body"
+    }
+   }
+  }
+ }
+}

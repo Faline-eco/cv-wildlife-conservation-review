@@ -1,0 +1,194 @@
+{
+ "doi": "10.1049/joe.2019.0041",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "3630e6289f03d453b0355bb827d159c45bba31e06bb2c37ccc4811fd5b64ab91",
+  "extracted_at": "2026-10-24T10:12:00.996746+00:00",
+  "cost_usd": 0.128736
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Applies a fully convolutional network to segment biological echoes (wild migrating birds and insects) from weather echoes in weather radar images. This counts as image-based computer vision on free-ranging animals.",
+   "page": 1,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 1,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [
+     {
+      "value": "Radar / Synthetic-Aperture Radar (SAR)",
+      "source": "text",
+      "page": 1,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 1,
+       "section": "front"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "China"
+    ],
+    "location_detail": "Weather radar station in Yantai, Shandong province; 200 km radius around the station; autumn 2012",
+    "species": [
+     "birds",
+     "insects"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "birds",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   },
+   {
+    "name": "insects",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "FCN-32s",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "VGG16",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "region growing",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

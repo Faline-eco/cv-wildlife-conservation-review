@@ -1,0 +1,269 @@
+{
+ "doi": "10.1016/j.rsma.2026.105049",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "99fc311ec335cb73868645b409f52367f2ebc8b616f4d082f9b8fab00fa58436",
+  "extracted_at": "2026-10-25T06:59:56.951665+00:00",
+  "cost_usd": 0.2295
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "application",
+   "reason": "Applies YOLOv5 to footage from an unmanned underwater camera to detect, classify and count wild reef fish in a marine protected area.",
+   "page": 8,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 8,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Stationary underwater camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 5,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 5,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Taiwan"
+    ],
+    "location_detail": "Wanghaixiang Chaojing Bay Aquatic Plants and Animals Conservation Area, off Chaojing Park, Keelung City; coral reef at 15 m depth",
+    "species": [
+     "Groupers",
+     "Snappers",
+     "Butterfly fishes",
+     "Parrotfishes",
+     "Humpback grouper",
+     "Damselfishes"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Groupers",
+    "scientific_name": "Serranidae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Snappers",
+    "scientific_name": "Lutjanidae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Butterfly fishes",
+    "scientific_name": "Chaetodontidae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Parrotfishes",
+    "scientific_name": "Scaridae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Humpback grouper",
+    "scientific_name": "Cromileptes altivelis",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Damselfishes",
+    "scientific_name": "Pomacentridae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "field_deployment",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "COCO",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "auxiliary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv5",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.3,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

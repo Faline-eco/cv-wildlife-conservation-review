@@ -1,0 +1,390 @@
+{
+ "doi": "10.64898/2026.07.07.736939",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "c4f82234c57c04758ce1700d0b90f32c1f468ac865214f8ff698d8164c3ad5b8",
+  "extracted_at": "2026-10-13T21:24:21.044423+00:00",
+  "cost_usd": 0.4048
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Primary study presenting a deep learning pipeline (detection, hierarchical classification, tracking) for free-ranging insects recorded by insect camera traps on flowering vegetation; it also releases the datasets.",
+   "page": 11,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 11,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Camera Trap",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 5,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 5,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "Denmark",
+     "France",
+     "Germany",
+     "Malta",
+     "Netherlands",
+     "United Kingdom"
+    ],
+    "location_detail": "Insect camera traps over flowering plant plots (mostly Sedum; also heather, herbs, clover, mixed and artificial flowers) in projects named GreenRoof, GreenHouse, Orchard, Heather, PollWatch, MAMBO, RT-Impact, ACSHQ, Arthropods. Habitat is inferred from the project names; the paper only says natural and semi-natural floral environments.",
+    "species": [
+     "arthropods"
+    ],
+    "datasets": [
+     "InsectDCT detector dataset (DV6)",
+     "InsectDCT classifier dataset (CV6)",
+     "GT dataset for tracker performance evaluation"
+    ],
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 33,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 33,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "GBIF images used to supplement the classifier training data; no location stated",
+    "species": [
+     "arthropods"
+    ],
+    "datasets": [
+     "GBIF images",
+     "InsectDCT classifier dataset (CV6)"
+    ],
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "arthropods",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 80,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "InsectDCT detector dataset (DV6)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "InsectDCT classifier dataset (CV6)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "mixed",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "GT dataset for tracker performance evaluation",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "GBIF images",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "citizen_science",
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "primary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLO11",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Motion-enhanced images (motion-informed detection)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Hierarchical multitask taxon classifier",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Threshold-based anomaly detection (out-of-distribution)",
+    "type": "other",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Track-by-detection with Hungarian algorithm",
+    "type": "other",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CSPDarknet53",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ConvNeXt-base",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EfficientNetV2-S",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet50V2",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ByteTrack",
+    "type": "other",
+    "role": "baseline",
+    "page": 32,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 32,
+     "section": "body"
+    }
+   },
+   {
+    "name": "BoT-SORT",
+    "type": "other",
+    "role": "baseline",
+    "page": 32,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 32,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

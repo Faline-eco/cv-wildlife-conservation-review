@@ -1,0 +1,55 @@
+{
+ "doi": "10.1002/ece3.9987",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0561849,
+ "items": [
+  {
+   "doi": "10.1002/ece3.9987",
+   "field": "habitat",
+   "value": "Artificial Aquatic",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Fish photographed in natural streams/rivers (freshwater, Inland Wetlands/Aquatic), plus museum specimens; not artificial."
+  },
+  {
+   "doi": "10.1002/ece3.9987",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Nikon camera photographs, standard RGB images."
+  },
+  {
+   "doi": "10.1002/ece3.9987",
+   "field": "task",
+   "value": "Segmentation",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Primary task is genus classification; U-Net masking is only preprocessing."
+  },
+  {
+   "doi": "10.1002/ece3.9987",
+   "field": "algorithm",
+   "value": "ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ResNet-34 U-Net and ResNet-101 classifier used."
+  },
+  {
+   "doi": "10.1002/ece3.9987",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors photographed fish in Peru and museum specimens themselves."
+  },
+  {
+   "doi": "10.1002/ece3.9987",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Own dataset released; ImageNet only for pretraining, no named public dataset used."
+  }
+ ]
+}

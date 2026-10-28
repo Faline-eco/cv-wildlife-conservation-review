@@ -1,0 +1,222 @@
+{
+ "doi": "10.1016/j.rsase.2023.101065",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "3b6837fe93090a7888b5c69996bc9d5a489d5d251bca7236da937edf90df003b",
+  "extracted_at": "2026-10-22T07:45:54.674915+00:00",
+  "cost_usd": 0.115996
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-NOCV",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "application",
+   "reason": "Wild Atlantic walrus are imaged by satellite and from an aircraft, but people counted the animals and digitized the haul-out area by hand. The images are interpreted visually, with no computer vision method applied to the animals.",
+   "page": 3,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 3,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Satellite",
+    "spectra": [
+     {
+      "value": "Panchromatic",
+      "source": "text",
+      "page": 2,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 2,
+       "section": "front"
+      }
+     },
+     {
+      "value": "Multispectral",
+      "source": "text",
+      "page": 2,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 2,
+       "section": "front"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Canada"
+    ],
+    "location_detail": "Borgen Mount terrestrial walrus haul-out, western end of Jones Sound, Canadian High Arctic",
+    "species": [
+     "Atlantic walrus"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   },
+   {
+    "platform": "Crewed aerial vehicle (CAV; e.g. plane, helicopter)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 2,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 2,
+       "section": "front"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Canada"
+    ],
+    "location_detail": "Coastal aerial survey of haul-out sites in the eastern Canadian High Arctic; Borgen Mount, Jones Sound",
+    "species": [
+     "Atlantic walrus"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Atlantic walrus",
+    "scientific_name": "Odobenus rosmarus rosmarus",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "field_deployment",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "back"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Manual digitization (ENVI ROI tool) with density extrapolation",
+    "type": "other",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Gram-Schmidt pansharpening",
+    "type": "classical_image_processing",
+    "role": "backbone",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "back"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

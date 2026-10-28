@@ -1,0 +1,224 @@
+{
+ "doi": "10.3390/rs12121981",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "8e72a6f4a9dea466fbe39c595d87c9002ec0a793af980479923db00b489ba71f",
+  "extracted_at": "2026-10-13T06:01:20.610645+00:00",
+  "cost_usd": 0.283836
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "application",
+   "reason": "Primary study applying CNN-based object detection (cloud and edge services) to AUV underwater images of wild fan mussels (Pinna nobilis) on the seabed of the Mar Menor.",
+   "page": 23,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 23,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Autonomous Underwater Vehicle (AUV)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 10,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 10,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Spain"
+    ],
+    "location_detail": "Mar Menor coastal saltwater lagoon, southeast Spain; 250 m x 100 m explored area, average depth about 5 m",
+    "species": [
+     "fan mussel"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fan mussel",
+    "scientific_name": "Pinna nobilis",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "mixed",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "auxiliary",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Azure Custom Vision (cloud object detection model)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 23,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 23,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Azure edge model (on-device inference in IoT gateway)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   },
+   {
+    "name": "IBM Watson custom object detection",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Google cloud custom object detection",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 21,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 21,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Triangular similarity algorithm (distance estimation)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 15,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

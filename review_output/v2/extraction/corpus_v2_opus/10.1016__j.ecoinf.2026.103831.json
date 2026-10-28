@@ -1,0 +1,284 @@
+{
+ "doi": "10.1016/j.ecoinf.2026.103831",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "0da7c4d1bdf2fd22d82e507051dedda52e42a17babe8f99649271878fa3e71db",
+  "extracted_at": "2026-10-15T09:17:33.662209+00:00",
+  "cost_usd": 0.189196
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Deep learning classification of benthic survey images of wild coral reef communities (corals are animals) for coral cover estimation.",
+   "page": 1,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 1,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Rowley Shoals; diver-based benthic image surveys along reef slope transects",
+    "species": [
+     "corals",
+     "Acropora branching"
+    ],
+    "datasets": [
+     "Rowley Shoals image surveys"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Moorea; coral reef benthic surveys",
+    "species": [
+     "corals"
+    ],
+    "datasets": [
+     "Moorea Corals dataset"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [
+     "Australia"
+    ],
+    "location_detail": "Catlin Seaview Survey, Pacific Region (Catlin Pacific Australia 2014)",
+    "species": [
+     "corals"
+    ],
+    "datasets": [
+     "Catlin Seaview Survey (Pacific Region)"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "corals",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Acropora branching",
+    "scientific_name": "Acropora",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Rowley Shoals image surveys",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Moorea Corals dataset",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Catlin Seaview Survey (Pacific Region)",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Synthetic datasets (make_blobs)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "synthetic",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "MCCC (Monte Carlo Calibrated Classifiers)",
+    "type": "other",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Logistic classifier",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EfficientNet B0",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Balanced training with RandomOverSampler and deterministic prediction",
+    "type": "other",
+    "role": "baseline",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

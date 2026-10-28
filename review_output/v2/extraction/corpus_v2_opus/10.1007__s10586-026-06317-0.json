@@ -1,0 +1,371 @@
+{
+ "doi": "10.1007/s10586-026-06317-0",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "0ce8dead561c9829711a41104fa1d3a45e475a00543e96b7ba4362c5a3b9ff55",
+  "extracted_at": "2026-10-14T15:09:09.378565+00:00",
+  "cost_usd": 0.266412
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-GENERIC",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Generic underwater single-object tracking method. Animals (fish, crabs, scallops) appear only as categories of the UOT32 tracking benchmark. The authors' own experiments track a chair, a basin, robots, a door and divers. Wildlife is not the stated subject or application.",
+   "page": 9,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 98.8,
+    "page": 9,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "UOT32 public Underwater Object Tracking dataset, 32 video sequences",
+    "species": [
+     "fish",
+     "crabs",
+     "scallops"
+    ],
+    "datasets": [
+     "UOT32"
+    ],
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Remotely operated underwater vehicle (ROV)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 9,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 9,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Aquatic",
+    "countries": [],
+    "location_detail": "Indoor turbid water tank and outdoor swimming pool; non-animal targets (chair, basin, robot, door, divers)",
+    "species": [],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.5,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "benchmark_class",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "crabs",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "benchmark_class",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "scallops",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "benchmark_class",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "UOT32",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "captive_or_lab",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Tracking",
+    "role": "primary",
+    "page": 17,
+    "evidence": {
+     "status": "other_page",
+     "score": 100,
+     "page": 1,
+     "section": "abstract"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "CWSCNet-RCAM",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.7,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SiamRPN++",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SiamFC",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SiamRPN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ATOM",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DiMP18",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DiMP50",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PrDiMP18",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PrDiMP50",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CWSCNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DUKF-Mp",
+    "type": "other",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CDRL",
+    "type": "other",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MCTS-LSD",
+    "type": "other",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 17,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

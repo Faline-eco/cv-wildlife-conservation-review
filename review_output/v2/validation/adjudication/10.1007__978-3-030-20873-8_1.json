@@ -1,0 +1,111 @@
+{
+ "doi": "10.1007/978-3-030-20873-8_1",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0691449,
+ "items": [
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "task",
+   "value": "Pose Estimation",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Predicts 2D joint positions with hourglass network; pose estimation central."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "task",
+   "value": "Reconstruction",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Title and abstract: recover 3D shape and motion; 3D reconstruction."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "task",
+   "value": "Synthesis",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Synthetic training data is a means; synthesis is not the primary task."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "taxon_species",
+   "value": "Aepyceros melampus",
+   "side": "auto_only",
+   "verdict": "unclear",
+   "reason": "Impala mentioned as unseen species in joint predictions, but species name not explicit in analysis."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "taxon_genus",
+   "value": "Aepyceros",
+   "side": "auto_only",
+   "verdict": "unclear",
+   "reason": "Impala (Aepyceros) shown in qualitative figures; only mentioned via common name."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "taxon_genus",
+   "value": "Camelus",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Camel sequence in BADJA and camel fitting results."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "algorithm",
+   "value": "DeepLab",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "DeepLabv3+ used for silhouette extraction."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "algorithm",
+   "value": "SMAL",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SMAL model fitted and used for synthetic data."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "algorithm",
+   "value": "Stacked Hourglass",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Stacked hourglass network used for joint prediction."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "algorithm",
+   "value": "medial axis transform",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Medial axis transform used in silhouette coverage loss."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Proposes own pipeline with OJA and fitting."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "algorithm",
+   "value": "modelalignment",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Model fitting to silhouettes exists, but 'modelalignment' label is vague."
+  },
+  {
+   "doi": "10.1007/978-3-030-20873-8_1",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "BADJA derived from DAVIS and online stock footage, not self-collected."
+  }
+ ]
+}

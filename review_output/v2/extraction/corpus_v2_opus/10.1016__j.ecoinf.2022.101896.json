@@ -1,0 +1,316 @@
+{
+ "doi": "10.1016/j.ecoinf.2022.101896",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "56bd619c14438f06945fae0bd39df3ef81edf249a7d19a8b7b15bfc643cb64dc",
+  "extracted_at": "2026-10-12T11:33:25.981148+00:00",
+  "cost_usd": 0.198832
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "specimen",
+   "paper_type": "method",
+   "reason": "Images are of collected, vouchered invertebrate specimens from pitfall traps photographed in bulk against a white background; no images of live free-ranging animals.",
+   "page": 10,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 10,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 10,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 10,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "United States"
+    ],
+    "location_detail": "Specimens from NEON pitfall traps at 27 locations across the United States (2016), imaged in bulk against a white background",
+    "species": [
+     "terrestrial invertebrates",
+     "Formicidae",
+     "Staphylinidae",
+     "Coleoptera",
+     "Elateridae"
+    ],
+    "datasets": [
+     "NEON invertebrate dataset"
+    ],
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "terrestrial invertebrates",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 153,
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Formicidae",
+    "scientific_name": "Formicidae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Staphylinidae",
+    "scientific_name": "Staphylinidae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Coleoptera",
+    "scientific_name": "Coleoptera",
+    "rank": "order",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Elateridae",
+    "scientific_name": "Elateridae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ground beetles",
+    "scientific_name": "Carabidae",
+    "rank": "family",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "NEON invertebrate dataset",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "captive_or_lab",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "auxiliary",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "XGBoost",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "K-nearest neighbours (KNN)",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "linear discriminant analysis (LDA)",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "naïve Bayes (NB)",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "artificial neural networks (ANN)",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageJ morphometric feature extraction",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "iNaturalist",
+    "type": "other",
+    "role": "baseline",
+    "page": 21,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 21,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

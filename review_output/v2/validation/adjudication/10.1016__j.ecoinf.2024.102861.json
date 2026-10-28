@@ -1,0 +1,127 @@
+{
+ "doi": "10.1016/j.ecoinf.2024.102861",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0918369,
+ "items": [
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "platform",
+   "value": "Camera Trap",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Time-lapse Wingscapes cameras on Sedum plots; coded as camera trap is arguable, but they are described as insect camera traps."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "taxon_species",
+   "value": "Apis mellifera",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Honeybees class labelled Apis melifera in Table 2."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "taxon_genus",
+   "value": "Apis",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Honeybees (Apis) class is classified."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "taxon_genus",
+   "value": "Bombus",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Bumblebees class, genus Bombus, in Table 2."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "taxon_class",
+   "value": "Malacostraca",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Isopods are Malacostraca; Isopoda class is included in the dataset, so taxon is correct."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "algorithm",
+   "value": "DeepLab",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "DeepLabV3 used for flower semantic segmentation."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "algorithm",
+   "value": "color thresholding",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "HSV color thresholding used to create flower masks."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Used standard models (YOLOv5, EfficientNet, DeepLab); no own architecture."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "algorithm",
+   "value": "template matching",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Matching filter uses normalized sum of squared differences template matching."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "algorithm",
+   "value": "ConvNeXt",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Only ResNet50v2 and EfficientNetB4 compared; no ConvNeXt."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "algorithm",
+   "value": "DenseNet",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "DenseNet not used."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "algorithm",
+   "value": "Inception",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Inception not used."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "algorithm",
+   "value": "MobileNet",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "MobileNet not used."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors recorded 48 time-lapse cameras images themselves."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102861",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Data are own; only COCO/ImageNet pretraining, not studied dataset; data on request."
+  }
+ ]
+}

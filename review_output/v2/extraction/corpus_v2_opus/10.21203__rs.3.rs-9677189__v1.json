@@ -1,0 +1,273 @@
+{
+ "doi": "10.21203/rs.3.rs-9677189/v1",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "3410278e40b4c9656e5f324f2bda81e682212621a53b9df1e7f3eee3851d0945",
+  "extracted_at": "2026-10-24T10:44:37.621280+00:00",
+  "cost_usd": 0.183856
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "application",
+   "reason": "Develops a YOLO-based detection model for wild Chinese giant salamanders using images from field monitoring equipment in a nature reserve.",
+   "page": 3,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 97.4,
+    "page": 3,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Camera Trap",
+    "spectra": [],
+    "habitat": "Wetlands (inland)",
+    "countries": [
+     "China"
+    ],
+    "location_detail": "Xianfeng Zhongjianhe Giant Salamander National Nature Reserve, Hubei Province (109.209125 E, 29.720598 N); river sections and small tributaries",
+    "species": [
+     "Chinese giant salamander"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.9,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Chinese giant salamander",
+    "scientific_name": "Andrias davidianus",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "auxiliary",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLO v11n-EWL",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLO v11n",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Efficient Multi-Scale Attention (EMA)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Wise-IoU (WIoU) loss",
+    "type": "other",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Lightweight Adaptive Extraction (LAE)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLO v8n-EWL",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLO v10n-EWL",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.1,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Deformable DETR",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SSD",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Coordinate Attention (CA)",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CBAM",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.2,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

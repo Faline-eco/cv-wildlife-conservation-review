@@ -1,0 +1,191 @@
+{
+ "doi": "10.1016/j.marpol.2019.103714",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0890109,
+ "items": [
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "habitat",
+   "value": "Artificial Terrestrial",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Images taken on conveyor belt aboard fishing vessels (and shore installation); human-made."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Colour industrial camera, RGB images."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "country",
+   "value": "Spain",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Spanish vessels (OPROMAR, Vigo), Spanish coastal waters, ICES VIIIc/IXa."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "task",
+   "value": "Other",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Species identification/classification with segmentation; 'Other' is not appropriate."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "taxon_species",
+   "value": "Raja asterias",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Only thornback ray RJN listed by FAO code; Raja asterias is not named (starry ray is Amblyraja)."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "taxon_species",
+   "value": "Amblyraja radiata",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Starry ray (RJR) in catalog is Amblyraja radiata."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "taxon_species",
+   "value": "Eutrigla gurnardus",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Gurnard GUX in catalog; tested; Eutrigla gurnardus plausible, mapped from gurnard."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "taxon_species",
+   "value": "Lophius piscatorius",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Anglerfish ANF in catalog and tested; Lophius piscatorius."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "taxon_species",
+   "value": "Merluccius merluccius",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Hake HKE trained and tested; Merluccius merluccius."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "taxon_species",
+   "value": "Sebastes norvegicus",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Redfish RED listed, species not specified; Sebastes norvegicus not stated."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "taxon_species",
+   "value": "Trachurus trachurus",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Horse mackerel HOM trained and tested; Trachurus trachurus."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "taxon_genus",
+   "value": "Amblyraja",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Starry ray is Amblyraja radiata."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "taxon_genus",
+   "value": "Eutrigla",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Gurnard in catalog; genus Eutrigla plausible for ICES gurnard."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "taxon_genus",
+   "value": "Lophius",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Anglerfish genus Lophius."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "algorithm",
+   "value": "HOG",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Texture uses histogram of gradient (HOG)."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "algorithm",
+   "value": "color thresholding",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Background removal by tolerance thresholds on colour masks."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "algorithm",
+   "value": "colour histogram",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "2D a,b colour histogram used."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "algorithm",
+   "value": "k-NN",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Classification uses nearest Euclidean distance to patterns, not k-NN explicitly."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "algorithm",
+   "value": "k-means",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "K-means applied to each characteristic in training."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "algorithm",
+   "value": "mathematical morphology",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Mathematical morphology used for mask refinement and segmentation."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "algorithm",
+   "value": "region growing",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Region growing step in segmentation."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "algorithm",
+   "value": "shape descriptor",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Shape descriptor from width profile along axis."
+  },
+  {
+   "doi": "10.1016/j.marpol.2019.103714",
+   "field": "algorithm",
+   "value": "watershed",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Watershed used for object segmentation."
+  }
+ ]
+}

@@ -1,0 +1,330 @@
+{
+ "doi": "10.1016/j.suscom.2026.101342",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "f08aaef994f4ca56a5f64272a333cf9be17fe81c3120d24bcfcabe087cd3ee15",
+  "extracted_at": "2026-10-25T07:00:09.759894+00:00",
+  "cost_usd": 0.168572
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "not_reported",
+   "paper_type": "method",
+   "reason": "Mask R-CNN detection and segmentation of marine animals in underwater images for marine ecosystem monitoring. The paper does not say whether the animals were wild or captive.",
+   "page": 1,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 99.4,
+    "page": 1,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Underwater images; location not stated",
+    "species": [
+     "fish",
+     "jellyfish",
+     "penguin",
+     "puffin",
+     "shark",
+     "starfish",
+     "stingray"
+    ],
+    "datasets": [
+     "UOD Dataset"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.3,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "jellyfish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "penguin",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "puffin",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "shark",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "starfish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "stingray",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "UOD Dataset",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "not_stated",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "auxiliary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Mask R-CNN",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "VGG-16",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CLAHE",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "median filter",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet101 +kNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SiamRPN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "AlexNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

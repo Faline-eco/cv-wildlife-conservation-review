@@ -1,0 +1,178 @@
+{
+ "doi": "10.1145/3666025.3699400",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "21fa048ed868eca95aa36f63301512cf95614e66b90c2e2ec22b354816ddc6ce",
+  "extracted_at": "2026-10-14T14:34:58.823559+00:00",
+  "cost_usd": 0.077936
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-AUDIO",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "The paper presents a low-power multi-sensor device and a learned scheduler. All event detection and analysis runs on audio (BirdNET, Goertzel filtering and a spectrogram CNN). The camera is only triggered by the PIR sensor, and no images are analysed.",
+   "page": 1,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 1,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Forest",
+    "countries": [
+     "Malaysia"
+    ],
+    "location_detail": "Sabah rainforest, Borneo (SAFE project); continuous audio recordings",
+    "species": [
+     "birds"
+    ],
+    "datasets": [
+     "Unnamed (SAFE project audio, Sabah)"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "birds",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "introduction"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (SAFE project audio, Sabah)",
+    "role": "public_wildlife_dataset",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "tasks": [],
+  "algorithms": [
+   {
+    "name": "BirdNET",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Q-learning",
+    "type": "other",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Goertzel filtering",
+    "type": "other",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "integer-quantized one-layer convolutional model",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "fixed schedules",
+    "type": "other",
+    "role": "baseline",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

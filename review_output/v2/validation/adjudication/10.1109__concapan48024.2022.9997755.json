@@ -1,0 +1,103 @@
+{
+ "doi": "10.1109/concapan48024.2022.9997755",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0391529,
+ "items": [
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "habitat",
+   "value": "Forest",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Camera traps in jaguar forest habitat; Panama tropical, though videos from internet worldwide."
+  },
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "spectrum",
+   "value": "Grayscale",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Images converted to grayscale; most are black and white."
+  },
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "task",
+   "value": "Classification",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Task is detecting jaguar presence with bounding rectangle; classification is secondary."
+  },
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "task",
+   "value": "Detection",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Algorithm detects jaguar and draws rectangle over it."
+  },
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "algorithm",
+   "value": "Hough transform",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "imfindcircles uses circular Hough transform."
+  },
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "algorithm",
+   "value": "Otsu thresholding",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "graythresh uses Otsu method."
+  },
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "algorithm",
+   "value": "connected component analysis",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "bwconncomp, bwareaopen, bwareafilt use connected components."
+  },
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "algorithm",
+   "value": "median filter",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "medfilt2 median filter used."
+  },
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "algorithm",
+   "value": "morphological filtering",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Top-hat and area opening morphological processing used."
+  },
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "algorithm",
+   "value": "patternmatching",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Matching jaguar spots to circle shapes counted as pattern recognition."
+  },
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Used videos found on the internet, not self-collected."
+  },
+  {
+   "doi": "10.1109/concapan48024.2022.9997755",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Internet videos, no named public dataset."
+  }
+ ]
+}

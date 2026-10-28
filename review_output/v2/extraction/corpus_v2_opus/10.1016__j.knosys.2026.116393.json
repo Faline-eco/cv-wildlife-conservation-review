@@ -1,0 +1,421 @@
+{
+ "doi": "10.1016/j.knosys.2026.116393",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "848e66da2906d1e2f191db83aa8d4b3285d12686ed75ce852c823bcbbf148be8",
+  "extracted_at": "2026-10-25T06:57:28.584689+00:00",
+  "cost_usd": 0.299432
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a CNN module and a web-sourced underwater instance segmentation dataset of real-world marine scenes, mostly fish. The paper says the category distribution reflects real-world underwater ecology. Detection and segmentation of these underwater organisms is the subject.",
+   "page": 5,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 99.0,
+    "page": 5,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 5,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 5,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Open-source underwater videos from the Internet plus public underwater images",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "MarIS20K-QUT"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.3,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Public underwater datasets (UW10K, UIIS, UIIS10K, USIS10K) and coral reef dataset Coralscapes",
+    "species": [],
+    "datasets": [
+     "UW10K",
+     "UIIS",
+     "UIIS10K",
+     "USIS10K",
+     "Coralscapes"
+    ],
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "MarIS20K-QUT",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "UW10K",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "UIIS",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "UIIS10K",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "USIS10K",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Coralscapes",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "COCO",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.3,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "FCDConv",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ConvNeXt-V2-T",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.5,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Swin Transformer-T",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.5,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Faster R-CNN",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Mask R-CNN",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Mask2Former",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SE",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ECA",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CBAM",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ODConv",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FDConv",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "AMSP-VConv",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SAM",
+    "type": "foundation_model",
+    "role": "baseline",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  }
+ }
+}

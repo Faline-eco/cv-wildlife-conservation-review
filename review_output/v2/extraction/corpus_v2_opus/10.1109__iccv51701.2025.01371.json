@@ -1,0 +1,344 @@
+{
+ "doi": "10.1109/iccv51701.2025.01371",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "93781eacca640e2c7212f1228cdd66cb2546e6efab3afecde56fb3459ee23b77",
+  "extracted_at": "2026-10-15T08:22:10.284245+00:00",
+  "cost_usd": 0.180884
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "dataset",
+   "reason": "Introduces a dataset and benchmarks for identifying wild animal species from their traces (footprints, feces, eggs, bones, feathers) using computer vision on citizen-science images.",
+   "page": 1,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 1,
+    "section": "abstract"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 3,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 3,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "iNaturalist research-grade images of animal traces under Creative Commons licenses",
+    "species": [
+     "animals"
+    ],
+    "datasets": [
+     "AnimalClue"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "animals",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 968,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "AnimalClue",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "citizen_science",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "VGG-16",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EfficientNet-B1",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ViT-B",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Swin-B",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CLIP",
+    "type": "foundation_model",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "BioCLIP",
+    "type": "foundation_model",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Fine-tuned CLIP",
+    "type": "foundation_model",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv8",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv11",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Faster-RCNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DINO",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "RT-DETR",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Mask-RCNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MaskDINO",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

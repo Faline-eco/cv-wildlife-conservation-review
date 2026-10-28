@@ -1,0 +1,424 @@
+{
+ "doi": "10.1016/j.neucom.2026.133768",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "002d66a6c03afc1ce5d958fb000b324123ac1ba253108811ef24e54b115fc009",
+  "extracted_at": "2026-10-15T09:21:31.015818+00:00",
+  "cost_usd": 0.247196
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a synthetic 360° video generation framework to train tiger Re-ID models, evaluated on real camera-trap images of wild Amur tigers.",
+   "page": 5,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 99.2,
+    "page": 5,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Camera Trap",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Not reported",
+    "species": [
+     "Amur tiger"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "introduction"
+    }
+   },
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Synthetic images and videos generated with Stable Diffusion v2.1 and Wan2.1 image-to-video model",
+    "species": [
+     "Tiger",
+     "Leopard",
+     "Zebra"
+    ],
+    "datasets": [
+     "Syn-Tiger-360",
+     "Synthetic leopard and zebra datasets"
+    ],
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Tiger",
+    "scientific_name": "Panthera tigris",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 2,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 2,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Amur tiger",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Leopard",
+    "scientific_name": "Panthera pardus",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Zebra",
+    "scientific_name": "Equus quagga",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "introduction"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Syn-Tiger-360",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "synthetic",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "back"
+    }
+   },
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Synthetic leopard and zebra datasets",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "synthetic",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 8,
+     "section": "introduction"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Re-Identification",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.3,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Synthesis",
+    "role": "primary",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "auxiliary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Stable Diffusion v2.1",
+    "type": "foundation_model",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.4,
+     "page": 3,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Wan2.1-14B",
+    "type": "foundation_model",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "360 Degree Rotation Effect LoRA",
+    "type": "other",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "ResNet",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "DenseNet",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "HR-Net",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "ConvNeXt",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Swin-T",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "TransReID",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "ViT",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "MegaDescriptor",
+    "type": "foundation_model",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.3,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "DeepFaune",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "SigLIP-SO400M",
+    "type": "foundation_model",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Qwen2.5-VL",
+    "type": "foundation_model",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "InternVL-2.5",
+    "type": "foundation_model",
+    "role": "baseline",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "introduction"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

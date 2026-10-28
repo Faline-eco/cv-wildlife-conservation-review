@@ -1,0 +1,244 @@
+{
+ "doi": "10.1109/ispan-fcst-iscc.2017.74",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "5076a9ce0ce9cb835c62374507dcceb5905b0262bee63cdf7f2753a4009c6357",
+  "extracted_at": "2026-10-25T08:09:31.991849+00:00",
+  "cost_usd": 0.27196
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a saliency and spatial-pyramid SURF method for retrieving fish images showing fish in natural underwater scenes.",
+   "page": 4,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 4,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 4,
+      "evidence": {
+       "status": "not_found",
+       "score": 84.3,
+       "page": 4,
+       "section": "front"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "QUT_fish_data provided by University of Queensland; location of images not stated",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "QUT_fish_data"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "front"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "DLOU_fish_data collected by image processing group of Dalian Ocean University; image location not stated",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "DLOU_fish_data"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 4,
+    "evidence": {
+     "status": "not_found",
+     "score": 79.5,
+     "page": 4,
+     "section": "front"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "QUT_fish_data",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "front"
+    }
+   },
+   {
+    "name": "DLOU_fish_data",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "not_stated",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "front"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 90.2,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.7,
+     "page": 3,
+     "section": "front"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "saliency map foreground extraction",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   },
+   {
+    "name": "SURF with spatial pyramid blocks",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 83.0,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Euclidean distance matching",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 88.2,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "MFFIR",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "front"
+    }
+   },
+   {
+    "name": "spatial pyramid block retrieval without saliency",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 4,
+    "evidence": {
+     "status": "not_found",
+     "score": 87.5,
+     "page": 4,
+     "section": "front"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

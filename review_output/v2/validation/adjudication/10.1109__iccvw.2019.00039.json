@@ -1,0 +1,79 @@
+{
+ "doi": "10.1109/iccvw.2019.00039",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.053514900000000004,
+ "items": [
+  {
+   "doi": "10.1109/iccvw.2019.00039",
+   "field": "habitat",
+   "value": "Artificial Aquatic",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Amur tiger dataset likely zoos/captive, but the paper doesn't state the setting."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00039",
+   "field": "habitat",
+   "value": "Artificial Terrestrial",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Habitat of images is not stated; ATRW zoo origin isn't in text."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00039",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Standard RGB tiger images, with grayscale only as augmentation."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00039",
+   "field": "country",
+   "value": "China",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Recording country is not mentioned in the paper."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00039",
+   "field": "algorithm",
+   "value": "DenseNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "DenseNet-121 is fine-tuned as the main network."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00039",
+   "field": "algorithm",
+   "value": "HRNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "HR-net is used for keypoint prediction for flank orientation."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00039",
+   "field": "algorithm",
+   "value": "RFBNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "RFBNet is fine-tuned for tiger detection in Wild Re-ID."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00039",
+   "field": "algorithm",
+   "value": "SIFT",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SIFT matching is used as a baseline and for re-ranking."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00039",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "The paper proposes its own hybrid model with KL loss and SIFT re-ranking."
+  }
+ ]
+}

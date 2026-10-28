@@ -1,0 +1,233 @@
+{
+ "doi": "10.1101/2025.10.09.681397",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "ccaea98dee90956c9b2de39704cc89b6a49afa7a4001423172b10f7be26a64e9",
+  "extracted_at": "2026-10-13T16:33:03.339532+00:00",
+  "cost_usd": 0.22168
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "application",
+   "reason": "Primary study applying a deep learning detection and classification pipeline to camera trap images of wild mammals (with livestock also present) in the Greater Maasai Mara Ecosystem.",
+   "page": 7,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 94.0,
+    "page": 7,
+    "section": "abstract"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Camera Trap",
+    "spectra": [],
+    "habitat": "Savanna",
+    "countries": [
+     "Kenya"
+    ],
+    "location_detail": "Greater Maasai Mara Ecosystem, Narok County: Mara Triangle (Maasai Mara National Reserve) and Mara North, Naboisho and Olare-Motorogi conservancies",
+    "species": [
+     "wild mammals",
+     "cattle",
+     "shoats (sheep and goats)"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 16,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.5,
+     "page": 16,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "wild mammals",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 35,
+    "page": 23,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.5,
+     "page": 23,
+     "section": "body"
+    }
+   },
+   {
+    "name": "cattle",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 21,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.0,
+     "page": 21,
+     "section": "body"
+    }
+   },
+   {
+    "name": "shoats (sheep and goats)",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 2,
+    "page": 18,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.3,
+     "page": 18,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 19,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.8,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 17,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 19,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.9,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 19,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.9,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "auxiliary",
+    "page": 19,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.5,
+     "page": 19,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Maasai Mara Classifier (MMC)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.7,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ConvNeXt-T",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MegaDetector v4",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 19,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.9,
+     "page": 19,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.6,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,368 @@
+{
+ "doi": "10.1007/s11042-023-17649-z",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "530e53d6926ec829ecf61d5d2451119633ad5a4d33238d7227406bdd462420a2",
+  "extracted_at": "2026-10-25T06:46:17.659008+00:00",
+  "cost_usd": 0.193824
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "not_reported",
+   "paper_type": "method",
+   "reason": "Proposes an enhanced YOLOv4 detector for underwater marine invertebrates (holothurian, echinus, scallop, starfish) on the DUO dataset. The paper does not say where the images come from, but the subject is underwater animal detection.",
+   "page": 17,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 17,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Underwater scenes from the DUO dataset; no location is given",
+    "species": [
+     "Holothurian",
+     "Echinus",
+     "Scallop",
+     "Starfish"
+    ],
+    "datasets": [
+     "Detecting Underwater Objects (DUO)"
+    ],
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Holothurian",
+    "scientific_name": "",
+    "rank": "class",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Echinus",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Scallop",
+    "scientific_name": "",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Starfish",
+    "scientific_name": "",
+    "rank": "class",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Detecting Underwater Objects (DUO)",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MS COCO",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "introduction"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "auxiliary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOcsp-cbam (enhanced YOLOv4)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "HINet",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CSPdarknet53",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CBAM",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MPRNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 21,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 21,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DeblurGAN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 21,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 21,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv4",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Cascade R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Sparse R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Grid R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "GFL",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 18,
+     "section": null
+    }
+   },
+   {
+    "name": "ATSS",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 18,
+     "section": null
+    }
+   },
+   {
+    "name": "RepPoints",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PAA",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 18,
+     "section": null
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

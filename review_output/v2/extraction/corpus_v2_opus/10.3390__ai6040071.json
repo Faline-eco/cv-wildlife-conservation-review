@@ -1,0 +1,237 @@
+{
+ "doi": "10.3390/ai6040071",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "3597ea719687f923c5229f3ab1b72e56e95147e3ff021ffbed182c848bbf3859",
+  "extracted_at": "2026-10-15T09:22:15.417236+00:00",
+  "cost_usd": 0.435352
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Vision-based (camera image only) active target tracking of a wild marine mammal (bottlenose dolphin) by an underwater vehicle, developed for cetacean conservation monitoring. Training and evaluation use simulated renders of a dolphin model; no captive or domestic animals are involved.",
+   "page": 18,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 18,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Remotely operated underwater vehicle (ROV)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 21,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 21,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Simulated underwater environment in the Unity game engine, with an emulated BlueROV2 camera (Sony IMX322/323 sensor)",
+    "species": [
+     "Common bottlenose dolphin"
+    ],
+    "datasets": [
+     "IMAGETRAIN",
+     "IMAGETEST"
+    ],
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Common bottlenose dolphin",
+    "scientific_name": "Tursiops truncatus",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "IMAGETRAIN",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "synthetic",
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "body"
+    }
+   },
+   {
+    "name": "IMAGETEST",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "synthetic",
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Tracking",
+    "role": "primary",
+    "page": 40,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 40,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "auxiliary",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "CMVAE",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 22,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 22,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Dronet",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SAC",
+    "type": "other",
+    "role": "proposed",
+    "page": 26,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 26,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PPO",
+    "type": "other",
+    "role": "baseline",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "TD3",
+    "type": "other",
+    "role": "baseline",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SAC (SWiMM1.0)",
+    "type": "other",
+    "role": "baseline",
+    "page": 26,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 26,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

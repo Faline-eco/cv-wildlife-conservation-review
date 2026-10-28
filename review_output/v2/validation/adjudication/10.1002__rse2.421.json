@@ -1,0 +1,31 @@
+{
+ "doi": "10.1002/rse2.421",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0671849,
+ "items": [
+  {
+   "doi": "10.1002/rse2.421",
+   "field": "habitat",
+   "value": "Wetlands (inland)",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Everglades wading bird colonies are freshwater wetlands; inland wetlands fits."
+  },
+  {
+   "doi": "10.1002/rse2.421",
+   "field": "task",
+   "value": "Classification",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Primary task is object detection (bird detection plus species classification), not image classification."
+  },
+  {
+   "doi": "10.1002/rse2.421",
+   "field": "algorithm",
+   "value": "DeepForest",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "RetinaNet-50 implemented via DeepForest package, used for detection and species classification."
+  }
+ ]
+}

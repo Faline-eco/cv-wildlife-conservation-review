@@ -1,0 +1,79 @@
+{
+ "doi": "10.1109/iccvw.2019.00042",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0542169,
+ "items": [
+  {
+   "doi": "10.1109/iccvw.2019.00042",
+   "field": "habitat",
+   "value": "Artificial Aquatic",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Wild Amur tigers in natural habitat; not aquatic or artificial."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00042",
+   "field": "habitat",
+   "value": "Artificial Terrestrial",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "ATRW includes zoo-captive tigers, but paper doesn't state this; uncertain."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00042",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Standard RGB tiger images; RGB augmentation mentioned."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00042",
+   "field": "country",
+   "value": "China",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Paper doesn't state recording country; ATRW is from China but not explicit."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00042",
+   "field": "algorithm",
+   "value": "AlignedReID",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Aligned-reID compared as baseline in Table 4."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00042",
+   "field": "algorithm",
+   "value": "Mask R-CNN",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Mask RCNN used as detector in wild track."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00042",
+   "field": "algorithm",
+   "value": "ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ResNet backbones used throughout."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00042",
+   "field": "algorithm",
+   "value": "part-based model",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Part-pose guided network with trunk and limb part streams."
+  },
+  {
+   "doi": "10.1109/iccvw.2019.00042",
+   "field": "algorithm",
+   "value": "triplet loss",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Triplet loss used for fused features."
+  }
+ ]
+}

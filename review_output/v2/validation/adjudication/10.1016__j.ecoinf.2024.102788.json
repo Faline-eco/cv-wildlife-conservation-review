@@ -1,0 +1,79 @@
+{
+ "doi": "10.1016/j.ecoinf.2024.102788",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0808469,
+ "items": [
+  {
+   "doi": "10.1016/j.ecoinf.2024.102788",
+   "field": "platform",
+   "value": "Ground Robot",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Crawler is a tracked benthic vehicle, but coded as ground robot; seafloor crawler, not ground robot, likely other category."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102788",
+   "field": "platform",
+   "value": "Remotely operated underwater vehicle (ROV)",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Images came from the crawler; the ROV only inspected the crawler."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102788",
+   "field": "task",
+   "value": "Classification",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Primary task is object detection (YOLO) with counting, not plain classification."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102788",
+   "field": "taxon_species",
+   "value": "Eptatretus stoutii",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Pacific hagfish Eptatretus stoutii is one of three targeted species."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102788",
+   "field": "taxon_genus",
+   "value": "Eptatretus",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Eptatretus stoutii analysed."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102788",
+   "field": "taxon_genus",
+   "value": "Sebastes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Rockfish Sebastes spp. detected."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102788",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "They used off-the-shelf YOLOv8 retrained, not a novel own model."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102788",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Crawler videos acquired and annotated by authors' group (ONC)."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2024.102788",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Own annotated dataset; no public named benchmark dataset used."
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "doi": "10.1109/cvpr.2018.00842",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.059502900000000004,
+ "items": [
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "habitat",
+   "value": "Desert",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "No desert imagery; none of the datasets are desert."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "habitat",
+   "value": "Grassland",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Crowd, vehicle, and penguin images; grassland not indicated."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "habitat",
+   "value": "Marine",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Penguin colonies are from Antarctica, but the paper doesn't describe marine habitat."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "habitat",
+   "value": "Wetlands (inland)",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "No inland wetland imagery in the study."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Crowd, vehicle, penguin and microscope images are visible-light RGB."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "country",
+   "value": "Antarctica",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Penguins dataset location not stated in this paper."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "algorithm",
+   "value": "CNN",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "CNN-based counting regressor is the core method."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "algorithm",
+   "value": "MobileNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "MobileNet used as feature extractor."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "algorithm",
+   "value": "ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ResNet50 compared as feature extractor."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "algorithm",
+   "value": "VGG",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "VGG16 compared as feature extractor."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Proposes own multi-domain adapter counting model."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00842",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "They built the Dublin Cell Counting dataset themselves."
+  }
+ ]
+}

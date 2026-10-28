@@ -1,0 +1,284 @@
+{
+ "doi": "10.1111/2041-210x.12915",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "6014cb43bcd44a700a064e7f07116ccc476e618407a890c9ecedf943cd76f266",
+  "extracted_at": "2026-10-25T08:20:59.200402+00:00",
+  "cost_usd": 0.146112
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "specimen",
+   "paper_type": "method",
+   "reason": "Software for imaging museum/fossil specimens (microfossils, shells, fish teeth) under light microscopy; no live wild free-ranging animals.",
+   "page": 1,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 99.4,
+    "page": 1,
+    "section": "abstract"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "caption",
+      "page": 5,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 5,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Laboratory serial focus light microscopy (Leica DM6000) of specimens on slides; example slide from an Atlantic core top sample",
+    "species": [
+     "planktonic foraminifera",
+     "patellogastropods",
+     "bivalves",
+     "ichthyoliths (fish teeth)"
+    ],
+    "datasets": [
+     "Example microfossil slide scan (Zenodo)",
+     "AutoMorph verification data (Zenodo)"
+    ],
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "planktonic foraminifera",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "patellogastropods",
+    "scientific_name": "Patellogastropoda",
+    "rank": "order",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.7,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "bivalves",
+    "scientific_name": "",
+    "rank": "class",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.7,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ichthyoliths (fish teeth)",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Example microfossil slide scan (Zenodo)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "AutoMorph verification data (Zenodo)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Reconstruction",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "AutoMorph",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.4,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "name": "thresholding segmentation",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "focus stacking (Zerene Stacker / FIJI)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.3,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "morphological image filters",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.5,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "height map Delaunay triangulation",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,405 @@
+{
+ "doi": "10.1007/978-3-031-20080-9_35",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "b46166d6ae5cc8884683d7dfc8ebf17bcd9be73992b9d8a9966ce1c390b83a2a",
+  "extracted_at": "2026-10-15T12:56:25.192703+00:00",
+  "cost_usd": 0.263072
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-GENERIC",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "benchmark",
+   "reason": "Generic weakly supervised object localization study on label granularity; animal images from iNaturalist serve as a fine-grained benchmark, and wildlife or conservation is not the stated application.",
+   "page": 1,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 99.4,
+    "page": 1,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 7,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 7,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "iNaturalist citizen science observations",
+    "species": [
+     "animals (iNatLoc500 species)"
+    ],
+    "datasets": [
+     "iNatLoc500",
+     "iNat17",
+     "iNat21"
+    ],
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Generic benchmarks CUB, ImageNet, OpenImages30k",
+    "species": [
+     "birds (CUB)",
+     "ImageNet classes"
+    ],
+    "datasets": [
+     "CUB",
+     "ImageNet",
+     "OpenImages30k"
+    ],
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "animals (iNatLoc500 species)",
+    "scientific_name": "Animalia",
+    "rank": "group",
+    "role": "benchmark_class",
+    "domestic": false,
+    "n_taxa": 500,
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "birds (CUB)",
+    "scientific_name": "Aves",
+    "rank": "group",
+    "role": "benchmark_class",
+    "domestic": false,
+    "n_taxa": 200,
+    "page": 23,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 23,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet classes",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "benchmark_class",
+    "domestic": false,
+    "n_taxa": 1000,
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "related"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "iNatLoc500",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "citizen_science",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "iNat17",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "citizen_science",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "iNat21",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "citizen_science",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CUB",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "OpenImages30k",
+    "role": "generic_benchmark",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "auxiliary",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "CAM",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CAM-Agg",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 28,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 28,
+     "section": "body"
+    }
+   },
+   {
+    "name": "HaS",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ACoL",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SPG",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ADL",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CutMix",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FSL-Det (Faster-RCNN)",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FSL-Seg",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Center baseline",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "introduction"
+    }
+   }
+  }
+ }
+}

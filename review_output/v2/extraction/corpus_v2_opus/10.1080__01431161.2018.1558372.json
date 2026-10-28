@@ -1,0 +1,246 @@
+{
+ "doi": "10.1080/01431161.2018.1558372",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "3ee74c8f4ee0245b11e76769be89955c6654dd6cf5a04e90aa248b2813808535",
+  "extracted_at": "2026-10-13T05:46:11.313647+00:00",
+  "cost_usd": 0.28032
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-NOCV",
+   "subject_type": "mixed",
+   "paper_type": "method",
+   "reason": "The paper gives physics-based guidance for planning drone thermal-infrared surveys (flying height, atmosphere, ground temperature, vegetation). Riverine rabbits were found by visual inspection of footage and confirmed by observers on foot; no computer vision method is developed or evaluated on the animal images.",
+   "page": 19,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 19,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "Long-wave Infrared / Thermal (LWIR)",
+      "source": "text",
+      "page": 17,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 17,
+       "section": "introduction"
+      }
+     }
+    ],
+    "habitat": "Shrubland",
+    "countries": [
+     "South Africa"
+    ],
+    "location_detail": "Loxton, Karoo region (latitude -31.476421, longitude 22.354109)",
+    "species": [
+     "riverine rabbit"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "introduction"
+    }
+   },
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "Long-wave Infrared / Thermal (LWIR)",
+      "source": "text",
+      "page": 18,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 18,
+       "section": "introduction"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Not reported",
+    "species": [
+     "domestic rabbit"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "introduction"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "riverine rabbit",
+    "scientific_name": "Bunolagus monticularis",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "domestic rabbit",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "Scrub hare",
+    "scientific_name": "Lepis saxatilis",
+    "rank": "species",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 22,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 22,
+     "section": "body"
+    }
+   },
+   {
+    "name": "red rock rabbit",
+    "scientific_name": "Pronolagus spp.",
+    "rank": "genus",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 22,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 22,
+     "section": "body"
+    }
+   },
+   {
+    "name": "aardvarks",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "introduction"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "introduction"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 20,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 20,
+     "section": "introduction"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Coolest-50%-of-pixels background temperature estimate",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "introduction"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

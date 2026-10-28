@@ -1,0 +1,63 @@
+{
+ "doi": "10.1093/icb/icac053",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0688269,
+ "items": [
+  {
+   "doi": "10.1093/icb/icac053",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Moon video from Raspberry Pi camera, converted to grayscale; visible light."
+  },
+  {
+   "doi": "10.1093/icb/icac053",
+   "field": "task",
+   "value": "Tracking",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Silhouettes assembled into bird flight paths across frames; tracking."
+  },
+  {
+   "doi": "10.1093/icb/icac053",
+   "field": "task",
+   "value": "Segmentation",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "No segmentation task; contour/motion detection of silhouettes is detection, not segmentation."
+  },
+  {
+   "doi": "10.1093/icb/icac053",
+   "field": "algorithm",
+   "value": "Gaussian filter",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Uses a 5×5 Gaussian kernel blur."
+  },
+  {
+   "doi": "10.1093/icb/icac053",
+   "field": "algorithm",
+   "value": "Motion detection",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Background subtraction and inter-frame differences for motion detection."
+  },
+  {
+   "doi": "10.1093/icb/icac053",
+   "field": "algorithm",
+   "value": "contour detection",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Uses OpenCV contour detection (Suzuki method) on silhouettes."
+  },
+  {
+   "doi": "10.1093/icb/icac053",
+   "field": "algorithm",
+   "value": "curve fitting",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Conic fitting (Fitzgibbon) used to fit moon ellipse."
+  }
+ ]
+}

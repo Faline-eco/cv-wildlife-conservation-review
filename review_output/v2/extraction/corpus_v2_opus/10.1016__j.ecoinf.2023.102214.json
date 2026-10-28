@@ -1,0 +1,249 @@
+{
+ "doi": "10.1016/j.ecoinf.2023.102214",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "a9b240e067df8dfb245bd50503e6f7252ae6d7ca29843649073bd20f030102df",
+  "extracted_at": "2026-10-12T11:34:08.166218+00:00",
+  "cost_usd": 0.1757
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "application",
+   "reason": "Evaluates individual identification algorithms (PIE v2, HotSpotter) on camera-trap images of free-ranging snow leopards in Afghanistan together with captive zoo images.",
+   "page": 1,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 96.6,
+    "page": 1,
+    "section": "abstract"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Camera Trap",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [
+     "Afghanistan"
+    ],
+    "location_detail": "Wildlife Conservation Society (WCS) program in Afghanistan; field camera trap observations from one location",
+    "species": [
+     "snow leopard"
+    ],
+    "datasets": [
+     "Whiskerbook.org curated snow leopard catalog (WCS Afghanistan and zoo data)"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.1,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "Finland",
+     "Sweden",
+     "Germany",
+     "United States"
+    ],
+    "location_detail": "Helsinki and Ätheri Zoos (Finland); Kolmården Zoo, Nordens Ark and Orsa Bear Park (Sweden); Köln and Wuppertal Zoos (Germany); Bronx and Central Park zoos (New York City)",
+    "species": [
+     "snow leopard"
+    ],
+    "datasets": [
+     "Whiskerbook.org curated snow leopard catalog (WCS Afghanistan and zoo data)"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.1,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "snow leopard",
+    "scientific_name": "Panthera uncia",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.2,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Whiskerbook.org curated snow leopard catalog (WCS Afghanistan and zoo data)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "mixed",
+    "page": 21,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.5,
+     "page": 21,
+     "section": "back"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Re-Identification",
+    "role": "primary",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.5,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.3,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "PIE v2 (Pose Invariant Embeddings)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.1,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "InceptionV3",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.8,
+     "page": 4,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "HotSpotter",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.0,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLO v2",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "background subtraction",
+    "type": "other",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.7,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PIE-BGS-LR + HotSpotter",
+    "type": "other",
+    "role": "proposed",
+    "page": 18,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 18,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

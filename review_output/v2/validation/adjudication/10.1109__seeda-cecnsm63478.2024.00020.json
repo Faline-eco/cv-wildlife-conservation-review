@@ -1,0 +1,135 @@
+{
+ "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0527729,
+ "items": [
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "habitat",
+   "value": "Marine",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Nesting islets in a gulf; birds over land/water, Amvrakikos Gulf is coastal wetland, not open marine."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "habitat",
+   "value": "Wetlands (inland)",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Amvrakikos Gulf lagoon/islets; wetland plausible but paper doesn't state habitat class."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Drone visible-light footage; infrared only future work."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "country",
+   "value": "Greece",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Amvrakikos Gulf, Greece; authors at University of Ioannina."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "task",
+   "value": "Segmentation",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Segmentation is auxiliary; primary tasks are detection and tracking."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "task",
+   "value": "Tracking",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Tracking with OSNet is core to counting birds."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "algorithm",
+   "value": "gamma correction",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Gamma correction applied in pre-processing layer."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ORACLE is the authors' own model/pipeline, with finetuned detectors."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "algorithm",
+   "value": "HAN",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "HAN appears only in cited OSNet comparison table, not used."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "algorithm",
+   "value": "MobileNet",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "MobileNetV2 appears only in cited OSNet comparison table."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "algorithm",
+   "value": "OSNet",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "OSNet used as tracking model, finetuned."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "algorithm",
+   "value": "ShuffleNet",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "ShuffleNet only in cited comparison table."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "algorithm",
+   "value": "ViLT",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "ViLT mentioned as example; BLIP actually used."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "algorithm",
+   "value": "braidnet",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "BraidNet only in cited comparison table."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors captured drone footage and built AMVRADIA dataset."
+  },
+  {
+   "doi": "10.1109/seeda-cecnsm63478.2024.00020",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Uses named AMVRADIA dataset (and ADE20k for SegFormer)."
+  }
+ ]
+}

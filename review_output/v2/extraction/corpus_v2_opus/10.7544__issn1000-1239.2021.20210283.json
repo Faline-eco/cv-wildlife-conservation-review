@@ -1,0 +1,336 @@
+{
+ "doi": "10.7544/issn1000-1239.2021.20210283",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "b86052f1c0f0d89951b4228cb32b413d60dcd7377b16ff202b0b341863149710",
+  "extracted_at": "2026-10-25T08:47:29.622665+00:00",
+  "cost_usd": 0.315756
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "method",
+   "reason": "Proposes an improved RetinaNet to detect and identify butterfly species in images taken in the natural environment. Specimen photos are added to the training set, which makes the data mixed.",
+   "page": 3,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 3,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Butterfly images from the 2018 China Data Mining Competition dataset (ecological photos plus specimen photos); capture location not stated",
+    "species": [
+     "butterflies"
+    ],
+    "datasets": [
+     "Butterfly_Data",
+     "Test_Butterfly_Data",
+     "aug-eco-1"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 3,
+     "section": null
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "butterflies",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 94,
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Butterfly_Data",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "mixed",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Test_Butterfly_Data",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "aug-eco-1",
+    "role": "public_wildlife_dataset",
+    "availability": "not_stated",
+    "origin": "not_stated",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "front"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "front"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "front"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "front"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "RetinaNet",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "front"
+    }
+   },
+   {
+    "name": "DSEM",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "name": "DSEA",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "other_page",
+     "score": 98.3,
+     "page": 2,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Deformable convolution (DCN)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 10,
+     "section": null
+    }
+   },
+   {
+    "name": "ResNet50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "front"
+    }
+   },
+   {
+    "name": "ResNet34",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "front"
+    }
+   },
+   {
+    "name": "ResNet101",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "front"
+    }
+   },
+   {
+    "name": "ResNeSt50",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "front"
+    }
+   },
+   {
+    "name": "ResNeSt101",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "front"
+    }
+   },
+   {
+    "name": "SEA (SENet squeeze-and-excitation)",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "front"
+    }
+   },
+   {
+    "name": "SEM",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "front"
+    }
+   },
+   {
+    "name": "K-means",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Grad-CAM++",
+    "type": "other",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.4,
+     "page": 7,
+     "section": "front"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.4,
+     "page": 7,
+     "section": "front"
+    }
+   }
+  }
+ }
+}

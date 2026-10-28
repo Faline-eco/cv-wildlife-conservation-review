@@ -1,0 +1,63 @@
+{
+ "doi": "10.1038/s41598-019-41275-1",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.07177090000000001,
+ "items": [
+  {
+   "doi": "10.1038/s41598-019-41275-1",
+   "field": "task",
+   "value": "Activity Recognition",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Polyp activity is classified via patch classification, not activity recognition of video behavior."
+  },
+  {
+   "doi": "10.1038/s41598-019-41275-1",
+   "field": "task",
+   "value": "Other",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Tasks are segmentation and classification; no distinct 'other' primary task."
+  },
+  {
+   "doi": "10.1038/s41598-019-41275-1",
+   "field": "task",
+   "value": "Segmentation",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Pixel-labelling segmentation of live coral is a core step."
+  },
+  {
+   "doi": "10.1038/s41598-019-41275-1",
+   "field": "algorithm",
+   "value": "Gabor filter",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "HHSOM trained with Gabor features for coral segmentation."
+  },
+  {
+   "doi": "10.1038/s41598-019-41275-1",
+   "field": "algorithm",
+   "value": "LeNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "LeNet-5 layout CNN trained for polyp classification."
+  },
+  {
+   "doi": "10.1038/s41598-019-41275-1",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors' observatory images, annotated by authors; own deployment data."
+  },
+  {
+   "doi": "10.1038/s41598-019-41275-1",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Images from own observatory portal; no named benchmark dataset used."
+  }
+ ]
+}

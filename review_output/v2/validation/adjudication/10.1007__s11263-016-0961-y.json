@@ -1,0 +1,63 @@
+{
+ "doi": "10.1007/s11263-016-0961-y",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0955709,
+ "items": [
+  {
+   "doi": "10.1007/s11263-016-0961-y",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Unconstrained natural colour photographs of fins; opponentSIFT used."
+  },
+  {
+   "doi": "10.1007/s11263-016-0961-y",
+   "field": "task",
+   "value": "Segmentation",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Primary task is individual identification; segmentation/detection is only a component."
+  },
+  {
+   "doi": "10.1007/s11263-016-0961-y",
+   "field": "algorithm",
+   "value": "FLANN",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "FLANN used for approximate nearest neighbour search of descriptors."
+  },
+  {
+   "doi": "10.1007/s11263-016-0961-y",
+   "field": "algorithm",
+   "value": "Random Forest",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Random forest regressor for fin detection and identification model."
+  },
+  {
+   "doi": "10.1007/s11263-016-0961-y",
+   "field": "algorithm",
+   "value": "SIFT",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "opponentSIFT features and affine-covariant SIFT comparison used."
+  },
+  {
+   "doi": "10.1007/s11263-016-0961-y",
+   "field": "algorithm",
+   "value": "differenceofgaussian",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "DoG corner detector and DoGN descriptors used."
+  },
+  {
+   "doi": "10.1007/s11263-016-0961-y",
+   "field": "algorithm",
+   "value": "hierarchicalsegmentation",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Ultrametric contour map hierarchical segmentation (Arbeláez) used."
+  }
+ ]
+}

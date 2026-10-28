@@ -1,0 +1,71 @@
+{
+ "doi": "10.1038/s41598-019-39917-5",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0591969,
+ "items": [
+  {
+   "doi": "10.1038/s41598-019-39917-5",
+   "field": "spectrum",
+   "value": "Long-wave Infrared / Thermal (LWIR)",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "FLIR Tau 2 thermal camera RPAS imagery."
+  },
+  {
+   "doi": "10.1038/s41598-019-39917-5",
+   "field": "algorithm",
+   "value": "Faster R-CNN",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Faster-RCNN was fine-tuned and used as a detector."
+  },
+  {
+   "doi": "10.1038/s41598-019-39917-5",
+   "field": "algorithm",
+   "value": "ORB",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ORB detector used for image registration."
+  },
+  {
+   "doi": "10.1038/s41598-019-39917-5",
+   "field": "algorithm",
+   "value": "ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ResNet101 backbone investigated for Faster RCNN."
+  },
+  {
+   "doi": "10.1038/s41598-019-39917-5",
+   "field": "algorithm",
+   "value": "VGG",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "VGG16 architecture investigated for Faster RCNN."
+  },
+  {
+   "doi": "10.1038/s41598-019-39917-5",
+   "field": "algorithm",
+   "value": "connected component analysis",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Connected component analysis used to locate regions in heat map."
+  },
+  {
+   "doi": "10.1038/s41598-019-39917-5",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Used published detectors without architectural changes; no own model proposed."
+  },
+  {
+   "doi": "10.1038/s41598-019-39917-5",
+   "field": "algorithm",
+   "value": "fastercnn",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Same as Faster R-CNN, used in the pipeline."
+  }
+ ]
+}

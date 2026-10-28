@@ -1,0 +1,63 @@
+{
+ "doi": "10.1145/3209811.3209880",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0846649,
+ "items": [
+  {
+   "doi": "10.1145/3209811.3209880",
+   "field": "taxon_species",
+   "value": "Panthera leo",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Lions are simulated animals modeled in the environment, though not in the thermal database."
+  },
+  {
+   "doi": "10.1145/3209811.3209880",
+   "field": "taxon_genus",
+   "value": "Panthera",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Panthera follows from lions being included in the simulation."
+  },
+  {
+   "doi": "10.1145/3209811.3209880",
+   "field": "taxon_class",
+   "value": "Mammalia",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Elephants, zebras, and other mammals appear in real and simulated images."
+  },
+  {
+   "doi": "10.1145/3209811.3209880",
+   "field": "taxon_class",
+   "value": "Reptilia",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Crocodiles appear only in simulation; the real data has none."
+  },
+  {
+   "doi": "10.1145/3209811.3209880",
+   "field": "algorithm",
+   "value": "SPOT",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SPOT with Faster RCNN is the baseline compared against."
+  },
+  {
+   "doi": "10.1145/3209811.3209880",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Real data comes from earlier work; new data is simulated, not collected by authors."
+  },
+  {
+   "doi": "10.1145/3209811.3209880",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Real data is an unnamed Air Shepherd dataset; SYNTHIA is only cited."
+  }
+ ]
+}

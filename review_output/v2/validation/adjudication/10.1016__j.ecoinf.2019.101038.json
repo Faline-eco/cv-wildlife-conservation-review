@@ -1,0 +1,47 @@
+{
+ "doi": "10.1016/j.ecoinf.2019.101038",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0688328,
+ "items": [
+  {
+   "doi": "10.1016/j.ecoinf.2019.101038",
+   "field": "country",
+   "value": "Chile",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Images from Patagonian coast, Argentina, not Chile."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2019.101038",
+   "field": "algorithm",
+   "value": "ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Mask R-CNN uses ResNet101 backbone."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2019.101038",
+   "field": "algorithm",
+   "value": "SVM",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "LinearSVC SVM was trained and compared, then discarded."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2019.101038",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors' institute photographed dolphins in campaigns; own database."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2019.101038",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Own unnamed dataset; COCO only used for pretrained weights."
+  }
+ ]
+}

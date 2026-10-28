@@ -1,0 +1,307 @@
+{
+ "doi": "10.1016/j.cub.2022.01.024",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "b16a6276b6bcd5a5b9de852829640f2d2f68ba2fcc357f6c823dbe30f5d87ddd",
+  "extracted_at": "2026-10-12T11:29:46.743943+00:00",
+  "cost_usd": 0.380876
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "method",
+   "reason": "Laboratory-reared Drosophila melanogaster pairs filmed in acrylic arenas inside fly incubators; pose estimation is used for a neuroethology study, with no wild or free-ranging animals.",
+   "page": 23,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 99.1,
+    "page": 23,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "Grayscale",
+      "source": "implied",
+      "page": 0,
+      "evidence": {
+       "status": "none",
+       "score": 0,
+       "page": 0,
+       "section": null
+      }
+     },
+     {
+      "value": "Near Infrared (NIR)",
+      "source": "text",
+      "page": 24,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 24,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Indoor laboratory arenas (4 by 4 array, 20 mm diameter) inside fly incubators; country of recording not stated",
+    "species": [
+     "Fruit fly"
+    ],
+    "datasets": [
+     "Social Drosophila Pose Dataset (SDPD-15k)",
+     "Unnamed (collected by authors)",
+     "ImageNet"
+    ],
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Fruit fly",
+    "scientific_name": "Drosophila melanogaster",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 23,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 23,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Social Drosophila Pose Dataset (SDPD-15k)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 23,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 23,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "captive_or_lab",
+    "page": 23,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 23,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Pose Estimation",
+    "role": "primary",
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 25,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 25,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Activity Recognition",
+    "role": "primary",
+    "page": 26,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 26,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "SoAL",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   },
+   {
+    "name": "HRNet",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 25,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 25,
+     "section": "body"
+    }
+   },
+   {
+    "name": "background subtraction",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Gaussian Mixture Model (GMM)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DeepLabCut",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 25,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 25,
+     "section": "body"
+    }
+   },
+   {
+    "name": "resnet-50",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 25,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 25,
+     "section": "body"
+    }
+   },
+   {
+    "name": "GLM",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 28,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 28,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

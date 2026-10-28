@@ -1,0 +1,47 @@
+{
+ "doi": "10.1109/cvpr52733.2024.00249",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.09602290000000001,
+ "items": [
+  {
+   "doi": "10.1109/cvpr52733.2024.00249",
+   "field": "algorithm",
+   "value": "LoRA",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Uses LoRA low-rank matrices on SAM encoder's Query/Value; ablation 'w/o LoRA'."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.00249",
+   "field": "algorithm",
+   "value": "Transformer",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SAM ViT encoder and transformer layers in MCP are used."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.00249",
+   "field": "algorithm",
+   "value": "U-Net",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "U-Net not used; only compared via TransUNet/UNet++ baselines."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.00249",
+   "field": "algorithm",
+   "value": "gamma correction",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Gamma correction branch used for illumination compensation in Dual-SAM encoder."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.00249",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Proposes own Dual-SAM model."
+  }
+ ]
+}

@@ -1,0 +1,324 @@
+{
+ "doi": "10.7554/elife.63720",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "6f999561f8617ef1c3561351c1f30b029e8ea77e4117c7e9e1577f059e5bedf5",
+  "extracted_at": "2026-10-12T16:28:08.724362+00:00",
+  "cost_usd": 0.407532
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "method",
+   "reason": "Pose estimation and social behavior classification of laboratory mice filmed in a resident-intruder assay in a home cage; no wild or free-ranging animals.",
+   "page": 23,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 23,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "Near Infrared (NIR)",
+      "source": "text",
+      "page": 23,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 23,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "United States"
+    ],
+    "location_detail": "Home cage in custom-built recording hardware, behavioral testing room, Caltech animal facility (Anderson lab)",
+    "species": [
+     "laboratory mouse"
+    ],
+    "datasets": [
+     "MARS pose annotation data",
+     "MARS behavior annotation data",
+     "MARS multi-worker behavior annotation data",
+     "Unnamed (collected by authors)"
+    ],
+    "page": 23,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 23,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Not reported",
+    "species": [
+     "laboratory mouse"
+    ],
+    "datasets": [
+     "CRIM13"
+    ],
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "laboratory mouse",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 23,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 23,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "MARS pose annotation data",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 24,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 24,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MARS behavior annotation data",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 25,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 25,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MARS multi-worker behavior annotation data",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "captive_or_lab",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CRIM13",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Pose Estimation",
+    "role": "primary",
+    "page": 28,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 28,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Activity Recognition",
+    "role": "primary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "MARS",
+    "type": "other",
+    "role": "proposed",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MSC-MultiBox",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Inception-Resnet-v2",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 27,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 27,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Stacked hourglass network",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 28,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 28,
+     "section": "body"
+    }
+   },
+   {
+    "name": "XGBoost",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 30,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 30,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Hidden Markov Model",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 30,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 30,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": true,
+    "page": 17,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 32,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 32,
+     "section": "back"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "doi": "10.1016/j.ecss.2022.107815",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0515709,
+ "items": [
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "platform",
+   "value": "Non-specialized Camera",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Fixed SmartBay observatory PTZ camera; 'non-specialized' vs fixed underwater/observatory camera ambiguous."
+  },
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "habitat",
+   "value": "Marine",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "SmartBay sub-sea observatory in coastal marine waters."
+  },
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Standard video camera, visible light frames."
+  },
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "country",
+   "value": "Ireland",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "SmartBay observatory, Ireland (Galway Bay)."
+  },
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "task",
+   "value": "Detection",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Primary task is instance segmentation with Mask R-CNN, not plain detection."
+  },
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "taxon_class",
+   "value": "Actinopterygii",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "118,659 fish instances annotated."
+  },
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "taxon_class",
+   "value": "Malacostraca",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "171 crab instances annotated."
+  },
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "algorithm",
+   "value": "FgSegNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "FgSegNet was tested and retrained for comparison."
+  },
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "algorithm",
+   "value": "ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ResNet-101 backbone used in Mask R-CNN."
+  },
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "algorithm",
+   "value": "YOLO",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "YOLOv2 only mentioned as preliminary pre-trained test, not really used; borderline."
+  },
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors created and annotated their own dataset from SmartBay videos."
+  },
+  {
+   "doi": "10.1016/j.ecss.2022.107815",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Own new dataset created; no existing public named dataset used (COCO only pretraining)."
+  }
+ ]
+}

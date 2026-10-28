@@ -1,0 +1,303 @@
+{
+ "doi": "10.1038/s42003-026-10392-9",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "c1ae73c05a088d55697df2b13231ddd63a5043b3371be0aa4e34046427ec1f74",
+  "extracted_at": "2026-10-24T10:11:42.739644+00:00",
+  "cost_usd": 0.310016
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "specimen",
+   "paper_type": "method",
+   "reason": "The CNN classifies photos of museum skull specimens of talpid moles. No live wild animals are imaged, and museum specimens fall under E-CAPTIVE.",
+   "page": 10,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 10,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 10,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 10,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "China",
+     "Vietnam",
+     "Japan",
+     "Germany",
+     "United States"
+    ],
+    "location_detail": "Natural history museum collections (e.g., IOZ, KIZ, USNM, AMNH, FMNH, MCZ, NSMT, IEBR, SMNS); skulls photographed on a camera stand against a blue background",
+    "species": [
+     "talpid moles",
+     "Parascaptor sp.1",
+     "Parascaptor sp.2",
+     "Euroscaptor sp.1"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "talpid moles",
+    "scientific_name": "Talpidae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 51,
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Parascaptor sp.1",
+    "scientific_name": "Parascaptor sp.1",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Parascaptor sp.2",
+    "scientific_name": "Parascaptor sp.2",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Euroscaptor sp.1",
+    "scientific_name": "Euroscaptor sp.1",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "captive_or_lab",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "back"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.1,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "HISNET",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EfficientNet-B3",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "AlexNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "GoogleNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MobileNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet series",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ShuffleNet series",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "VGGNet series",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  }
+ }
+}

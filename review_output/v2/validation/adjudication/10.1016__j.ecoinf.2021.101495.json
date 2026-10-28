@@ -1,0 +1,103 @@
+{
+ "doi": "10.1016/j.ecoinf.2021.101495",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0935029,
+ "items": [
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "platform",
+   "value": "Non-specialized Camera",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Low-cost EM CCTV-type cameras on vessels, not specialized sensors."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "habitat",
+   "value": "Marine",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Images taken on conveyor belt onboard vessel, not in the sea."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "habitat",
+   "value": "Artificial Aquatic",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Aquatic artificial means aquaculture; here fishing vessel deck."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "habitat",
+   "value": "Artificial Terrestrial",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Vessel deck conveyor belt; habitat classification ambiguous, not clearly terrestrial."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "spectrum",
+   "value": "Hyperspectral",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Standard RGB images, no hyperspectral."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "task",
+   "value": "Other",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Primary tasks are segmentation and classification, not other."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "task",
+   "value": "Segmentation",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Mask R-CNN instance segmentation of fish is a core task."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "algorithm",
+   "value": "Image statistics",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Pixel variance used only for dirtiness; not a method family."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "algorithm",
+   "value": "Inception",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Mask R-CNN Inception ResNet V2 model used."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "algorithm",
+   "value": "ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ResNet50V2 classifier used."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "algorithm",
+   "value": "histogram equalization",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "CLAHE histogram equalization applied in preprocessing."
+  },
+  {
+   "doi": "10.1016/j.ecoinf.2021.101495",
+   "field": "algorithm",
+   "value": "perspective transformation",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Perspective correction of conveyor belt applied."
+  }
+ ]
+}

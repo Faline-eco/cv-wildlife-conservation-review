@@ -1,0 +1,31 @@
+{
+ "doi": "10.1016/j.gecco.2022.e02104",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0682469,
+ "items": [
+  {
+   "doi": "10.1016/j.gecco.2022.e02104",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Standard camera trap images analysed with MegaDetector; visible RGB implied, no thermal/IR mentioned."
+  },
+  {
+   "doi": "10.1016/j.gecco.2022.e02104",
+   "field": "task",
+   "value": "Classification",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Primary task is object detection (MegaDetector) of humans/animals, not classification."
+  },
+  {
+   "doi": "10.1016/j.gecco.2022.e02104",
+   "field": "algorithm",
+   "value": "Gaussian filter",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Gaussian blur is only a privacy tool; the ML method family is object detection CNN."
+  }
+ ]
+}

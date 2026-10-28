@@ -1,0 +1,87 @@
+{
+ "doi": "10.1016/j.patrec.2015.08.015",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0783689,
+ "items": [
+  {
+   "doi": "10.1016/j.patrec.2015.08.015",
+   "field": "country",
+   "value": "UK",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Authors based in Lincoln, UK; birds likely filmed there, though country not explicit."
+  },
+  {
+   "doi": "10.1016/j.patrec.2015.08.015",
+   "field": "task",
+   "value": "Segmentation",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Primary task is species classification; segmentation is only preprocessing."
+  },
+  {
+   "doi": "10.1016/j.patrec.2015.08.015",
+   "field": "taxon_species",
+   "value": "Nandayus nenday",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Nanday Parakeet is one of the seven species analysed."
+  },
+  {
+   "doi": "10.1016/j.patrec.2015.08.015",
+   "field": "taxon_genus",
+   "value": "Nandayus",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Nanday Parakeet belongs to genus Nandayus (Nandayus nenday)."
+  },
+  {
+   "doi": "10.1016/j.patrec.2015.08.015",
+   "field": "algorithm",
+   "value": "Bayes classifier",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Normal Bayes classifier used."
+  },
+  {
+   "doi": "10.1016/j.patrec.2015.08.015",
+   "field": "algorithm",
+   "value": "SVM",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SVM with RBF kernel used."
+  },
+  {
+   "doi": "10.1016/j.patrec.2015.08.015",
+   "field": "algorithm",
+   "value": "background subtraction",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Background GMM subtraction used to extract silhouettes."
+  },
+  {
+   "doi": "10.1016/j.patrec.2015.08.015",
+   "field": "algorithm",
+   "value": "color features",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Colour moments and log-polar colour features used."
+  },
+  {
+   "doi": "10.1016/j.patrec.2015.08.015",
+   "field": "algorithm",
+   "value": "contour detection",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Contours obtained with Suzuki algorithm."
+  },
+  {
+   "doi": "10.1016/j.patrec.2015.08.015",
+   "field": "algorithm",
+   "value": "GMM",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Background Gaussian mixture model used for segmentation."
+  }
+ ]
+}

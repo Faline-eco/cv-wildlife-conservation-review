@@ -1,0 +1,290 @@
+{
+ "doi": "10.1101/2024.09.02.610558",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "b992bb6ba79cd1417ac2cc4c29d04c5a34389e00da3f115ad652af437f77aeda",
+  "extracted_at": "2026-10-14T14:14:33.947873+00:00",
+  "cost_usd": 0.248328
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "specimen",
+   "paper_type": "method",
+   "reason": "Computer vision classification of images of wild invertebrates collected in field pitfall traps (NEON bycatch) for biomonitoring; primary method study.",
+   "page": 9,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 96.2,
+    "page": 9,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [
+     "United States"
+    ],
+    "location_detail": "56 NEON pitfall trap plots from 27 sites across the United States (incl. Alaska, Hawaii, Puerto Rico); specimens photographed on white ceramic tile",
+    "species": [
+     "Invertebrates (17 classes)",
+     "Annelida",
+     "Opilioacarida",
+     "Zygentoma"
+    ],
+    "datasets": [
+     "NEON invertebrate bycatch image data",
+     "ImageNet"
+    ],
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.8,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Invertebrates (17 classes)",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 17,
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Annelida",
+    "scientific_name": "Annelida",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.1,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Opilioacarida",
+    "scientific_name": "Opilioacarida",
+    "rank": "order",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 19,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Zygentoma",
+    "scientific_name": "Zygentoma",
+    "rank": "order",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 19,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ground beetles",
+    "scientific_name": "Carabidae",
+    "rank": "family",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.0,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "NEON invertebrate bycatch image data",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.4,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 92.9,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.7,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.2,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Image-DNA multimodal fusion model",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 16,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.6,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 16,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50 baseline (image only)",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.8,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Naïve mask",
+    "type": "other",
+    "role": "proposed",
+    "page": 14,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.5,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Weighted mask",
+    "type": "other",
+    "role": "proposed",
+    "page": 14,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.9,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FIJI/ImageJ specimen detection",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.7,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

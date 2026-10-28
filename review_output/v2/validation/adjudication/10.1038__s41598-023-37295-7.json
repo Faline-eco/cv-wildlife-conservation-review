@@ -1,0 +1,95 @@
+{
+ "doi": "10.1038/s41598-023-37295-7",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0795969,
+ "items": [
+  {
+   "doi": "10.1038/s41598-023-37295-7",
+   "field": "habitat",
+   "value": "Artificial Terrestrial",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Deer enclosures and animal research center paddocks are human-made facilities."
+  },
+  {
+   "doi": "10.1038/s41598-023-37295-7",
+   "field": "habitat",
+   "value": "Forest",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Images were from enclosures and paddocks, not natural forest."
+  },
+  {
+   "doi": "10.1038/s41598-023-37295-7",
+   "field": "habitat",
+   "value": "Grassland",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Pastures are in managed research paddocks, so artificial, not natural grassland."
+  },
+  {
+   "doi": "10.1038/s41598-023-37295-7",
+   "field": "task",
+   "value": "Classification",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Primary task is detection and classification; object detection (YOLO) fits better."
+  },
+  {
+   "doi": "10.1038/s41598-023-37295-7",
+   "field": "algorithm",
+   "value": "SVD",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SVD fusion method was compared."
+  },
+  {
+   "doi": "10.1038/s41598-023-37295-7",
+   "field": "algorithm",
+   "value": "fusion",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Visible-thermal fusion is the core approach."
+  },
+  {
+   "doi": "10.1038/s41598-023-37295-7",
+   "field": "algorithm",
+   "value": "image fusion",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Eight image fusion methods were compared."
+  },
+  {
+   "doi": "10.1038/s41598-023-37295-7",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Used existing YOLOv5/YOLOv7 and existing fusion methods; no new model proposed."
+  },
+  {
+   "doi": "10.1038/s41598-023-37295-7",
+   "field": "algorithm",
+   "value": "sparse coding",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Sparse representation fusion was one of the methods."
+  },
+  {
+   "doi": "10.1038/s41598-023-37295-7",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors collected drone images at Mississippi State facilities."
+  },
+  {
+   "doi": "10.1038/s41598-023-37295-7",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Own images stored in AWIR repository; no pre-existing public benchmark used."
+  }
+ ]
+}

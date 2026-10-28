@@ -1,0 +1,249 @@
+{
+ "doi": "10.64898/2026.04.06.716557",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "724bdd6eaa754e20ce43f831a065d35623bc203e3241c109f3e9bc7876c13912",
+  "extracted_at": "2026-10-14T15:06:25.138621+00:00",
+  "cost_usd": 0.320744
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "application",
+   "reason": "Applies a computer vision pipeline (detection, segmentation, monocular depth estimation) to iNaturalist and FathomNet images of wild fish groups to quantify collective movement across species.",
+   "page": 7,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 96.7,
+    "page": 7,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 14,
+      "evidence": {
+       "status": "fuzzy",
+       "score": 96.6,
+       "page": 14,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "Images of schooling/aggregating fish from public databases; no locations stated",
+    "species": [
+     "ray-finned fishes"
+    ],
+    "datasets": [
+     "iNaturalist",
+     "FathomNet"
+    ],
+    "page": 14,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.2,
+     "page": 14,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "ray-finned fishes",
+    "scientific_name": "Actinopterygii",
+    "rank": "class",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 45,
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.5,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "iNaturalist",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "citizen_science",
+    "page": 14,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.7,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FathomNet",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 14,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 14,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Reconstruction",
+    "role": "primary",
+    "page": 14,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.1,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.3,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "auxiliary",
+    "page": 14,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.2,
+     "page": 14,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLO-E",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SAM2",
+    "type": "foundation_model",
+    "role": "proposed",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.1,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Depth Anything V2",
+    "type": "foundation_model",
+    "role": "proposed",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.8,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Principal component analysis (heading estimation)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 14,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.6,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ModernBERT-embed with SetFit",
+    "type": "transformer",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.6,
+     "page": 11,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

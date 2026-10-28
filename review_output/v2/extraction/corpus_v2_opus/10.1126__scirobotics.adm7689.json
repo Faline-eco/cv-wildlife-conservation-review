@@ -1,0 +1,274 @@
+{
+ "doi": "10.1126/scirobotics.adm7689",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "799e94dc2324afee330dae2a86ee57793fbb371ef79b8386989100d37c09e550",
+  "extracted_at": "2026-10-14T14:32:40.566996+00:00",
+  "cost_usd": 0.2111
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "method",
+   "reason": "Image-based closed-loop tracking (bright-point detection with a Kalman filter) and high-speed video of marked bees flying freely outdoors, including from a drone. The bees come from managed or commercial colonies but forage freely outdoors. The locusts are reared in the lab.",
+   "page": 3,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 97.7,
+    "page": 3,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [
+     {
+      "value": "Near Infrared (NIR)",
+      "source": "text",
+      "page": 4,
+      "evidence": {
+       "status": "fuzzy",
+       "score": 95.9,
+       "page": 4,
+       "section": "body"
+      }
+     },
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 4,
+      "evidence": {
+       "status": "fuzzy",
+       "score": 94.4,
+       "page": 4,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Outdoors, naturalistic conditions; honey bees from hives maintained on-site; pan-tilt mirror periscope FLO system with high-speed camera",
+    "species": [
+     "Buff-tailed bumble bee",
+     "Western honey bee",
+     "Desert locust"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.5,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "Near Infrared (NIR)",
+      "source": "text",
+      "page": 7,
+      "evidence": {
+       "status": "fuzzy",
+       "score": 94.7,
+       "page": 7,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Outdoor flights of quadcopter (Holybro X500 V2) tracking marked honey bees",
+    "species": [
+     "Western honey bee"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.2,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Buff-tailed bumble bee",
+    "scientific_name": "Bombus terrestris",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Western honey bee",
+    "scientific_name": "Apis mellifera",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.1,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Desert locust",
+    "scientific_name": "Schistocerca gregaria",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.6,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "mixed",
+    "page": 4,
+    "evidence": {
+     "status": "not_found",
+     "score": 82.8,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Tracking",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.2,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Fast Lock-On (FLO) tracking",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.4,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Kalman filter",
+    "type": "other",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.3,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Brightest pixel detector",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.8,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Stereo disparity distance estimation",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.6,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

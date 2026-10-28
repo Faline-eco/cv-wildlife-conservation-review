@@ -1,0 +1,167 @@
+{
+ "doi": "10.1109/cvpr.2017.586",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0638509,
+ "items": [
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "platform",
+   "value": "Depth Sensor / Lidar",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Artec scanner scans toys, not an animal imaging platform of depth sensor sense; images are RGB photos."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "spectrum",
+   "value": "Depth / LiDAR",
+   "side": "auto_only",
+   "verdict": "unclear",
+   "reason": "3D scans of toys are used, but analysed images are RGB; ambiguous."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "task",
+   "value": "Pose Estimation",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Fits shape and pose of model to image keypoints."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "task",
+   "value": "Reconstruction",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Learns and fits 3D shape models; 3D reconstruction from scans and images."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "task",
+   "value": "Synthesis",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Generative model, but no image synthesis task; primary tasks are reconstruction/pose."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "taxon_species",
+   "value": "Equus asinus",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Donkey images fitted in Fig. 11."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "taxon_species",
+   "value": "Ovis aries",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Sheep images fitted in Fig. 11."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "taxon_species",
+   "value": "Sus scrofa",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Pigs and boar fitted in Fig. 11."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "taxon_species",
+   "value": "Vulpes vulpes",
+   "side": "auto_only",
+   "verdict": "unclear",
+   "reason": "Toy fox scanned, but real fox images not stated."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "taxon_species",
+   "value": "Equus quagga",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Zebra toy scans; likely zebra images (Muybridge) too, though ambiguous."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "taxon_genus",
+   "value": "Ovis",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Sheep (Ovis) fitted in images."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "taxon_genus",
+   "value": "Sus",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Pigs/boar (Sus) fitted in images."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "taxon_genus",
+   "value": "Vulpes",
+   "side": "auto_only",
+   "verdict": "unclear",
+   "reason": "Fox toy scanned only; real fox images not confirmed."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "algorithm",
+   "value": "ARAP",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ARAP regularization used for refinement."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "algorithm",
+   "value": "PCA",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "PCA shape space learned."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "algorithm",
+   "value": "SMAL",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SMAL is the proposed model."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "algorithm",
+   "value": "Stitched Puppet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Stitched Puppet compared and extended by GLoSS."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "algorithm",
+   "value": "shape model",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Statistical shape model is core."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "algorithm",
+   "value": "modelalignment",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Template registration/alignment to scans is used."
+  },
+  {
+   "doi": "10.1109/cvpr.2017.586",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "They scanned toy figurines themselves and clicked keypoints."
+  }
+ ]
+}

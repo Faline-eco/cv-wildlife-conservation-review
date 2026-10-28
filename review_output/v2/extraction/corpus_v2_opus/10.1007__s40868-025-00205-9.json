@@ -1,0 +1,335 @@
+{
+ "doi": "10.1007/s40868-025-00205-9",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "056e478bcca35332ebfa669535e47ee7caeb4c02af1045f7c8fc01737a100ea4",
+  "extracted_at": "2026-10-25T06:50:18.288906+00:00",
+  "cost_usd": 0.282932
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "application",
+   "reason": "Deep learning classification of real-world underwater images of healthy vs bleached corals (wild reef animals) for reef health monitoring.",
+   "page": 7,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 98.7,
+    "page": 7,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Real-world underwater coral reef images from public Kaggle datasets; location not stated",
+    "species": [
+     "corals"
+    ],
+    "datasets": [
+     "Healthy and Bleached Corals Image Classification (Kaggle)",
+     "BHD-Corals"
+    ],
+    "page": 7,
+    "evidence": {
+     "status": "not_found",
+     "score": 88.6,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "corals",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Healthy and Bleached Corals Image Classification (Kaggle)",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "BHD-Corals",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 16,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ImageNet-1K",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 9,
+    "evidence": {
+     "status": "other_page",
+     "score": 98.9,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv8",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ViT-Base",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ViT-Small",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DeiT-Base",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Swin-Tiny",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EfficientFormer-L1",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.9,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "RegNetY-016",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EfficientNet-B0",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet50",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet18",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "VGG16",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "VGG19",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MobileNetV3",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DenseNet201",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ConvNeXt-Tiny",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   }
+  }
+ }
+}

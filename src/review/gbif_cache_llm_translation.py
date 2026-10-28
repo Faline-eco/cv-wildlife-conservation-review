@@ -184,7 +184,7 @@ def main():
     parser = argparse.ArgumentParser(description="Process GBIF species names with LLM")
     parser.add_argument("-i", "--input", type=Path, default=Path(r"D:\LiteratureReviewCVinWC\review_output\gbif_cache.json"), help="Input JSON file with hits/misses")
     parser.add_argument("-o", "--output", type=Path, default=Path(r"/review_output/llm_cache.json"), help="Output JSON file")
-    parser.add_argument("-k", "--api-keys", type=str, default="AIzaSyA97_daJ2odbnImSAt66rr6z5mdd73kfE8",
+    parser.add_argument("-k", "--api-keys", type=str, default=os.environ.get("GOOGLE_API_KEYS", ""),
                         help="Comma-separated Google AI API keys")
     parser.add_argument("-m", "--model", type=str, default="gemini-2.5-pro",
                         help="Model name (default: gemini-3-pro-preview)")

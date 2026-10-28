@@ -1,0 +1,238 @@
+{
+ "doi": "10.1109/ieeeconf38699.2020.9389156",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "4328c9dd299a71a63005005fdb37ca18125676d073f34fd99554fb9ca5020016",
+  "extracted_at": "2026-10-25T08:07:14.808782+00:00",
+  "cost_usd": 0.778875
+ },
+ "record": {
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   }
+  ],
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "The paper develops a shape-based image classification and identification system for digital in-line holographic images of marine plankton (including copepods) and particles recorded in situ by an underwater holocamera during North Sea expeditions, so computer vision is applied to images of wild, free-ranging aquatic organisms.",
+   "page": 3,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 3,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Stationary underwater camera",
+    "spectra": [
+     {
+      "value": "Grayscale",
+      "source": "text",
+      "page": 1,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 1,
+       "section": "front"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "North Sea; holograms of marine plankton and particles recorded in their natural habitat by the eHoloCam underwater digital in-line holographic camera during research expeditions",
+    "species": [
+     "marine plankton",
+     "copepod"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "marine plankton",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 3,
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   },
+   {
+    "name": "copepod",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.7,
+     "page": 4,
+     "section": "front"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.2,
+     "page": 4,
+     "section": "front"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "auxiliary",
+    "page": 2,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.2,
+     "page": 2,
+     "section": "front"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "binary SVM (support vector machine)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   },
+   {
+    "name": "NN (three-layer feedforward neural network)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   },
+   {
+    "name": "back-propagation learning algorithm",
+    "type": "other",
+    "role": "backbone",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 91.5,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Zernike moments, Fourier descriptors, affine curvature descriptors and morphological features",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 2,
+     "section": "front"
+    }
+   },
+   {
+    "name": "content-based image retrieval with relevance feedback",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.2,
+     "page": 2,
+     "section": "front"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,266 @@
+{
+ "doi": "10.21203/rs.3.rs-6258914/v1",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "e9e8254fcbeb8a1ab14d29fad85714a290ace575a011cf42ce9db318172d1580",
+  "extracted_at": "2026-10-14T14:46:07.735994+00:00",
+  "cost_usd": 0.190412
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-NOCV",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Species distribution modelling on a tabular fish occurrence dataset (441 observations, 3 variables) using ensemble ML; no image or video analysis.",
+   "page": 7,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 7,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Wetlands (inland)",
+    "countries": [
+     "Uganda"
+    ],
+    "location_detail": "Major rivers and lakes in Uganda",
+    "species": [
+     "Bagrus docmak",
+     "Brycinus sadleri",
+     "Mormyrus kannume",
+     "Oreochromis leucostictus",
+     "Synodontis victoriae"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Bagrus docmak",
+    "scientific_name": "Bagrus docmak",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Brycinus sadleri",
+    "scientific_name": "Brycinus sadleri",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Mormyrus kannume",
+    "scientific_name": "Mormyrus kannume",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Oreochromis leucostictus",
+    "scientific_name": "Oreochromis leucostictus",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Synodontis victoriae",
+    "scientific_name": "Synodontis victoriae",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 12,
+    "evidence": {
+     "status": "other_page",
+     "score": 100,
+     "page": 13,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Random forests (RF)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 14,
+    "evidence": {
+     "status": "other_page",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Bagging classification trees (bagCART)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 14,
+    "evidence": {
+     "status": "other_page",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "AdaBoost",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 14,
+    "evidence": {
+     "status": "other_page",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Gradient boosting models (GBM)",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 13,
+    "evidence": {
+     "status": "other_page",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Extreme gradient boosting (XGB)",
+    "type": "classical_machine_learning",
+    "role": "baseline",
+    "page": 13,
+    "evidence": {
+     "status": "other_page",
+     "score": 100,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Random over-sampling (ROS)",
+    "type": "other",
+    "role": "proposed",
+    "page": 14,
+    "evidence": {
+     "status": "other_page",
+     "score": 100,
+     "page": 15,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,344 @@
+{
+ "doi": "10.21203/rs.3.rs-9207681/v1",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "55d7c9ed320f4283905fc9f74bbfbda5d1aac2447bae4d15585684bec13639fb",
+  "extracted_at": "2026-10-14T14:46:53.430352+00:00",
+  "cost_usd": 0.250416
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-AGRI",
+   "subject_type": "livestock_or_pet",
+   "paper_type": "method",
+   "reason": "Counting of farmed rice field eel juveniles on an aquaculture chute platform; animals are aquaculture stock, not wild free-ranging.",
+   "page": 23,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 95.8,
+    "page": 23,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 5,
+      "evidence": {
+       "status": "fuzzy",
+       "score": 95.7,
+       "page": 5,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Aquatic",
+    "countries": [
+     "China"
+    ],
+    "location_detail": "Experimental chute counting platform at the Zhuanghang Station of the Shanghai Academy of Agricultural Sciences, Shanghai",
+    "species": [
+     "Rice field eel"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.8,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Rice field eel",
+    "scientific_name": "Monopterus albus",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 23,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.4,
+     "page": 23,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "captive_or_lab",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 19,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.4,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.5,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLO11s-Eel",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Improved ByteTrack",
+    "type": "other",
+    "role": "proposed",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 13,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLO11s",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.0,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "FasterNet",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.0,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "C2PSA_DAT (Deformable Attention Transformer)",
+    "type": "transformer",
+    "role": "backbone",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DualConv",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Oriented virtual counting line with dual-threshold hysteresis",
+    "type": "other",
+    "role": "proposed",
+    "page": 14,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.1,
+     "page": 14,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Faster R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.2,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "RT-DETR-r18",
+    "type": "transformer",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.2,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv5s",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.3,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv8s",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.3,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ByteTrack",
+    "type": "other",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.1,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "DeepSORT",
+    "type": "other",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "StrongSORT",
+    "type": "other",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "OC-SORT",
+    "type": "other",
+    "role": "baseline",
+    "page": 18,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 18,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 24,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.4,
+     "page": 24,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

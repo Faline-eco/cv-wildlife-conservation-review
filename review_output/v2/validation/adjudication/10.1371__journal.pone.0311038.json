@@ -1,0 +1,111 @@
+{
+ "doi": "10.1371/journal.pone.0311038",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0685549,
+ "items": [
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "platform",
+   "value": "Satellite",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Images are ground photographs; satellite imagery only used for mesh texture."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "habitat",
+   "value": "Marine",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Penguin colonies photographed on land (rocky/snowy terrestrial); not marine habitat."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "country",
+   "value": "Antarctica",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Photos from Devil Island and Brown Bluff, Antarctic Peninsula."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "task",
+   "value": "Other",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Georegistration/camera pose estimation doesn't fit standard categories; segmentation also used, but 'Other' plausible."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "task",
+   "value": "Reconstruction",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "3D mesh reconstruction and registration of colony is central."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "taxon_species",
+   "value": "Pygoscelis adeliae",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Adélie penguin colonies at Devil Island and Brown Bluff."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "taxon_species",
+   "value": "Pygoscelis papua",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Brown Bluff has mixed Adélie and gentoo colony."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "taxon_genus",
+   "value": "Pygoscelis",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Pygoscelis species studied."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "algorithm",
+   "value": "GLU-Net",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "GLU-Net used for pose refinement."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "algorithm",
+   "value": "PnP",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "PnP solved with Levenberg-Marquardt in step 4."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "algorithm",
+   "value": "SuperGlue",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SuperGlue was tested and compared, though it failed."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "algorithm",
+   "value": "mesh generation",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Textured 3D triangle mesh generated with Trimesh."
+  },
+  {
+   "doi": "10.1371/journal.pone.0311038",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Team's own field photographs were used alongside online ones."
+  }
+ ]
+}

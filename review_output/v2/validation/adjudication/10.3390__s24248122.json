@@ -1,0 +1,167 @@
+{
+ "doi": "10.3390/s24248122",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.1180489,
+ "items": [
+  {
+   "doi": "10.3390/s24248122",
+   "field": "habitat",
+   "value": "Desert",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "No desert habitat reported; only wooded, grassland scenes described."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "habitat",
+   "value": "Forest",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Wooded environment, trees at night in Limpopo; gorillas/chimpanzees in dataset imply forest."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "habitat",
+   "value": "Grassland",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Ground truth Q3 describes grassland with trees; grassy hill."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "habitat",
+   "value": "Savanna",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Sub-Saharan African plains images with wildebeest, zebra, giraffe; 'African plain' savanna."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "habitat",
+   "value": "Shrubland",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Bushes mentioned, but shrubland not clearly stated as habitat."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "habitat",
+   "value": "Wetlands (inland)",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "No wetland habitat described; only passing mention of water sources absent."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "country",
+   "value": "South Africa",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Figures from Limpopo Province, South Africa; Welgevonden reserve."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "country",
+   "value": "Africa",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Africa is a continent, not a country."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "task",
+   "value": "Classification",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Primary task is detection (YOLOv10-X) with VLM; classification not primary."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "task",
+   "value": "Other",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "VQA, RAG, and report generation tasks fall under other."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "taxon_species",
+   "value": "Bunolagus monticularis",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Bunolagus monticularis appears in Table 1 classes and results."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "taxon_species",
+   "value": "Oryctolagus cuniculus",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Oryctolagus cuniculus is not studied."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "taxon_genus",
+   "value": "Bunolagus",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Bunolagus monticularis is a studied class."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "taxon_genus",
+   "value": "Gorilla",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Gorilla sp. is a studied class in Table 1."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "taxon_genus",
+   "value": "Papio",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Papio sp. baboon is a studied class."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "taxon_genus",
+   "value": "Oryctolagus",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "No Oryctolagus species studied."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "algorithm",
+   "value": "CSPNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "YOLOv10 uses CSPNet backbone, described in methods."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "algorithm",
+   "value": "LLaMA",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Llama-2-7b-hf used for automated report generation."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "algorithm",
+   "value": "Phi",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Phi-3.5-vision-instruct is a core component."
+  },
+  {
+   "doi": "10.3390/s24248122",
+   "field": "algorithm",
+   "value": "RAG",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Retrieval-augmented generation is used with FAISS and Wikipedia."
+  }
+ ]
+}

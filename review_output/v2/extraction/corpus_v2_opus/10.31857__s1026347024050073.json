@@ -1,0 +1,275 @@
+{
+ "doi": "10.31857/s1026347024050073",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "374f54e70e7c21a3e97f536bbb5f109069ff6759439748d5a75e93a21121fdd9",
+  "extracted_at": "2026-10-24T10:48:42.905332+00:00",
+  "cost_usd": 0.315412
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Develops a two-stage CNN pipeline (ResNet-50 patch classifier plus YOLOv7 detector) to detect and count wild saiga antelopes in very-high-resolution satellite images of the North-Western Caspian steppe.",
+   "page": 3,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 3,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Satellite",
+    "spectra": [
+     {
+      "value": "Panchromatic",
+      "source": "text",
+      "page": 3,
+      "evidence": {
+       "status": "none",
+       "score": 0,
+       "page": 3,
+       "section": null
+      }
+     }
+    ],
+    "habitat": "Grassland",
+    "countries": [
+     "Russia"
+    ],
+    "location_detail": "North-Western Caspian region, border of Astrakhan Oblast and Republic of Kalmykia; Eros-B images 22.11.2012 (7×32 km) and 12.01.2013",
+    "species": [
+     "Saiga antelope",
+     "Sheep"
+    ],
+    "datasets": [
+     "Eros-B satellite images 2012-2013"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "platform": "Satellite",
+    "spectra": [],
+    "habitat": "Grassland",
+    "countries": [
+     "Russia"
+    ],
+    "location_detail": "Adjacent protected areas: Chernye Zemli reserve (Kalmykia) and Stepnoy sanctuary (Astrakhan Oblast), ~1600 km2, Beijing KA image 2.12.2022",
+    "species": [
+     "Saiga antelope"
+    ],
+    "datasets": [
+     "Beijing KA satellite images 2022"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Saiga antelope",
+    "scientific_name": "Saiga tatarica",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Sheep",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "mentioned",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 8,
+     "section": null
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Eros-B satellite images 2012-2013",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Beijing KA satellite images 2022",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "front"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "front"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "front"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "auxiliary",
+    "page": 5,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 5,
+     "section": null
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "front"
+    }
+   },
+   {
+    "name": "YOLOv7",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 6,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 6,
+     "section": null
+    }
+   },
+   {
+    "name": "DCNN Classification (GKNS-K)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 5,
+     "section": null
+    }
+   },
+   {
+    "name": "DCNN Detection (GKNS-V)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 5,
+     "section": null
+    }
+   },
+   {
+    "name": "sliding window",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "front"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 14,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 14,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

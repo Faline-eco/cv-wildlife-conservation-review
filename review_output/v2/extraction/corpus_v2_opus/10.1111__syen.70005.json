@@ -1,0 +1,312 @@
+{
+ "doi": "10.1111/syen.70005",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "305b63b8287c0b829f66934d88cce9efceb9a747f0f91abb541815e0c668cb0e",
+  "extracted_at": "2026-10-22T15:51:57.742104+00:00",
+  "cost_usd": 0.466216
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "specimen",
+   "paper_type": "method",
+   "reason": "Software/method paper analysing images of preserved psyllid specimens (forewings) for automated taxonomic descriptions; no wild free-ranging animals imaged in the field, i.e. specimen-only data.",
+   "page": 30,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 96.2,
+    "page": 30,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 16,
+      "evidence": {
+       "status": "fuzzy",
+       "score": 97.5,
+       "page": 16,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Specimen forewing images (Psylloidea); imaging setup not described",
+    "species": [
+     "Melanastera",
+     "Russelliana"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 30,
+    "evidence": {
+     "status": "not_found",
+     "score": 81.1,
+     "page": 30,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Melanastera",
+    "scientific_name": "Melanastera",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 40,
+    "page": 30,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.5,
+     "page": 30,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Russelliana",
+    "scientific_name": "Russelliana",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 43,
+    "page": 30,
+    "evidence": {
+     "status": "not_found",
+     "score": 81.1,
+     "page": 30,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "captive_or_lab",
+    "page": 30,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 30,
+     "section": "body"
+    }
+   },
+   {
+    "name": "COCO",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 12,
+    "evidence": {
+     "status": "not_found",
+     "score": 68.9,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 30,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.2,
+     "page": 30,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 31,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.1,
+     "page": 31,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Mask R-CNN (Detectron2)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.1,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50-FPN",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 12,
+    "evidence": {
+     "status": "not_found",
+     "score": 68.9,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SAM2",
+    "type": "foundation_model",
+    "role": "proposed",
+    "page": 30,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.0,
+     "page": 30,
+     "section": "body"
+    }
+   },
+   {
+    "name": "GPT-4o",
+    "type": "foundation_model",
+    "role": "proposed",
+    "page": 31,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.3,
+     "page": 31,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CLIP",
+    "type": "foundation_model",
+    "role": "proposed",
+    "page": 29,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.7,
+     "page": 29,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Metric3Dv2",
+    "type": "transformer",
+    "role": "proposed",
+    "page": 19,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.2,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "EasyOCR",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.3,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Felzenszwalb and Huttenlocher segmentation",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 22,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.2,
+     "page": 22,
+     "section": "body"
+    }
+   },
+   {
+    "name": "CLAHE",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 23,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 23,
+     "section": "body"
+    }
+   },
+   {
+    "name": "KMeans",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 25,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.1,
+     "page": 25,
+     "section": "body"
+    }
+   },
+   {
+    "name": "PCA and Procrustes analysis",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 16,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.1,
+     "page": 16,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

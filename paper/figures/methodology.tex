@@ -1,0 +1,60 @@
+% Process overview of the review (replaces images/methodology.drawio of the first version).
+% Built by paper/build.sh into images/methods_v2/methodology.pdf; counts come from numbers.tex.
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+\usetikzlibrary{positioning,calc,fit,arrows.meta}
+\input{../numbers}
+
+\begin{document}
+\begin{tikzpicture}[
+    font=\footnotesize,
+    >={Stealth[length=2.2mm]},
+    proc/.style={draw, rounded corners=3pt, minimum width=24mm, minimum height=13mm,
+                 text width=22mm, align=center, fill=white, thick},
+    num/.style={circle, fill=black, text=white, font=\scriptsize\bfseries, inner sep=1pt, minimum size=4mm},
+    doc/.style={draw, minimum width=7mm, minimum height=9mm, fill=white,
+                path picture={\draw (path picture bounding box.north east) ++(-2.2mm,0) -- ++(0,-2.2mm) -- ++(2.2mm,0);}},
+    outlabel/.style={text width=24mm, align=center, font=\scriptsize, inner sep=1pt},
+    flow/.style={->, thick},
+    data/.style={->, densely dashed},
+    term/.style={circle, draw, thick, minimum size=7mm},
+]
+% process steps
+\node[term] (start) {};
+\node[proc, right=5mm of start]   (s1) {Research questions and variables};
+\node[proc, right=6mm of s1]      (s2) {Search: index, library, citations};
+\node[proc, right=6mm of s2]      (s3) {Title and abstract screening};
+\node[proc, right=6mm of s3]      (s4) {Full-text retrieval};
+\node[proc, right=6mm of s4]      (s5) {Eligibility and data extraction};
+\node[proc, right=6mm of s5]      (s6) {Normalisation and synthesis};
+\node[term, double, double distance=1.2pt, right=5mm of s6] (end) {};
+\foreach \i in {1,...,6} {\node[num] at ($(s\i.north west)+(3mm,0)$) {\i};}
+\draw[flow] (start) -- (s1);
+\foreach \a/\b in {s1/s2, s2/s3, s3/s4, s4/s5, s5/s6} {\draw[flow] (\a) -- (\b);}
+\draw[flow] (s6) -- (end);
+
+% outputs of each step
+\foreach \i/\t in {
+    1/{5 research questions, closed vocabularies},
+    2/{\recordsScreened{} unique records},
+    3/{Candidates for full-text review},
+    4/{\prismaAssessed{} full texts},
+    5/{\papersEligible{} eligible, coded papers},
+    6/{Systematic map (RQ1--RQ5)}} {
+    \node[doc, below=7mm of s\i, xshift=6mm] (o\i) {};
+    \node[outlabel, below=0.5mm of o\i] (l\i) {\t};
+    \draw[data] ([xshift=-6mm]s\i.south) |- (o\i.west);
+}
+% each output feeds the next step
+\foreach \i/\j in {1/2, 2/3, 3/4, 4/5, 5/6} {
+    \draw[data] (o\i.east) -| ([xshift=-6mm]s\j.south);
+}
+
+% validation covers the search (coverage) and every later step
+\node[draw, thick, rounded corners=3pt, fill=black!6, minimum height=6mm, inner sep=2pt,
+      fit={($(s2.west|-l2.south)+(0,-5mm)$) ($(s6.east|-l2.south)+(0,-5mm)$)}] (val) {};
+\node at (val.center) [font=\scriptsize] {Validation: search coverage $\cdot$ screening accuracy $\cdot$ extraction agreement $\cdot$ unsupported values $\cdot$ stability $\cdot$ corrected shares $\cdot$ domestic targets};
+\end{tikzpicture}
+\end{document}

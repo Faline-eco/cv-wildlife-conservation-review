@@ -1,0 +1,127 @@
+{
+ "doi": "10.3390/s22239082",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0942193,
+ "items": [
+  {
+   "doi": "10.3390/s22239082",
+   "field": "platform",
+   "value": "Camera Trap",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SOCRATES is a PIR-triggered stereo camera trap."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "platform",
+   "value": "Non-specialized Camera",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Custom camera trap, not a non-specialized camera."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "habitat",
+   "value": "Artificial Aquatic",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Wildlife park enclosure is terrestrial, not aquatic."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "spectrum",
+   "value": "Depth / LiDAR",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Stereo-derived depth maps used as model input."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "spectrum",
+   "value": "Near Infrared (NIR)",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "IR filter removed, 850 nm illumination; near-infrared images."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Analysed images are grayscale/NIR; RGB only for Cityscapes."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "country",
+   "value": "Germany",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Recorded in Plittersdorf wildlife park, Bonn, Germany."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "country",
+   "value": "Germay",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Misspelled country name; not the valid form."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "task",
+   "value": "Detection",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Instance segmentation with bounding box animal detection."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "algorithm",
+   "value": "MegaDetector",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "MegaDetector boxes used for CTDS."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "algorithm",
+   "value": "Omnivore",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Omnivore used as depth-aware backbone."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "algorithm",
+   "value": "ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ResNet-18/50 backbones compared in appendix."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "algorithm",
+   "value": "Swin Transformer",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Swin-L baseline; Omnivore is Swin-based."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "algorithm",
+   "value": "background subtraction",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Gaussian mixture background modeling used for frame sampling."
+  },
+  {
+   "doi": "10.3390/s22239082",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors deployed SOCRATES and collected own data."
+  }
+ ]
+}

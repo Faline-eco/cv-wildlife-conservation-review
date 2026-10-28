@@ -1,0 +1,237 @@
+{
+ "doi": "10.1101/2022.01.20.477059",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "7e4d898f7035ab9280819ca6f8aee3cc523574016786a4160a955064bf753661",
+  "extracted_at": "2026-10-12T12:12:54.084279+00:00",
+  "cost_usd": 0.040256
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "application",
+   "reason": "Evaluates two individual identification algorithms (PIE v2, HotSpotter) plus a detector on camera-trap images of free-ranging snow leopards in Afghanistan together with captive zoo images.",
+   "page": 1,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 96.6,
+    "page": 1,
+    "section": "abstract"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Camera Trap",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [
+     "Afghanistan"
+    ],
+    "location_detail": "Wildlife Conservation Society program in Afghanistan; field camera trap observations from one location",
+    "species": [
+     "snow leopard"
+    ],
+    "datasets": [
+     "Whiskerbook.org snow leopard catalog (WCS Afghanistan and zoos)"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.9,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [
+     "Finland",
+     "Sweden",
+     "Germany",
+     "United States"
+    ],
+    "location_detail": "Helsinki and Ätheri Zoos, Kolmården Zoo, Nordens Ark, Orsa Bear Park, Köln and Wuppertal Zoos, Bronx and Central Park zoos",
+    "species": [
+     "snow leopard"
+    ],
+    "datasets": [
+     "Whiskerbook.org snow leopard catalog (WCS Afghanistan and zoos)"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.1,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "snow leopard",
+    "scientific_name": "Panthera uncia",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.2,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Whiskerbook.org snow leopard catalog (WCS Afghanistan and zoos)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "mixed",
+    "page": 21,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.5,
+     "page": 21,
+     "section": "back"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Re-Identification",
+    "role": "primary",
+    "page": 18,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.8,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "PIE v2 (Pose Invariant Embeddings)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.1,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "InceptionV3",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 4,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.8,
+     "page": 4,
+     "section": "introduction"
+    }
+   },
+   {
+    "name": "HotSpotter",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.5,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLO v2",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.9,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "background subtraction model",
+    "type": "other",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.7,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

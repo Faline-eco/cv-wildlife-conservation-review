@@ -1,0 +1,334 @@
+{
+ "doi": "10.3390/ani16162519",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "e1c2c0a468d3f6a0311ad2c6b20147cbdc5658a36ff6c357d44102926e5faddc",
+  "extracted_at": "2026-10-15T09:22:58.203919+00:00",
+  "cost_usd": 0.39322
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "method",
+   "reason": "Main dataset shows Medaka (a laboratory model fish) in a larval-breeding tank at a university. The paper does not say the external Blue Bot Dataset shows wild fish, so no data is confirmed to show wild or free-ranging animals.",
+   "page": 5,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 5,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 6,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 6,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Aquatic",
+    "countries": [
+     "Japan"
+    ],
+    "location_detail": "Medaka larval-breeding tank with planted aquatic vegetation, duckweed and sand substrate, Kyushu Institute of Technology",
+    "species": [
+     "Medaka"
+    ],
+    "datasets": [
+     "Medaka"
+    ],
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Public Blue Bot Dataset (Kaggle); location not stated",
+    "species": [
+     "Parrotfish",
+     "Sergeant Major fish",
+     "Atlantic Tang",
+     "Trumpetfish"
+    ],
+    "datasets": [
+     "Blue Bot Dataset"
+    ],
+    "page": 30,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 30,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Medaka",
+    "scientific_name": "Oryzias latipes",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Parrotfish",
+    "scientific_name": "",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 30,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 30,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Sergeant Major fish",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 30,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 30,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Atlantic Tang",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 30,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 30,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Trumpetfish",
+    "scientific_name": "",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 30,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 30,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Medaka",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "captive_or_lab",
+    "page": 35,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 35,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Blue Bot Dataset",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 30,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 30,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Structure-Driven YOLOv8n",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv8n",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Faster R-CNN (ResNet-50-FPN)",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 19,
+    "evidence": {
+     "status": "not_found",
+     "score": 84.9,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv5n",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 28,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 28,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv7-tiny",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 28,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 28,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv10n",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 28,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 28,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv11n",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 28,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 28,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv12n",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 28,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 28,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 35,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 35,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": true,
+    "page": 26,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 26,
+     "section": "body"
+    }
+   }
+  }
+ }
+}

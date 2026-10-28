@@ -1,0 +1,46 @@
+% Structure of the search string (replaces images/search_query.drawio of the first version).
+% Built by paper/build.sh into images/methods_v2/search_query.pdf; terms as in src/review_v2/search/queries.py.
+\documentclass[tikz,border=1pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{tgheros}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{popL}{HTML}{DAE8FC}\definecolor{popD}{HTML}{0050EF}
+\definecolor{intL}{HTML}{D5E8D4}\definecolor{intM}{HTML}{60A917}\definecolor{intD}{HTML}{008A00}
+\definecolor{conL}{HTML}{F8CECC}\definecolor{conD}{HTML}{A20025}
+\definecolor{query}{HTML}{FA6800}
+
+\begin{document}
+\hyphenpenalty=10000\exhyphenpenalty=10000
+\begin{tikzpicture}[x=1cm, y=1cm, font=\footnotesize,
+    terms/.style={align=center, inner sep=2pt},
+    label/.style={text=white, font=\footnotesize\bfseries},
+    op/.style={font=\tiny\bfseries, fill=white, rounded corners=1pt, inner sep=1pt}]
+% columns: population 0-2.8, CV task 2.8-8, platform 8-14.4, context 14.4-17
+% rows: terms 1.8-3.8, sub-blocks 1.2-1.8, blocks 0.6-1.2, query 0-0.6
+\fill[popL] (0,1.2) rectangle (2.8,3.8);
+\fill[intL] (2.8,1.8) rectangle (14.4,3.8);
+\fill[conL] (14.4,1.2) rectangle (17,3.8);
+\fill[intM] (2.8,1.2) rectangle (14.4,1.8);
+\fill[popD] (0,0.6) rectangle (2.8,1.2);
+\fill[intD] (2.8,0.6) rectangle (14.4,1.2);
+\fill[conD] (14.4,0.6) rectangle (17,1.2);
+\fill[query] (0,0) rectangle (17,0.6);
+\draw[white, thick] (2.8,0.6) -- (2.8,3.8) (14.4,0.6) -- (14.4,3.8) (8,1.2) -- (8,3.8) (0,0.6) -- (17,0.6);
+
+\node[terms, text width=2.6cm] at (1.4,2.5) {``computer vision'' OR ``machine vision''};
+\node[terms, text width=5cm] at (5.4,2.8) {detection OR recognition OR prediction OR identification OR segmentation OR tracking OR classification OR pose OR estimation OR generation OR synthesis};
+\node[terms, text width=6.2cm] at (11.2,2.8) {camera OR satellite OR UAV OR ROV OR drone OR aircraft OR plane OR ``remote sensing'' OR ``animal borne'' OR ((aerial OR airborne OR terrestrial OR ground OR underwater OR marine) AND (vehicle OR robot))};
+\node[terms, text width=2.4cm] at (15.7,2.5) {wildlife OR animal OR ecology OR conservation};
+
+\node[label] at (5.4,1.5) {CV task};
+\node[label] at (11.2,1.5) {Imaging platform};
+\node[label] at (1.4,0.9) {Population};
+\node[label] at (8.6,0.9) {Intervention};
+\node[label] at (15.7,0.9) {Context};
+\node[label] at (8.5,0.3) {Search query (title and abstract, in Scopus also keywords; 2014--2026)};
+
+\node[op] at (8,1.5) {OR};
+\node[op] at (2.8,0.9) {AND};
+\node[op] at (14.4,0.9) {AND};
+\end{tikzpicture}
+\end{document}

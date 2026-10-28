@@ -1,0 +1,111 @@
+{
+ "doi": "10.1111/2041-210x.14254",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0740549,
+ "items": [
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "platform",
+   "value": "Camera Trap",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Images from camera traps with infrared flash on farms."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "platform",
+   "value": "Non-specialized Camera",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Camera traps were used, not non-specialized cameras."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "habitat",
+   "value": "Artificial Terrestrial",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Cameras placed on farms with livestock; artificial terrestrial."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "habitat",
+   "value": "Grassland",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "Fields/grass visible, but habitats not explicitly classified as grassland."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "spectrum",
+   "value": "Near Infrared (NIR)",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Night images use camera's infrared flash."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "task",
+   "value": "Classification",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Images classified as badger/empty; paper keywords image classification."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "task",
+   "value": "Detection",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Bounding boxes are intermediate; evaluation is image-level classification, not detection."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "taxon_species",
+   "value": "Meles meles",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "European badger Meles meles is the target species."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "taxon_species",
+   "value": "Taxidea taxus",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Taxidea taxus (American badger) not studied."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "taxon_genus",
+   "value": "Meles",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Meles meles belongs to genus Meles."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "taxon_genus",
+   "value": "Taxidea",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "No Taxidea species analysed."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "algorithm",
+   "value": "background subtraction",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Compares images to rolling median background to detect disturbances."
+  },
+  {
+   "doi": "10.1111/2041-210x.14254",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Proposes novel Sherlock algorithm."
+  }
+ ]
+}

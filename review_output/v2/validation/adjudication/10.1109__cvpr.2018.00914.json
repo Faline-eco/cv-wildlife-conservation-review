@@ -1,0 +1,63 @@
+{
+ "doi": "10.1109/cvpr.2018.00914",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0584369,
+ "items": [
+  {
+   "doi": "10.1109/cvpr.2018.00914",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Citizen-science photographs are standard visible-light RGB images."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00914",
+   "field": "task",
+   "value": "Classification",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Species classification is the main task, alongside detection."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00914",
+   "field": "taxon_genus",
+   "value": "Animalia",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Animalia is a kingdom/catch-all super-class, not a genus."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00914",
+   "field": "taxon_class",
+   "value": "Actinopterygii",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Actinopterygii is a super-class with 53 classes and images analysed."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00914",
+   "field": "algorithm",
+   "value": "Faster R-CNN",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Faster-RCNN with Inception V3 backbone used for detection baselines."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00914",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Images come from iNaturalist citizen scientists, not collected by authors themselves."
+  },
+  {
+   "doi": "10.1109/cvpr.2018.00914",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "iNat2017 is a named public dataset, introduced and used here."
+  }
+ ]
+}

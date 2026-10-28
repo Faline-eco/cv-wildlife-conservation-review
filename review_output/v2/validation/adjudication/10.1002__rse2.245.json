@@ -1,0 +1,63 @@
+{
+ "doi": "10.1002/rse2.245",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0735089,
+ "items": [
+  {
+   "doi": "10.1002/rse2.245",
+   "field": "platform",
+   "value": "Camera Trap",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Time-lapse webcam with Jetson, not a motion-triggered camera trap."
+  },
+  {
+   "doi": "10.1002/rse2.245",
+   "field": "platform",
+   "value": "Non-specialized Camera",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Off-the-shelf Logitech Brio webcam used for time-lapse imaging."
+  },
+  {
+   "doi": "10.1002/rse2.245",
+   "field": "task",
+   "value": "Classification",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "YOLOv3 object detection with classification; primary task is detection (and tracking)."
+  },
+  {
+   "doi": "10.1002/rse2.245",
+   "field": "task",
+   "value": "Detection",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "YOLOv3 detects insects with bounding boxes."
+  },
+  {
+   "doi": "10.1002/rse2.245",
+   "field": "algorithm",
+   "value": "Darknet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Darknet53 YOLOv3 backbone is used."
+  },
+  {
+   "doi": "10.1002/rse2.245",
+   "field": "algorithm",
+   "value": "Hungarian algorithm",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Hungarian algorithm used for track assignment."
+  },
+  {
+   "doi": "10.1002/rse2.245",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Uses standard YOLOv3 trained on own data; ICT is a pipeline, not a new model."
+  }
+ ]
+}

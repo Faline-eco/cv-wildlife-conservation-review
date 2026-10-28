@@ -1,0 +1,272 @@
+{
+ "doi": "10.26428/1606-9919-2022-202-429-449",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "b32df03c952a735eb1d6ee6dd01630ef0eaae732da3de519fc35bc753944c887",
+  "extracted_at": "2026-10-24T10:47:16.819243+00:00",
+  "cost_usd": 0.264964
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Develops a UAV photogrammetric (SfM orthomosaic and DEM) image-processing pipeline for counting wild Pacific salmon spawners and their redds in rivers of Khabarovsk Krai.",
+   "page": 11,
+   "evidence": {
+    "status": "none",
+    "score": 0,
+    "page": 11,
+    "section": null
+   }
+  },
+  "settings": [
+   {
+    "platform": "Unmanned aerial vehicle (UAV; e.g. drone)",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 5,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 5,
+       "section": "front"
+      }
+     }
+    ],
+    "habitat": "Wetlands (inland)",
+    "countries": [
+     "Russia"
+    ],
+    "location_detail": "Monitoring sites on spawning rivers of Khabarovsk Krai (e.g. Kukhtuy, Urak, Aniuy, Amgun, Iska, Urmi rivers; Okhota estuary), 2020-2021",
+    "species": [
+     "Chum salmon",
+     "Pink salmon",
+     "Brown bear",
+     "Spotted seal"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Chum salmon",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 15,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 15,
+     "section": null
+    }
+   },
+   {
+    "name": "Pink salmon",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 13,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 13,
+     "section": null
+    }
+   },
+   {
+    "name": "Brown bear",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 12,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 12,
+     "section": null
+    }
+   },
+   {
+    "name": "Spotted seal",
+    "scientific_name": "",
+    "rank": "species",
+    "role": "mentioned",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 12,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 12,
+     "section": null
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "field_deployment",
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "front"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 14,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 14,
+     "section": null
+    }
+   },
+   {
+    "task": "Reconstruction",
+    "role": "auxiliary",
+    "page": 6,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 6,
+     "section": null
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 13,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 13,
+     "section": null
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Agisoft Metashape Professional (SfM photogrammetry, orthomosaic and DEM)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Manual GIS digitization (NextGIS QGIS)",
+    "type": "other",
+    "role": "proposed",
+    "page": 13,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 13,
+     "section": null
+    }
+   },
+   {
+    "name": "Pix4Dmapper",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "name": "WebODM",
+    "type": "classical_image_processing",
+    "role": "baseline",
+    "page": 11,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 11,
+     "section": null
+    }
+   },
+   {
+    "name": "Neural networks (ArcGIS Pro, Erdas Imagine, ENVI Deep Learning)",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 14,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 14,
+     "section": "front"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 17,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 17,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

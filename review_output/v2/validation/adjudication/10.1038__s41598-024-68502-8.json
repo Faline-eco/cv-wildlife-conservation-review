@@ -1,0 +1,39 @@
+{
+ "doi": "10.1038/s41598-024-68502-8",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0477305,
+ "items": [
+  {
+   "doi": "10.1038/s41598-024-68502-8",
+   "field": "task",
+   "value": "Classification",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Species identification evaluated with Top-1/Top-5 classification accuracy."
+  },
+  {
+   "doi": "10.1038/s41598-024-68502-8",
+   "field": "task",
+   "value": "Detection",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "YOLOv8 used as image classifier; no boxes or detection metrics."
+  },
+  {
+   "doi": "10.1038/s41598-024-68502-8",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Images web-scraped from Observations.org/GBIF, not photographed by authors."
+  },
+  {
+   "doi": "10.1038/s41598-024-68502-8",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Uses GBIF image repository, a named public dataset, for test and training."
+  }
+ ]
+}

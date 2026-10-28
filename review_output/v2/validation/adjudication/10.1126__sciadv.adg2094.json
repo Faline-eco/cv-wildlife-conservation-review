@@ -1,0 +1,95 @@
+{
+ "doi": "10.1126/sciadv.adg2094",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.08276889999999999,
+ "items": [
+  {
+   "doi": "10.1126/sciadv.adg2094",
+   "field": "habitat",
+   "value": "Shrubland",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Desert-shrub habitat with bushes; shrubland plausible."
+  },
+  {
+   "doi": "10.1126/sciadv.adg2094",
+   "field": "habitat",
+   "value": "Desert",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Desert ants in complex desert-shrub habitat."
+  },
+  {
+   "doi": "10.1126/sciadv.adg2094",
+   "field": "habitat",
+   "value": "Forest",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Habitat is desert shrub, not forest."
+  },
+  {
+   "doi": "10.1126/sciadv.adg2094",
+   "field": "task",
+   "value": "Reconstruction",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Environment reconstruction (image mosaic) is a core task alongside tracking."
+  },
+  {
+   "doi": "10.1126/sciadv.adg2094",
+   "field": "task",
+   "value": "Detection",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Unsupervised probabilistic ant detection is core contribution."
+  },
+  {
+   "doi": "10.1126/sciadv.adg2094",
+   "field": "algorithm",
+   "value": "background subtraction",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Uses motion residuals after camera compensation; background modeling explicitly prevented, not used."
+  },
+  {
+   "doi": "10.1126/sciadv.adg2094",
+   "field": "algorithm",
+   "value": "factor graph",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Factor graph with max-sum used for detection."
+  },
+  {
+   "doi": "10.1126/sciadv.adg2094",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Proposes own CATER framework."
+  },
+  {
+   "doi": "10.1126/sciadv.adg2094",
+   "field": "algorithm",
+   "value": "factorgraphoptimization",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Factor graph optimization used to find ant locations."
+  },
+  {
+   "doi": "10.1126/sciadv.adg2094",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors recorded 151 videos of desert ants themselves."
+  },
+  {
+   "doi": "10.1126/sciadv.adg2094",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Own dataset used; public dataset only cited in prior evaluation."
+  }
+ ]
+}

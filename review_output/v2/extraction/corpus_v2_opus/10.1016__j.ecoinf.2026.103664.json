@@ -1,0 +1,227 @@
+{
+ "doi": "10.1016/j.ecoinf.2026.103664",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "5cc27de5bcc71c8b351f6630ec114d51bfe17b3c104f3741ae89a6482853cbb6",
+  "extracted_at": "2026-10-13T16:16:26.617298+00:00",
+  "cost_usd": 0.205652
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "specimen",
+   "paper_type": "method",
+   "reason": "The only analysed data is BIOSCAN-1M, which the paper describes as a lab imaging setup with a standardized imaging system and fixed camera-to-specimen distance; no images of wild, free-ranging insects are analysed.",
+   "page": 5,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 97.1,
+    "page": 5,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Lab imaging setup with standardized imaging system (fixed camera-to-specimen distance)",
+    "species": [
+     "insects",
+     "Megaselia"
+    ],
+    "datasets": [
+     "BIOSCAN-1M"
+    ],
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.1,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "insects",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 65,
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.1,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Megaselia",
+    "scientific_name": "Megaselia",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.0,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "BIOSCAN-1M",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 5,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.5,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 1,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.0,
+     "page": 1,
+     "section": "abstract"
+    }
+   },
+   {
+    "task": "Segmentation",
+    "role": "auxiliary",
+    "page": 6,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Bayesian Corrected (BC) ResNet",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.8,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Size distribution model (Student's t-distribution likelihood)",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.8,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "BC ResNet with temperature scaling",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.6,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-18",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.7,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Feature-Fused ResNet",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.5,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLO-v8",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 6,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

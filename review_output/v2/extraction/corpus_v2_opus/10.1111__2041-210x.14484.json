@@ -1,0 +1,207 @@
+{
+ "doi": "10.1111/2041-210x.14484",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "cffc4545959c54408c5260c9b9d8a8e1fe37bf7e6c060bda88b8a1c32af264d4",
+  "extracted_at": "2026-10-14T14:28:55.686511+00:00",
+  "cost_usd": 0.223576
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "method",
+   "reason": "Proposes a Bayesian model for counts from an image classifier (ResNet-50) applied to images of wild zooplankton taken by the Plankton Imager on a pelagic survey.",
+   "page": 8,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 8,
+    "section": "abstract"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Marine",
+    "countries": [
+     "United Kingdom"
+    ],
+    "location_detail": "Western English Channel and eastern Celtic Seas, PELTIC pelagic fisheries survey, Autumn 2019; Plankton Imager on board RV Cefas Endeavour",
+    "species": [
+     "copepods",
+     "non-copepods"
+    ],
+    "datasets": [
+     "Plankton Imager labelled dataset (Data Study Group)",
+     "PELTIC 2019 Plankton Imager survey images"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "abstract"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "copepods",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 8,
+     "section": "abstract"
+    }
+   },
+   {
+    "name": "non-copepods",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 8,
+     "section": "abstract"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Plankton Imager labelled dataset (Data Study Group)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.1,
+     "page": 8,
+     "section": "abstract"
+    }
+   },
+   {
+    "name": "PELTIC 2019 Plankton Imager survey images",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "abstract"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "auxiliary",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "abstract"
+    }
+   },
+   {
+    "task": "Counting",
+    "role": "primary",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.3,
+     "page": 8,
+     "section": "abstract"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Bayesian classification model with confusion matrix (MCMC)",
+    "type": "other",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.0,
+     "page": 8,
+     "section": "abstract"
+    }
+   },
+   {
+    "name": "ResNet 50",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "abstract"
+    }
+   },
+   {
+    "name": "No-U-turn Hamiltonian Monte Carlo",
+    "type": "other",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.0,
+     "page": 11,
+     "section": "abstract"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,282 @@
+{
+ "doi": "10.1101/2025.06.19.660198",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "c7ea2111129ade2f815f73839f79de55d5d94d7d1403d205dbe5d8baea0241dc",
+  "extracted_at": "2026-10-14T14:15:31.934441+00:00",
+  "cost_usd": 0.242868
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "method",
+   "reason": "Software tool for object detection demonstrated on laboratory cell images, laboratory C. elegans recordings, and dart frogs in a simulated (captive) rainforest environment; no wild, free-ranging animals are imaged.",
+   "page": 3,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 96.6,
+    "page": 3,
+    "section": "introduction"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Laboratory; worms on NGM agar plates recorded with a stereomicroscope (Leica M165 FC) and InfinityCam 8-8 camera",
+    "species": [
+     "Caenorhabditis elegans"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors) - C. elegans videos",
+     "COCO"
+    ],
+    "page": 16,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.7,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Not reported",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Simulated rainforest environment",
+    "species": [
+     "Harlequin poison frog"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors) - frog images",
+     "COCO"
+    ],
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Laboratory well plates imaged with Nikon W1 spinning disk confocal system (HT-1080 cells, not animals)",
+    "species": [],
+    "datasets": [
+     "Unnamed (collected by authors) - cell images",
+     "COCO"
+    ],
+    "page": 16,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.7,
+     "page": 16,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Caenorhabditis elegans",
+    "scientific_name": "C. elegans",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.3,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Harlequin poison frog",
+    "scientific_name": "O. histrionica",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.6,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors) - C. elegans videos",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 16,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.1,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Unnamed (collected by authors) - frog images",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.4,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Unnamed (collected by authors) - cell images",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 6,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.5,
+     "page": 6,
+     "section": "body"
+    }
+   },
+   {
+    "name": "COCO",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "not_stated",
+    "page": 18,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.2,
+     "page": 18,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Detection",
+    "role": "primary",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.7,
+     "page": 12,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "primary",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.6,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "EZ-FRCNN (Faster R-CNN)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 16,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 16,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50 with FPN",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 17,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.7,
+     "page": 17,
+     "section": "body"
+    }
+   },
+   {
+    "name": "k-means clustering",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 19,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 92.9,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Microsoft Azure Custom Vision",
+    "type": "other",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.5,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,245 @@
+{
+ "doi": "10.1111/eea.70190",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "1c60503622d28e2b7aa72c3c827648a4c90c4f47ecf86fccb95774a29a282b37",
+  "extracted_at": "2026-10-24T10:27:14.284327+00:00",
+  "cost_usd": 0.228536
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "specimen",
+   "paper_type": "application",
+   "reason": "Wild tachinid flies were caught in Malaise traps, but the images analysed are of preserved dead specimens photographed under a photomicroscope. The paper does not analyse images of free-ranging live animals, so it falls under the specimen exclusion.",
+   "page": 3,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 99.0,
+    "page": 3,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Forest",
+    "countries": [
+     "Italy"
+    ],
+    "location_detail": "Presidential Estate of Castelporziano, Rome, Mediterranean forest; Malaise traps at four sites in 1998 and 2022; specimens imaged with Entomoscope photomicroscope",
+    "species": [
+     "Tachinidae",
+     "Oswaldia muscaria",
+     "Peribaea tibialis"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Tachinidae",
+    "scientific_name": "Tachinidae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 127,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Oswaldia muscaria",
+    "scientific_name": "Oswaldia muscaria",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Peribaea tibialis",
+    "scientific_name": "Peribaea tibialis",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 4,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 4,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 11,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 11,
+     "section": "back"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Segmentation",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.7,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "InsectMorphoAI",
+    "type": "other",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.5,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv8m-seg",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.6,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "YOLOv8n-seg",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.8,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Mask R-CNN",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.8,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "ResNet-50-FPN",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.1,
+     "page": 3,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Stacked frustum geometric reconstruction",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 3,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.4,
+     "page": 3,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

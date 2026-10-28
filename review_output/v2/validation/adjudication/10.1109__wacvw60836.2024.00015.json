@@ -1,0 +1,63 @@
+{
+ "doi": "10.1109/wacvw60836.2024.00015",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0699629,
+ "items": [
+  {
+   "doi": "10.1109/wacvw60836.2024.00015",
+   "field": "habitat",
+   "value": "Artificial Aquatic",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "No aquatic setting; real images are PartImageNet, synthetic data is rendered."
+  },
+  {
+   "doi": "10.1109/wacvw60836.2024.00015",
+   "field": "habitat",
+   "value": "Artificial Terrestrial",
+   "side": "manual_only",
+   "verdict": "unclear",
+   "reason": "PartImageNet images' recording habitats are not described; synthetic backgrounds only."
+  },
+  {
+   "doi": "10.1109/wacvw60836.2024.00015",
+   "field": "task",
+   "value": "Synthesis",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Primary task is part (semantic) segmentation; synthesis is only a data source."
+  },
+  {
+   "doi": "10.1109/wacvw60836.2024.00015",
+   "field": "algorithm",
+   "value": "SMAL",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SMAL models are fitted to generate synthetic animals."
+  },
+  {
+   "doi": "10.1109/wacvw60836.2024.00015",
+   "field": "algorithm",
+   "value": "data augmentation",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Uses random color jittering and mixing augmentation, rotations/transformations."
+  },
+  {
+   "doi": "10.1109/wacvw60836.2024.00015",
+   "field": "algorithm",
+   "value": "domain adaptation",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Syn-to-real unsupervised domain adaptation with DAFormer, HRDA, SePiCo, CB-FDM."
+  },
+  {
+   "doi": "10.1109/wacvw60836.2024.00015",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Uses PartImageNet, a public named dataset, for real images."
+  }
+ ]
+}

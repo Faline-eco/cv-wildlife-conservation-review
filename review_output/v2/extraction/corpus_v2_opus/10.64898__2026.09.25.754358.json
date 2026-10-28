@@ -1,0 +1,296 @@
+{
+ "doi": "10.64898/2026.09.25.754358",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "f69a5ef9370c4677f690202f9455b724db4bca021e827e58cb5393e88c7098a9",
+  "extracted_at": "2026-10-24T11:18:16.703846+00:00",
+  "cost_usd": 0.471728
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "wild_free_ranging",
+   "paper_type": "application",
+   "reason": "Applies stereo-video 3D reconstruction (calibration, triangulation, depth estimation) to footage of wild predator and prey reef fishes recorded in the field.",
+   "page": 19,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 19,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Stationary underwater camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 18,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 18,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [
+     "Curaçao"
+    ],
+    "location_detail": "Coral reefs on the leeward coast of Curaçao (12°14′4′′ N, 69°5′54′′ W), seven sites within the bay, 3–10 m depth, southern Caribbean",
+    "species": [
+     "Brown chromis",
+     "Bar jack",
+     "Sand diver",
+     "Grouper"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 18,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 99.2,
+     "page": 18,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Brown chromis",
+    "scientific_name": "Azurina multilineata",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 32,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 32,
+     "section": "back"
+    }
+   },
+   {
+    "name": "Bar jack",
+    "scientific_name": "Caranx ruber",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 45,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 45,
+     "section": "back"
+    }
+   },
+   {
+    "name": "Sand diver",
+    "scientific_name": "Synodus intermedius",
+    "rank": "species",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 45,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 45,
+     "section": "back"
+    }
+   },
+   {
+    "name": "Grouper",
+    "scientific_name": "Epinephelus sp.",
+    "rank": "genus",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 45,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 45,
+     "section": "back"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 29,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 29,
+     "section": "back"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Reconstruction",
+    "role": "primary",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Activity Recognition",
+    "role": "auxiliary",
+    "page": 22,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 22,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Stereo triangulation",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Zhang stereo calibration (MATLAB Stereo Camera Calibrator)",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 18,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 18,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Savitzky–Golay filter",
+    "type": "other",
+    "role": "proposed",
+    "page": 19,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 19,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Evasive-maneuver detection algorithm (LOS-rate rise)",
+    "type": "other",
+    "role": "proposed",
+    "page": 22,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 22,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Depth Anything V2",
+    "type": "foundation_model",
+    "role": "proposed",
+    "page": 41,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 41,
+     "section": "back"
+    }
+   },
+   {
+    "name": "SURF feature matching",
+    "type": "classical_image_processing",
+    "role": "proposed",
+    "page": 41,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 41,
+     "section": "back"
+    }
+   },
+   {
+    "name": "k-means clustering",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 42,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 42,
+     "section": "back"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.8,
+     "page": 12,
+     "section": "back"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

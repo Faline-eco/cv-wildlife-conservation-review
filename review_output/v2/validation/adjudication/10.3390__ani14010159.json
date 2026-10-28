@@ -1,0 +1,55 @@
+{
+ "doi": "10.3390/ani14010159",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.07609089999999999,
+ "items": [
+  {
+   "doi": "10.3390/ani14010159",
+   "field": "task",
+   "value": "Segmentation",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Task is object detection with bounding boxes; mask head frozen, only boxes annotated."
+  },
+  {
+   "doi": "10.3390/ani14010159",
+   "field": "algorithm",
+   "value": "FPN",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "FPN used as neck in Swin-Mask R-CNN."
+  },
+  {
+   "doi": "10.3390/ani14010159",
+   "field": "algorithm",
+   "value": "NMS",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "NMS merges overlapping SAHI boxes."
+  },
+  {
+   "doi": "10.3390/ani14010159",
+   "field": "algorithm",
+   "value": "ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ResNet backbone used in Faster/Mask R-CNN comparisons and ablation."
+  },
+  {
+   "doi": "10.3390/ani14010159",
+   "field": "algorithm",
+   "value": "SAHI",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SAHI central to proposed inference method."
+  },
+  {
+   "doi": "10.3390/ani14010159",
+   "field": "algorithm",
+   "value": "Swin Transformer",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Swin Transformer is the proposed backbone."
+  }
+ ]
+}

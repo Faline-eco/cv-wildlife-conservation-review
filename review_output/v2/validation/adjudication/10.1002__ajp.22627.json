@@ -1,0 +1,55 @@
+{
+ "doi": "10.1002/ajp.22627",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.093306,
+ "items": [
+  {
+   "doi": "10.1002/ajp.22627",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Bushnell Trophy Cam videos, visible-light footage; no infrared stated, but analysed as grayscale RGB video."
+  },
+  {
+   "doi": "10.1002/ajp.22627",
+   "field": "task",
+   "value": "Detection",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Chimpanzee face detection for presence/absence is the main task."
+  },
+  {
+   "doi": "10.1002/ajp.22627",
+   "field": "task",
+   "value": "Identification",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Individual identification is only a future goal; not performed."
+  },
+  {
+   "doi": "10.1002/ajp.22627",
+   "field": "algorithm",
+   "value": "Kalman filter",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SHORE tracking uses a linear Kalman filter."
+  },
+  {
+   "doi": "10.1002/ajp.22627",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "They used existing Fraunhofer software unmodified, not their own model."
+  },
+  {
+   "doi": "10.1002/ajp.22627",
+   "field": "algorithm",
+   "value": "SHORE",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "SHORE face detection framework is the software used."
+  }
+ ]
+}

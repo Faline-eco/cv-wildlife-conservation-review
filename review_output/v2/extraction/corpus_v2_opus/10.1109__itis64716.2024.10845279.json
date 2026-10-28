@@ -1,0 +1,296 @@
+{
+ "doi": "10.1109/itis64716.2024.10845279",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "9e9cf1adff87faaaeb4fec687d07f8afcb2f6c07731d25f6e993b6e53fad487b",
+  "extracted_at": "2026-10-25T08:11:05.523244+00:00",
+  "cost_usd": 1.20303
+ },
+ "record": {
+  "eligibility": {
+   "include": true,
+   "criterion": "none",
+   "subject_type": "mixed",
+   "paper_type": "method",
+   "reason": "Primary study proposing a modified MobileNetV2 image-classification architecture. Part of the analysed data is the Fish4Knowledge dataset of underwater live fish filmed in the open sea, alongside farmed catfish imaged in a tank, so wild free-ranging animals form part of the image data.",
+   "page": 3,
+   "evidence": {
+    "status": "not_found",
+    "score": 43.0,
+    "page": 7,
+    "section": "front"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 3,
+      "evidence": {
+       "status": "not_found",
+       "score": 40.5,
+       "page": 3,
+       "section": "front"
+      }
+     }
+    ],
+    "habitat": "Artificial Aquatic",
+    "countries": [],
+    "location_detail": "Aquaculture ponds at unspecified locations; video recorded with a camera mounted above a fish tank",
+    "species": [
+     "Catfish"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 41.4,
+     "page": 7,
+     "section": "front"
+    }
+   },
+   {
+    "platform": "Stationary underwater camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 3,
+      "evidence": {
+       "status": "not_found",
+       "score": 42.7,
+       "page": 3,
+       "section": "front"
+      }
+     }
+    ],
+    "habitat": "Marine",
+    "countries": [],
+    "location_detail": "Open sea underwater video",
+    "species": [
+     "fish"
+    ],
+    "datasets": [
+     "Fish4Knowledge"
+    ],
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 42.0,
+     "page": 3,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Catfish",
+    "scientific_name": "Clarias sp",
+    "rank": "genus",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 40.0,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "fish",
+    "scientific_name": "",
+    "rank": "group",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 1,
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 44.6,
+     "page": 7,
+     "section": "front"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "not_stated",
+    "origin": "captive_or_lab",
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 42.0,
+     "page": 1,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Fish4Knowledge",
+    "role": "public_wildlife_dataset",
+    "availability": "public",
+    "origin": "field_deployment",
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 43.9,
+     "page": 7,
+     "section": "front"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 39.8,
+     "page": 1,
+     "section": "front"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "Modified MobileNetV2 (pruned bottleneck layers)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 2,
+    "evidence": {
+     "status": "not_found",
+     "score": 41.7,
+     "page": 7,
+     "section": "front"
+    }
+   },
+   {
+    "name": "MobileNetV2",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 39.2,
+     "page": 7,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Separable Conv2D",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 40.7,
+     "page": 7,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Global Max Pooling",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 3,
+    "evidence": {
+     "status": "not_found",
+     "score": 39.3,
+     "page": 3,
+     "section": "front"
+    }
+   },
+   {
+    "name": "InceptionV3",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "not_found",
+     "score": 47.3,
+     "page": 5,
+     "section": "front"
+    }
+   },
+   {
+    "name": "VGG16",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "not_found",
+     "score": 47.4,
+     "page": 6,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Xception",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "not_found",
+     "score": 41.4,
+     "page": 5,
+     "section": "front"
+    }
+   },
+   {
+    "name": "NASNetMobile",
+    "type": "cnn",
+    "role": "baseline",
+    "page": 5,
+    "evidence": {
+     "status": "not_found",
+     "score": 40.3,
+     "page": 5,
+     "section": "front"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

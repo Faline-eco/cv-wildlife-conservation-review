@@ -1,0 +1,246 @@
+{
+ "doi": "10.1111/eth.70027",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "0c136e841a5adafa858c5e99ba3a2c45007901c2cf5ca2a96d94eb8586c77aa4",
+  "extracted_at": "2026-10-22T15:51:50.209249+00:00",
+  "cost_usd": 0.210232
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "application",
+   "reason": "Cichlids obtained from the aquarium trade were reared and filmed in laboratory glass aquaria. No wild or free-ranging animals were imaged.",
+   "page": 6,
+   "evidence": {
+    "status": "not_found",
+    "score": 83.2,
+    "page": 7,
+    "section": "body"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "Near Infrared (NIR)",
+      "source": "text",
+      "page": 9,
+      "evidence": {
+       "status": "fuzzy",
+       "score": 96.2,
+       "page": 9,
+       "section": "body"
+      }
+     }
+    ],
+    "habitat": "Artificial Aquatic",
+    "countries": [],
+    "location_detail": "Laboratory glass filming tanks (10 gallon) at UMass Amherst and TAMU fish facilities, lit by 850 nm IR LED strips",
+    "species": [
+     "Abactochromis labrosus",
+     "Tropheops kumwera",
+     "Maylandia sp. 'Daktari'",
+     "Maylandia faiaziberi"
+    ],
+    "datasets": [
+     "Unnamed (collected by authors)"
+    ],
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.7,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Abactochromis labrosus",
+    "scientific_name": "Abactochromis labrosus",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.0,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Tropheops kumwera",
+    "scientific_name": "Tropheops kumwera",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.0,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Maylandia sp. 'Daktari'",
+    "scientific_name": "Maylandia sp. 'Daktari'",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.6,
+     "page": 9,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Maylandia faiaziberi",
+    "scientific_name": "Maylandia faiaziberi",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.6,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Unnamed (collected by authors)",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 25,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 25,
+     "section": "back"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Tracking",
+    "role": "primary",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.3,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Detection",
+    "role": "auxiliary",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.7,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Activity Recognition",
+    "role": "auxiliary",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 12,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "YOLOv8n",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "SORT (augmented)",
+    "type": "other",
+    "role": "proposed",
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.1,
+     "page": 11,
+     "section": "body"
+    }
+   },
+   {
+    "name": "MiniBatchKMeans",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 9,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.7,
+     "page": 9,
+     "section": "body"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": true,
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 96.2,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

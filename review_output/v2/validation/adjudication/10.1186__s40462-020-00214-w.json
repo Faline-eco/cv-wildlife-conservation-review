@@ -1,0 +1,55 @@
+{
+ "doi": "10.1186/s40462-020-00214-w",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.07805690000000001,
+ "items": [
+  {
+   "doi": "10.1186/s40462-020-00214-w",
+   "field": "country",
+   "value": "France",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Corsica (STARESO) data is French; Tanganyika data also analysed, but France included."
+  },
+  {
+   "doi": "10.1186/s40462-020-00214-w",
+   "field": "task",
+   "value": "Reconstruction",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "3D reconstruction of trajectories and environment via SfM is central."
+  },
+  {
+   "doi": "10.1186/s40462-020-00214-w",
+   "field": "task",
+   "value": "Segmentation",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Mask R-CNN segmentation is a means; primary task is tracking/reconstruction."
+  },
+  {
+   "doi": "10.1186/s40462-020-00214-w",
+   "field": "algorithm",
+   "value": "DLT",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Direct linear transformation used for triangulation of two-camera positions."
+  },
+  {
+   "doi": "10.1186/s40462-020-00214-w",
+   "field": "algorithm",
+   "value": "Hungarian algorithm",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Hungarian method used for trajectory assignment."
+  },
+  {
+   "doi": "10.1186/s40462-020-00214-w",
+   "field": "algorithm",
+   "value": "morphological operations",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Morphological image processing used to skeletonize masks."
+  }
+ ]
+}

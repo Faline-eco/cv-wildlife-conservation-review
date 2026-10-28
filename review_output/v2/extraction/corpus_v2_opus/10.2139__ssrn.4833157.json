@@ -1,0 +1,282 @@
+{
+ "doi": "10.2139/ssrn.4833157",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "ad33b6f13553393c0dea5c712d4649d4a8b4c063020f772590627c5b1839ee50",
+  "extracted_at": "2026-10-25T14:06:09.907522+00:00",
+  "cost_usd": 0.24008
+ },
+ "record": {
+  "eligibility": {
+   "include": false,
+   "criterion": "E-LAB",
+   "subject_type": "laboratory",
+   "paper_type": "method",
+   "reason": "All images show leaf-cutter ant workers from a laboratory colony, recorded in acrylic arenas, Petri dishes or a lab foraging trail. No wild or free-ranging animals are imaged.",
+   "page": 23,
+   "evidence": {
+    "status": "exact",
+    "score": 100,
+    "page": 23,
+    "section": "back"
+   }
+  },
+  "settings": [
+   {
+    "platform": "Non-specialized Camera",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "text",
+      "page": 24,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 24,
+       "section": "back"
+      }
+     },
+     {
+      "value": "Grayscale",
+      "source": "text",
+      "page": 24,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 24,
+       "section": "back"
+      }
+     }
+    ],
+    "habitat": "Artificial Terrestrial",
+    "countries": [],
+    "location_detail": "Laboratory colony housed in a climate chamber; acrylic recording arenas, Petri dish on a precision scale, and a laboratory foraging trail container",
+    "species": [
+     "Atta vollenweideri"
+    ],
+    "datasets": [
+     "MultiCamAnts",
+     "Test-A",
+     "Test-B"
+    ],
+    "page": 22,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 22,
+     "section": "back"
+    }
+   },
+   {
+    "platform": "Other",
+    "spectra": [],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Synthetic images generated with replicAnt in Unreal Engine 5 from photogrammetry 3D models",
+    "species": [
+     "Atta vollenweideri"
+    ],
+    "datasets": [
+     "replicAnt synthetic dataset"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.3,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Atta vollenweideri",
+    "scientific_name": "Atta vollenweideri",
+    "rank": "species",
+    "role": "target",
+    "domestic": true,
+    "n_taxa": 1,
+    "page": 5,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 5,
+     "section": "body"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "MultiCamAnts",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Test-A",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Test-B",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "captive_or_lab",
+    "page": 7,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 7,
+     "section": "body"
+    }
+   },
+   {
+    "name": "replicAnt synthetic dataset",
+    "role": "collected_by_authors",
+    "availability": "public",
+    "origin": "synthetic",
+    "page": 8,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 8,
+     "section": "body"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Other",
+    "role": "primary",
+    "page": 1,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 1,
+     "section": "front"
+    }
+   },
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "task": "Tracking",
+    "role": "auxiliary",
+    "page": 7,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.7,
+     "page": 7,
+     "section": "body"
+    }
+   }
+  ],
+  "algorithms": [
+   {
+    "name": "VGG-style CNN (WOLO)",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 98.1,
+     "page": 8,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Class relationship-aware Gaussian label smoothing (CRALS)",
+    "type": "other",
+    "role": "proposed",
+    "page": 10,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 10,
+     "section": "body"
+    }
+   },
+   {
+    "name": "Xception",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 29,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 29,
+     "section": "back"
+    }
+   },
+   {
+    "name": "OmniTrax",
+    "type": "other",
+    "role": "backbone",
+    "page": 23,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 23,
+     "section": "back"
+    }
+   }
+  ],
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,119 @@
+{
+ "doi": "10.1109/cvpr52733.2024.01761",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0882089,
+ "items": [
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "habitat",
+   "value": "Marine",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Penguins recorded nesting on land colony; terrestrial/rocky habitat, not marine."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "spectrum",
+   "value": "Grayscale",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Analysis uses event data; grayscale frames only shown for visualization, not used."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "No RGB images; event camera DAVIS346 data used."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "task",
+   "value": "Activity Recognition",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Task is temporal action detection, not activity recognition classification."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "algorithm",
+   "value": "CNN",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "CNN-based ResNet backbone classifies event representations."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "algorithm",
+   "value": "MobileNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "MobileNetV3 backbone tested in supplementary sensitivity study."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "algorithm",
+   "value": "R3D",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "R3D used for ActionFormer baseline feature extraction."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "algorithm",
+   "value": "ResNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ResNet18 backbone in ATSN."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "algorithm",
+   "value": "TSN",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ATSN extends TSN; raw TSN ablation reported."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "algorithm",
+   "value": "Transformer",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "ActionFormer transformer baseline compared."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Proposes reTAG and ATSN own method."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "algorithm",
+   "value": "sliding window",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Sliding window proposal baseline compared."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "algorithm",
+   "value": "watershed",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Watershed algorithm used in reTAG and as baseline."
+  },
+  {
+   "doi": "10.1109/cvpr52733.2024.01761",
+   "field": "algorithm",
+   "value": "augmentedtemporalsegmentnetwork",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "ATSN, augmented temporal segment network, is the proposed classifier."
+  }
+ ]
+}

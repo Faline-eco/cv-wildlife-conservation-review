@@ -1,0 +1,347 @@
+{
+ "doi": "10.1093/sysbio/syaf026",
+ "provenance": {
+  "model": "claude-opus-5-5",
+  "schema_version": "2.0",
+  "prompt_hash": "a56e43a1f9e7",
+  "pdf_sha256": "7e50c7efb3c17f358036d5408e96fddcd8fc9dbaeb5588ddf36fbe3abe39a295",
+  "extracted_at": "2026-10-14T14:14:43.946206+00:00",
+  "cost_usd": 2.725498
+ },
+ "record": {
+  "algorithms": [
+   {
+    "name": "ResNet-50",
+    "type": "cnn",
+    "role": "proposed",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.0,
+     "page": 12,
+     "section": "front"
+    }
+   },
+   {
+    "name": "ImageNet1K V2 pre-trained weights",
+    "type": "cnn",
+    "role": "backbone",
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.9,
+     "page": 13,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Random Forest",
+    "type": "classical_machine_learning",
+    "role": "proposed",
+    "page": 18,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.7,
+     "page": 18,
+     "section": "front"
+    }
+   },
+   {
+    "name": "score-level fusion (sum, product, max)",
+    "type": "other",
+    "role": "proposed",
+    "page": 18,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.9,
+     "page": 18,
+     "section": "front"
+    }
+   },
+   {
+    "name": "blastn (BLAST)",
+    "type": "other",
+    "role": "baseline",
+    "page": 12,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.3,
+     "page": 12,
+     "section": "front"
+    }
+   },
+   {
+    "name": "fully connected classifier (two dense layers)",
+    "type": "other",
+    "role": "proposed",
+    "page": 16,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.8,
+     "page": 16,
+     "section": "front"
+    }
+   }
+  ],
+  "datasets": [
+   {
+    "name": "Asteraceae dataset (herbarium/collection images + rbcLa barcodes)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "mixed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.0,
+     "page": 8,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Poaceae dataset (in situ images + rbcLa barcodes)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "mixed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.3,
+     "page": 8,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Coccinellidae dataset (collection images + COI-5P barcodes)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "mixed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.6,
+     "page": 8,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Lycaenidae dataset (collection images + COI-5P barcodes)",
+    "role": "collected_by_authors",
+    "availability": "on_request",
+    "origin": "mixed",
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.8,
+     "page": 8,
+     "section": "front"
+    }
+   },
+   {
+    "name": "ImageNet1K",
+    "role": "pretraining_only",
+    "availability": "public",
+    "origin": "web_scraped",
+    "page": 13,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 13,
+     "section": "front"
+    }
+   }
+  ],
+  "eligibility": {
+   "include": false,
+   "criterion": "E-CAPTIVE",
+   "subject_type": "specimen",
+   "paper_type": "method",
+   "reason": "The analysed animal image data (Coccinellidae, Lycaenidae) come exclusively from preserved museum/collection specimens, and the only in situ imagery is of plants (Poaceae); no wild free-ranging animals are imaged.",
+   "page": 8,
+   "evidence": {
+    "status": "fuzzy",
+    "score": 95.6,
+    "page": 8,
+    "section": "front"
+   }
+  },
+  "flags": {
+   "cost_reported": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "ethics_statement": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   },
+   "explainability": {
+    "value": false,
+    "page": 0,
+    "evidence": {
+     "status": "none",
+     "score": 0,
+     "page": 0,
+     "section": null
+    }
+   }
+  },
+  "settings": [
+   {
+    "platform": "Not reported",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 11,
+      "evidence": {
+       "status": "fuzzy",
+       "score": 95.3,
+       "page": 11,
+       "section": "front"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [],
+    "location_detail": "Digitized preserved specimens from museum and museum-acknowledged private collections, sourced via BOLD and GBIF",
+    "species": [
+     "Asteraceae",
+     "Coccinellidae",
+     "Lycaenidae"
+    ],
+    "datasets": [
+     "Asteraceae dataset (herbarium/collection images + rbcLa barcodes)",
+     "Coccinellidae dataset (collection images + COI-5P barcodes)",
+     "Lycaenidae dataset (collection images + COI-5P barcodes)"
+    ],
+    "page": 11,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 95.2,
+     "page": 11,
+     "section": "front"
+    }
+   },
+   {
+    "platform": "Web / citizen-science images",
+    "spectra": [
+     {
+      "value": "RGB (visible)",
+      "source": "implied",
+      "page": 11,
+      "evidence": {
+       "status": "exact",
+       "score": 100,
+       "page": 11,
+       "section": "front"
+      }
+     }
+    ],
+    "habitat": "Not reported",
+    "countries": [
+     "Global / web"
+    ],
+    "location_detail": "In situ plant photographs obtained from GBIF/iNaturalist research-grade observations and Flora Capture",
+    "species": [
+     "Poaceae"
+    ],
+    "datasets": [
+     "Poaceae dataset (in situ images + rbcLa barcodes)"
+    ],
+    "page": 8,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 94.3,
+     "page": 8,
+     "section": "front"
+    }
+   }
+  ],
+  "species": [
+   {
+    "name": "Asteraceae",
+    "scientific_name": "Asteraceae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 146,
+    "page": 13,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 93.2,
+     "page": 13,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Poaceae",
+    "scientific_name": "Poaceae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 123,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Coccinellidae",
+    "scientific_name": "Coccinellidae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 72,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "front"
+    }
+   },
+   {
+    "name": "Lycaenidae",
+    "scientific_name": "Lycaenidae",
+    "rank": "family",
+    "role": "target",
+    "domestic": false,
+    "n_taxa": 259,
+    "page": 9,
+    "evidence": {
+     "status": "exact",
+     "score": 100,
+     "page": 9,
+     "section": "front"
+    }
+   }
+  ],
+  "tasks": [
+   {
+    "task": "Classification",
+    "role": "primary",
+    "page": 1,
+    "evidence": {
+     "status": "fuzzy",
+     "score": 97.1,
+     "page": 1,
+     "section": "front"
+    }
+   }
+  ]
+ }
+}

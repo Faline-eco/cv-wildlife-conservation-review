@@ -1,0 +1,151 @@
+{
+ "doi": "10.1109/wacv57701.2024.00701",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0641869,
+ "items": [
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "habitat",
+   "value": "Artificial Aquatic",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Mostly natural marine/freshwater habitats; Game of Trawls is minor; majority is Marine Neritic/oceanic."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "spectrum",
+   "value": "Grayscale",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Dataset mixes color and black-and-white imagery; not solely grayscale (SEAMAP only)."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "country",
+   "value": "USA",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SEAMAP, Lake Jennings California, Hawaii MOUSS are in USA."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "task",
+   "value": "Classification",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "Primary task is multi-object tracking (also detection); classification is secondary."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "taxon_species",
+   "value": "Micropterus floridanus",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Florida-strain largemouth bass in Lake Jennings footage."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "taxon_species",
+   "value": "Sparus aurata",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Gilthead seabream named in Ifremer DropCam (though mislabeled)."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "taxon_species",
+   "value": "Micropterus salmoides",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Largemouth bass Micropterus salmoides floridanus is in the CDFW data."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "taxon_species",
+   "value": "Spondyliosoma cantharus",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Spondyliosoma catharus targeted in DropCam data."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "taxon_genus",
+   "value": "Sparus",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Gilthead seabream is named, which is genus Sparus, in DropCam."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "taxon_genus",
+   "value": "Spondyliosoma",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Spondyliosoma catharus is annotated in DropCam."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "algorithm",
+   "value": "EfficientNet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "EfficientNetV2 used as classifier (ENET2)."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "algorithm",
+   "value": "SiamMask",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "SiamMask multi-object tracking version evaluated."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "algorithm",
+   "value": "own model",
+   "side": "auto_only",
+   "verdict": "wrong",
+   "reason": "Baselines are existing methods with modifications; no distinct proposed own model."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "algorithm",
+   "value": "efficentnet",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Duplicate of EfficientNet; used in the study."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "algorithm",
+   "value": "smmote",
+   "side": "manual_only",
+   "verdict": "wrong",
+   "reason": "SMOTE is not mentioned in the paper."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "algorithm",
+   "value": "trackingtheuntrackable",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Tracking the Untrackable (TUT) is used."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "own_data",
+   "value": "yes",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Authors' organizations collected the footage themselves."
+  },
+  {
+   "doi": "10.1109/wacv57701.2024.00701",
+   "field": "public_dataset",
+   "value": "yes",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Introduces FishTrack23, a named public dataset."
+  }
+ ]
+}

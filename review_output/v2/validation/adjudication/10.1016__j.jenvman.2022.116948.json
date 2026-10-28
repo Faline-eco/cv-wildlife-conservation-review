@@ -1,0 +1,71 @@
+{
+ "doi": "10.1016/j.jenvman.2022.116948",
+ "model": "claude-sonnet-5-5",
+ "cost_usd": 0.0751009,
+ "items": [
+  {
+   "doi": "10.1016/j.jenvman.2022.116948",
+   "field": "habitat",
+   "value": "Artificial Terrestrial",
+   "side": "auto_only",
+   "verdict": "unclear",
+   "reason": "Roost in wetland lake; feeding station is farmland; mixed natural/artificial, ambiguous."
+  },
+  {
+   "doi": "10.1016/j.jenvman.2022.116948",
+   "field": "spectrum",
+   "value": "Long-wave Infrared / Thermal (LWIR)",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Flir A655SC thermal night images analysed."
+  },
+  {
+   "doi": "10.1016/j.jenvman.2022.116948",
+   "field": "spectrum",
+   "value": "RGB (visible)",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Daytime RGB UAV images used with YOLO."
+  },
+  {
+   "doi": "10.1016/j.jenvman.2022.116948",
+   "field": "task",
+   "value": "Detection",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "YOLO v3 detects and counts cranes."
+  },
+  {
+   "doi": "10.1016/j.jenvman.2022.116948",
+   "field": "task",
+   "value": "Segmentation",
+   "side": "manual_only",
+   "verdict": "correct",
+   "reason": "Thermal pipeline described as automatic segmentation and counting of cranes."
+  },
+  {
+   "doi": "10.1016/j.jenvman.2022.116948",
+   "field": "algorithm",
+   "value": "Darknet",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "YOLO v3 on Darknet-53 platform used."
+  },
+  {
+   "doi": "10.1016/j.jenvman.2022.116948",
+   "field": "algorithm",
+   "value": "Thresholding",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Temperature and blue-channel thresholding used to separate cranes."
+  },
+  {
+   "doi": "10.1016/j.jenvman.2022.116948",
+   "field": "algorithm",
+   "value": "thresholding",
+   "side": "auto_only",
+   "verdict": "correct",
+   "reason": "Same as thresholding; temperature and DN thresholds used."
+  }
+ ]
+}
