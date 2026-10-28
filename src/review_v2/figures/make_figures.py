@@ -20,6 +20,7 @@ import seaborn as sns
 from scipy import stats
 
 matplotlib.use("Agg")
+import matplotlib.patches as mpatches  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
@@ -29,6 +30,7 @@ V2 = ROOT / "review_output" / "v2"
 CORPUS = V2 / "corpus"
 FIG = ROOT / "paper" / "images" / "results_v2"
 TAB = ROOT / "paper" / "tables_v2"
+FULL_W = 9.5   # inches; shown at full text width (6.5 in), so fonts keep about the size of the first version
 NUMBERS = ROOT / "paper" / "numbers.tex"
 FIRST_YEAR, LAST_FULL_YEAR = 2014, 2025
 SHORT = {
@@ -99,7 +101,7 @@ def save(fig, name):
 
 def barh(c, name, xlabel_n, top=None, italic=False, hatch=None):
     c = c.head(top) if top else c
-    fig, ax = plt.subplots(figsize=(7, 0.32 * len(c) + 1))
+    fig, ax = plt.subplots(figsize=(FULL_W, 0.32 * len(c) + 1))
     labels = [short(x) for x in c.index]
     bars = ax.barh(labels[::-1], 100 * c["share"].values[::-1], color=sns.color_palette("tab10")[0])
     if hatch is not None:
@@ -112,7 +114,7 @@ def barh(c, name, xlabel_n, top=None, italic=False, hatch=None):
     if italic:
         for t in ax.get_yticklabels():
             t.set_fontstyle("italic")
-    ax.set_xlabel(f"Share of papers (%) — n = {fmt_int(xlabel_n)}")
+    ax.set_xlabel(f"Share of papers (%; n = {fmt_int(xlabel_n)})")
     ax.set_xlim(0, 100 * c["share"].max() * 1.15)
     save(fig, name)
 
@@ -198,7 +200,7 @@ def trend(df, col, name, table, title, categories=None):
 def fig_years(p):
     years = list(range(FIRST_YEAR, p["year"].max() + 1))
     ct = pd.crosstab(p["year"], p["in_old_corpus"]).reindex(years, fill_value=0)
-    fig, ax = plt.subplots(figsize=(8, 4))
+    fig, ax = plt.subplots(figsize=(FULL_W, 4))
     c = sns.color_palette("tab10")
     ax.bar(years, ct.get(True, 0), color=c[0], label="In the first-round corpus")
     ax.bar(years, ct.get(False, 0), bottom=ct.get(True, 0), color=c[1], label="Added in this revision")
@@ -287,7 +289,7 @@ def algorithms(t, p, n):
     years = list(range(FIRST_YEAR, p["year"].max() + 1))
     per_year = p.groupby("year")["doi"].nunique().reindex(years)
     ct = pd.crosstab(ty["type"], ty["year"]).reindex(columns=years, fill_value=0)
-    fig, ax = plt.subplots(figsize=(8, 4))
+    fig, ax = plt.subplots(figsize=(FULL_W, 4))
     for (typ, r), colr in zip(ct.iterrows(), sns.color_palette("tab10")):
         ax.plot(years, 100 * r / per_year, marker="o", ms=3, label=short(typ), color=colr)
     ax.set_ylabel("Share of papers (%)")
@@ -368,51 +370,82 @@ def prisma_figure(p_all):
     num("prismaNotRetrieved", fmt_int(not_retrieved))
     num("prismaAssessed", fmt_int(assessed))
     num("prismaOldNotRefound", fmt_int(len(old)))
-    boxes = [
-        (0.02, 0.80, 0.30, 0.17, "Index search 2014-2026\n" + "\n".join(f"{k.title()}: {fmt_int(v)}" for k, v in
-                                                                        src.items())
-         + f"\nTo screen after de-duplication: {fmt_int(runs.get('index_2014_2026', 0))}"),
-        (0.35, 0.80, 0.30, 0.17, "Library exports 2024-2026\n" + "\n".join(f"{k}: {fmt_int(v)}" for k, v in
-                                                                         libs.items()).replace("sciencedirect",
-                                                                                               "ScienceDirect")
-         + f"\nNew records to screen: {fmt_int(runs.get('libraries_2024_2026', 0))}"),
-        (0.68, 0.80, 0.30, 0.17, f"Citation search (OpenAlex, two hops)\n"
-                                 f"Hop 1: {fmt_int(seeds)} seeds, {fmt_int(works)} works\n"
-                                 f"Hop 2: {fmt_int(seeds2)} seeds, {fmt_int(works2)} new works\n"
-                                 f"New records to screen: {fmt_int(runs.get('citations_hop1', 0))} + "
-                                 f"{fmt_int(runs.get('citations_hop2', 0))}"),
-        (0.20, 0.58, 0.45, 0.12, f"Title/abstract screening (two LLM screeners,\nadjudicator for disagreements)\n"
-                                 f"Records screened: {fmt_int(len(ta))}"),
-        (0.70, 0.58, 0.28, 0.12, f"Excluded: {fmt_int((ta['final'] == 'exclude').sum())}"),
-        (0.20, 0.38, 0.45, 0.12, f"Full texts sought: {fmt_int(len(passed))}\n(include {fmt_int((ta['final'] == 'include').sum())}"
-                                 f", unclear {fmt_int((ta['final'] == 'fulltext').sum())})"),
-        (0.70, 0.38, 0.28, 0.12, f"Not retrieved: {fmt_int(not_retrieved)}"),
-        (0.02, 0.17, 0.30, 0.12, f"First-round corpus not found again\nby the new search: {fmt_int(len(old))}\n"
-                                 f"Check sample of exclusions: {fmt_int(len(check))}"),
-        (0.36, 0.17, 0.30, 0.12, f"Full texts assessed and coded\n(frozen extraction protocol): {fmt_int(assessed)}"),
-        (0.70, 0.04, 0.28, 0.27, "Excluded at full text: " + fmt_int(len(p_all) - p_all["eligible"].sum()) + "\n"
-         + "\n".join(f"  {names.get(k, k)}: {fmt_int(v)}" for k, v in excl.items())),
-        (0.36, 0.01, 0.30, 0.10, f"Included: {fmt_int(p_all['eligible'].sum())}\n"
-                                 f"(wild {fmt_int(p_all['eligible_strict'].sum())}, captive added "
-                                 f"{fmt_int((p_all['eligible'] & ~p_all['eligible_strict']).sum())})"),
-    ]
     label = {"scopus": "Scopus", "openalex": "OpenAlex", "pubmed": "PubMed", "ieee": "IEEE Xplore",
              "sciencedirect": "ScienceDirect", "wiley": "Wiley", "acm": "ACM"}
-    boxes = [(x, y, w, h, re.sub(r"\b(" + "|".join(label) + r")\b", lambda m: label[m.group().lower()], t, flags=re.I)
-              if i < 3 else t) for i, (x, y, w, h, t) in enumerate(boxes)]
-    fig, ax = plt.subplots(figsize=(12, 10))
+    n_excl_ft = len(p_all) - p_all["eligible"].sum()
+    # three columns: sources and additions (left), main flow (centre), exclusions and losses (right)
+    W, XL, XC, XR = 0.297, 0.197, 0.52, 0.843
+    SRC, MAIN, EXCL, INCL = "#dbe8f5", "#ffffff", "#eeeeee", "#dcefd6"
+    boxes = {   # key: (x centre, y centre, height, fill, heading, details)
+        "index": (XL, 0.905, 0.15, SRC, "Index search, 2014–2026",
+                  "\n".join(f"{label.get(k, k)}: {fmt_int(v)}" for k, v in src.items())
+                  + f"\nAfter de-duplication: {fmt_int(runs.get('index_2014_2026', 0))}"),
+        "library": (XC, 0.905, 0.15, SRC, "Library exports, 2024–2026",
+                    "\n".join(f"{label.get(k, k)}: {fmt_int(v)}" for k, v in libs.items())
+                    + f"\nNew records to screen: {fmt_int(runs.get('libraries_2024_2026', 0))}"),
+        "citation": (XR, 0.905, 0.15, SRC, "Citation search",
+                     f"OpenAlex, two hops\n"
+                     f"Hop 1: {fmt_int(seeds)} seeds, {fmt_int(works)} works\n"
+                     f"Hop 2: {fmt_int(seeds2)} seeds, {fmt_int(works2)} new\n"
+                     f"To screen: {fmt_int(runs.get('citations_hop1', 0))} + "
+                     f"{fmt_int(runs.get('citations_hop2', 0))}"),
+        "screen": (XC, 0.70, 0.095, MAIN, "Title/abstract screening",
+                   f"Two LLM screeners, adjudicator\nfor disagreements\nRecords screened: {fmt_int(len(ta))}"),
+        "excluded": (XR, 0.70, 0.06, EXCL, "Excluded", f"{fmt_int((ta['final'] == 'exclude').sum())} records"),
+        "sought": (XC, 0.565, 0.07, MAIN, "Full texts sought",
+                   f"{fmt_int(len(passed))} (include {fmt_int((ta['final'] == 'include').sum())}, "
+                   f"unclear {fmt_int((ta['final'] == 'fulltext').sum())})"),
+        "notret": (XR, 0.565, 0.06, EXCL, "Not retrieved", f"{fmt_int(not_retrieved)} records"),
+        "old": (XL, 0.43, 0.105, SRC, "First-round corpus\nnot found again",
+                f"By the new search: {fmt_int(len(old))}\nCheck sample of exclusions: {fmt_int(len(check))}"),
+        "assessed": (XC, 0.43, 0.07, MAIN, "Full texts assessed and coded",
+                     f"Frozen extraction protocol: {fmt_int(assessed)}"),
+        "exft": (XR, 0.40, 0.23, EXCL, f"Excluded at full text: {fmt_int(n_excl_ft)}",
+                 "\n".join(f"{names.get(k, k)}: {fmt_int(v)}" for k, v in excl.items())),
+        "included": (XC, 0.215, 0.07, INCL, f"Included: {fmt_int(p_all['eligible'].sum())}",
+                     f"wild {fmt_int(p_all['eligible_strict'].sum())}, captive added "
+                     f"{fmt_int((p_all['eligible'] & ~p_all['eligible_strict']).sum())}"),
+    }
+    fig, ax = plt.subplots(figsize=(7.6, 7.4))
     ax.axis("off")
-    for x, y, w, h, text in boxes:
-        ax.add_patch(plt.Rectangle((x, y), w, h, fill=False, lw=1, edgecolor="black"))
-        ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=9)
-    arrows = [((0.17, 0.80), (0.35, 0.70)), ((0.50, 0.80), (0.45, 0.70)), ((0.83, 0.80), (0.58, 0.70)),
-              ((0.65, 0.64), (0.70, 0.64)), ((0.42, 0.58), (0.42, 0.50)), ((0.65, 0.44), (0.70, 0.44)),
-              ((0.42, 0.38), (0.51, 0.29)), ((0.32, 0.23), (0.36, 0.23)), ((0.66, 0.20), (0.70, 0.20)),
-              ((0.51, 0.17), (0.51, 0.11))]
-    for a, b in arrows:
-        ax.annotate("", xy=b, xytext=a, arrowprops={"arrowstyle": "->", "lw": 1, "color": "black"})
     ax.set_xlim(0, 1)
-    ax.set_ylim(0, 1)
+    ax.set_ylim(0.165, 1)
+    for x, y, h, fill, head, body in boxes.values():
+        ax.add_patch(mpatches.FancyBboxPatch((x - W / 2, y - h / 2), W, h, boxstyle="round,pad=0,rounding_size=0.008",
+                                             facecolor=fill, edgecolor="#333333", lw=0.8))
+        top = y + h / 2 - 0.012
+        ax.text(x, top, head, ha="center", va="top", fontsize=7.8, fontweight="bold", linespacing=1.15)
+        ax.text(x, top - 0.021 * (head.count("\n") + 1), body, ha="center", va="top", fontsize=7.4,
+                linespacing=1.25)
+    # PRISMA phases on the left
+    for y0, y1, name in ((0.825, 0.985, "Identification"), (0.26, 0.75, "Screening"), (0.175, 0.255, "Included")):
+        ax.add_patch(mpatches.FancyBboxPatch((0.005, y0), 0.03, y1 - y0, boxstyle="round,pad=0,rounding_size=0.006",
+                                             facecolor="#9fb8d3", edgecolor="none"))
+        ax.text(0.02, (y0 + y1) / 2, name, rotation=90, ha="center", va="center", fontsize=7.8,
+                fontweight="bold", color="white")
+
+    def edge(k, side):
+        x, y, h = boxes[k][:3]
+        return {"top": (x, y + h / 2), "bottom": (x, y - h / 2), "left": (x - W / 2, y), "right": (x + W / 2, y)}[side]
+
+    def arrow(*pts):
+        xs, ys = zip(*pts)
+        ax.plot(xs[:-1], ys[:-1], color="#333333", lw=0.9, solid_capstyle="butt")
+        ax.annotate("", xy=pts[-1], xytext=pts[-2],
+                    arrowprops={"arrowstyle": "-|>", "lw": 0.9, "color": "#333333", "shrinkA": 0, "shrinkB": 0})
+
+    top_screen = edge("screen", "top")[1]
+    for k, dx in (("index", -0.07), ("citation", 0.07)):
+        x0, y0 = edge(k, "bottom")
+        arrow((x0, y0), (x0, 0.795), (XC + dx, 0.795), (XC + dx, top_screen))
+    arrow(edge("library", "bottom"), (XC, top_screen))
+    arrow(edge("screen", "right"), edge("excluded", "left"))
+    arrow(edge("screen", "bottom"), edge("sought", "top"))
+    arrow(edge("sought", "right"), edge("notret", "left"))
+    arrow(edge("sought", "bottom"), edge("assessed", "top"))
+    arrow(edge("old", "right"), edge("assessed", "left"))
+    arrow(edge("assessed", "right"), (XR - W / 2, boxes["assessed"][1]))
+    arrow(edge("assessed", "bottom"), edge("included", "top"))
     save(fig, "prisma")
 
 
@@ -424,7 +457,7 @@ def task_cooccurrence(t):
     m = pd.crosstab(tk["doi"], tk["task"]).clip(upper=1)[order]
     co = (m.T @ m).astype(float)
     cond = co.div(np.diag(co), axis=0) * 100
-    fig, ax = plt.subplots(figsize=(8, 6.5))
+    fig, ax = plt.subplots(figsize=(FULL_W, 6))
     sns.heatmap(cond, annot=True, fmt=".0f", cmap="Blues", vmin=0, vmax=100, cbar_kws={"label": "% of row papers"},
                 ax=ax, annot_kws={"fontsize": 8})
     ax.set_yticklabels([f"{r} ({fmt_int(co.loc[r, r])})" for r in cond.index], rotation=0)
@@ -449,7 +482,7 @@ def habitat_by_origin(t, n):
     labels = {"web_scraped": "Web-scraped", "citizen_science": "Citizen science", "field_deployment": "Field",
               "captive_or_lab": "Captive / lab", "mixed": "Mixed", "synthetic": "Synthetic",
               "not_stated": "Origin not stated"}
-    fig, ax = plt.subplots(figsize=(7, 3.2))
+    fig, ax = plt.subplots(figsize=(FULL_W, 3.2))
     bars = ax.barh([labels.get(i, i) for i in g.index][::-1], 100 * g["no_habitat"].values[::-1],
                    color=sns.color_palette("tab10")[0])
     for b, k in zip(bars, g["papers"].values[::-1]):

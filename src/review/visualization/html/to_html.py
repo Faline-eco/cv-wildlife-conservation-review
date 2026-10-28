@@ -1051,7 +1051,6 @@ def generate_html(
 </head>
 <body>
     <h1 style="margin:0px">{html.escape(title)}</h1>
-    <h5 style="margin:0px"><a href="https://orcid.org/0000-0002-9711-4818">Christoph Praschl <img width="16px" src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID Logo"/></a>, <a href="https://orcid.org/0009-0008-0508-8781">Stephanie Wohlfahrt <img width="16px" src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID Logo"/></a>, <a href="https://orcid.org/0000-0002-4286-6887">Marcus Rowcliffe <img width="16px" src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID Logo"/></a> and <a href="https://orcid.org/0000-0002-7621-3526">David C. Schedl <img width="16px" src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID Logo"/></a></h5>
     <h6 style="margin:0px; margin-bottom: 30px;">
     </h6>
 

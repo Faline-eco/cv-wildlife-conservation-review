@@ -63,7 +63,7 @@ Re-running the search, the screening, the extraction or the LLM-based checks nee
 
 ### License, archive and citation
 
-The code and data are released under the MIT license (`LICENSE`). The article is under double-blind review; an archived release of this repository with a DOI (Zenodo, metadata in `.zenodo.json`) will be created upon acceptance, and the citation will be added here.
+The code and data are released under the MIT license (`LICENSE`). The article is under double-blind review; a snapshot of this repository will be archived on Zenodo with a DOI upon acceptance (uploaded manually; the metadata are prepared in `.zenodo.json`), and the citation will be added here.
 
 ---
 

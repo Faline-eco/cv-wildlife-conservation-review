@@ -1,6 +1,7 @@
 """Validation 5.6: the main shares corrected for the measured extraction error, with intervals.
 
-Usage: python src/review_v2/validation/corrected_shares.py   (after adjudicate_disagreements.py and corpus/tables.py)
+Usage: python src/review_v2/validation/corrected_shares.py [plot]   (after adjudicate_disagreements.py and
+       corpus/tables.py; "plot" only redraws the figures from corrected_shares.json)
 
 For a value v of a field (e.g. platform = camera trap), the adjudicated sample of 5.2 gives, over its papers,
   TP = papers where the extraction codes v and v is correct, FP = extraction codes v wrongly,
@@ -12,7 +13,7 @@ Values that the comparison merged with another (e.g. web images, coded as "non-s
 vocabulary) use k_f. Interval: percentile bootstrap that resamples the sample papers (k_v) and the corpus papers
 (observed share) independently. Limits: the reference only contains values that at least one coder found, so
 values both missed are not counted; the sample is the old manual corpus (2014-2024), not the 2024-2026 papers.
-Output: validation/corrected_shares.json, paper/images/results_v2/corrected_shares.pdf
+Output: validation/corrected_shares.json, paper/images/results_v2/corrected_shares_<field>.pdf
 """
 import ast
 import json
@@ -79,7 +80,33 @@ def observed(p, t):
             "task": (tasks, "task"), "taxon_class": (t["target"].dropna(subset=["taxon_class"]), "taxon_class")}
 
 
-if __name__ == "__main__":
+def plot(res):
+    """One full-width panel per field (corrected_shares_<field>.pdf), shown as subfigures in the paper."""
+    sns.set_theme(style="darkgrid", context="paper", font_scale=1.1)
+    for field, r in res.items():
+        labels = [short(v) for v in r][::-1]
+        y = np.arange(len(labels))
+        obs = [100 * x["observed"] for x in r.values()][::-1]
+        cor = [100 * x["corrected"] for x in r.values()][::-1]
+        lo = [100 * x["lo"] for x in r.values()][::-1]
+        hi = [100 * x["hi"] for x in r.values()][::-1]
+        fig, ax = plt.subplots(figsize=(9.5, 0.26 * len(labels) + 0.9))
+        ax.barh(y, obs, color=sns.color_palette("tab10")[0], alpha=0.45, label="Observed (verified items)")
+        ax.errorbar(cor, y, xerr=[np.subtract(cor, lo), np.subtract(hi, cor)], fmt="o", color="black", ms=4,
+                    capsize=2, label="Corrected, 95% interval")
+        ax.set_yticks(y)
+        ax.set_yticklabels(labels)
+        ax.set_xlabel("Share of papers (%)")
+        ax.legend(loc="lower right", fontsize=8)
+        fig.tight_layout()
+        fig.savefig(FIG / f"corrected_shares_{field}.pdf", bbox_inches="tight")
+        plt.close(fig)
+
+
+if __name__ == "__main__" and sys.argv[1:] == ["plot"]:
+    # redraw the figures from the stored results, without re-running the bootstrap
+    plot(json.loads((V / "corrected_shares.json").read_text(encoding="utf-8")))
+elif __name__ == "__main__":
     p, t = load()
     n = len(p)
     counts, n_sample = sample_counts()
@@ -106,27 +133,7 @@ if __name__ == "__main__":
                              "sample_fn": int(fn)}
     (V / "corrected_shares.json").write_text(json.dumps(res, indent=1, default=float), encoding="utf-8")
 
-    sns.set_theme(style="darkgrid", context="paper", font_scale=1.1)
-    titles = {"platform": "Imaging platform", "habitat": "Habitat", "spectrum": "Spectrum", "task": "CV task",
-              "taxon_class": "Taxonomic class"}
-    fig, axes = plt.subplots(len(res), 1, figsize=(7, 2.6 * len(res)))
-    for ax, (field, r) in zip(axes, res.items()):
-        labels = [short(v) for v in r][::-1]
-        y = np.arange(len(labels))
-        obs = [100 * x["observed"] for x in r.values()][::-1]
-        cor = [100 * x["corrected"] for x in r.values()][::-1]
-        lo = [100 * x["lo"] for x in r.values()][::-1]
-        hi = [100 * x["hi"] for x in r.values()][::-1]
-        ax.barh(y, obs, color=sns.color_palette("tab10")[0], alpha=0.45, label="Observed (verified items)")
-        ax.errorbar(cor, y, xerr=[np.subtract(cor, lo), np.subtract(hi, cor)], fmt="o", color="black", ms=4,
-                    capsize=2, label="Corrected, 95% interval")
-        ax.set_yticks(y)
-        ax.set_yticklabels(labels)
-        ax.set_title(titles[field], loc="left", fontsize=10)
-        ax.set_xlabel("Share of papers (%)")
-    axes[0].legend(loc="lower right", fontsize=8)
-    fig.tight_layout()
-    fig.savefig(FIG / "corrected_shares.pdf", bbox_inches="tight")
+    plot(res)
     for field, r in res.items():
         print(field)
         for v, x in r.items():
