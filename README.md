@@ -1,6 +1,6 @@
 # Computer Vision in Wildlife Conservation: Review Data and Code
 
-This repository holds the code and data of the systematic review *Computer Vision in Wildlife Conservation*. The interactive overview of the corpus is at the [GitHub Pages site](https://faline-eco.github.io/cv-wildlife-conservation-review/) (`index.html`).
+This repository holds the code and data of the systematic review *Computer Vision in Wildlife Conservation*. The interactive overview of the corpus is published via GitHub Pages: <https://faline-eco.github.io/cv-wildlife-conservation-review/> (`index.html`).
 
 There are two versions of the pipeline:
 
