@@ -543,6 +543,50 @@ def validation_numbers(t):
                 num(f"{macro}{k}FOne", f"{r['f1']['p']:.2f}")
 
 
+AGREE_FIELDS = [("platform", "Platform"), ("spectrum", "Spectrum"), ("habitat", "Habitat"), ("country", "Country"),
+                ("taxon_class", "Taxonomic class"), ("taxon_genus", "Genus"), ("taxon_species", "Species"),
+                ("task", "Task"), ("algorithm", "Algorithm family"), ("own_data", "Own data"),
+                ("public_dataset", "Public dataset")]
+
+
+def agreement_raw_table():
+    """Reviewer 2 (R2.1b): raw agreement of the extraction with the manual coding, per field: matched and unmatched
+    values, precision and recall with paper-level bootstrap intervals, F1 for verified and for all items, share of
+    papers with identical value sets and unmatched values per paper (appendix table)."""
+    f = V2 / "validation" / "extraction_agreement.json"
+    if not f.exists():
+        return
+    r = json.loads(f.read_text())
+    lines = [r"\begin{tabular}{lrrrcccccc}", r"\toprule",
+             r" & \multicolumn{3}{c}{\textbf{Values}} & \multicolumn{3}{c}{\textbf{Verified values}} & "
+             r"\textbf{All values} & \textbf{Identical} & \textbf{Unmatched} \\",
+             r"\cmidrule(lr){2-4}\cmidrule(lr){5-7}",
+             r"\textbf{Field} & \textbf{Both} & \textbf{Extr.} & \textbf{Manual} & \textbf{P (95\% CI)} & "
+             r"\textbf{R (95\% CI)} & \textbf{F1} & \textbf{F1} & \textbf{papers (\%)} & \textbf{per paper} \\",
+             r"\midrule"]
+    tot = {"tp": 0, "fp": 0, "fn": 0}
+    for field, label in AGREE_FIELDS:
+        x, a = r["fields"][field], r["all_items"][field]
+        for k in tot:
+            tot[k] += x[k]
+        unm = (x["fp"] + x["fn"]) / x["papers"]
+        k = "".join(w.title() for w in field.split("_"))
+        num(f"agree{k}Precision", f"{x['precision']['p']:.2f}")
+        num(f"agree{k}Recall", f"{x['recall']['p']:.2f}")
+        num(f"agree{k}IdenticalPct", f"{100 * x['identical']['p']:.1f}")
+        num(f"agree{k}UnmatchedPerPaper", f"{unm:.2f}")
+        lines.append(f"{label} & {x['tp']:,} & {x['fp']:,} & {x['fn']:,} & "
+                     f"{x['precision']['p']:.2f} ({x['precision']['lo']:.2f}--{x['precision']['hi']:.2f}) & "
+                     f"{x['recall']['p']:.2f} ({x['recall']['lo']:.2f}--{x['recall']['hi']:.2f}) & "
+                     f"{x['f1']['p']:.2f} & {a['f1']['p']:.2f} & {100 * x['identical']['p']:.1f} & {unm:.2f} \\\\")
+    lines += [r"\bottomrule", r"\end{tabular}"]
+    (TAB / "agreement_raw.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    n = r["papers_compared"]
+    num("agreeUnmatchedPerPaper", f"{(tot['fp'] + tot['fn']) / n:.1f}")
+    num("agreeExtractionOnlyPerPaper", f"{tot['fp'] / n:.1f}")
+    num("agreeManualOnlyPerPaper", f"{tot['fn'] / n:.1f}")
+
+
 def arm_composition(p, t, n):
     """Reviewer 2 (seed bias): do the papers found only through citations differ from those found by the index and
     library searches? Share of papers per category in each group, for the five most frequent categories of each
@@ -805,5 +849,6 @@ if __name__ == "__main__":
     validation_numbers(t)
     revision_numbers(p, p_all, t, n)
     arm_composition(p, t, n)
+    agreement_raw_table()
     write_numbers()
     print(f"{len(list(FIG.rglob('*.pdf')))} figures in {FIG}, {len(NUM)} numbers in {NUMBERS}")
