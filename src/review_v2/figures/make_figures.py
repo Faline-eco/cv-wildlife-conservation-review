@@ -362,7 +362,7 @@ def prisma_figure(p_all):
     assessed = len(p_all)
     excl = p_all[~p_all["eligible"]]["criterion"].value_counts()
     names = {"E-NOCV": "no image analysis", "E-LAB": "laboratory animals", "E-GENERIC": "no specific animals",
-             "E-AGRI": "livestock / aquaculture", "E-CAPTIVE": "dead specimens", "E-PLANT": "plants / habitat only",
+             "E-AGRI": "livestock / aquaculture", "E-MUSEUM": "dead specimens", "E-PLANT": "plants / habitat only",
              "E-REVIEW": "review", "E-AUDIO": "audio only", "E-HUMAN": "humans", "E-YEAR": "outside 2014-2026",
              "none": "other"}
     num("prismaSeeds", fmt_int(seeds))
@@ -727,7 +727,7 @@ def revision_numbers(p, p_all, t, n):
     """Numbers asked for by the reviewer check of 2026-10-27 (sample sizes, left-out values, scope, benchmarks)."""
     vdir = V2 / "validation"
     num("papersScopeDropped", fmt_int(p_all["scope_dropped"].sum()))
-    num("papersScopeDroppedSpecimen", fmt_int((p_all["scope_dropped"] & p_all["criterion"].isin(["E-CAPTIVE", "E-AGRI"])).sum()))
+    num("papersScopeDroppedSpecimen", fmt_int((p_all["scope_dropped"] & p_all["criterion"].isin(["E-MUSEUM", "E-AGRI"])).sum()))
     num("papersScopeDroppedYear", fmt_int((p_all["scope_dropped"] & (p_all["criterion"] == "E-YEAR")).sum()))
     # papers without any verified setting count in every denominator but in no setting-based category
     no_set = n - t["settings"]["doi"].nunique()

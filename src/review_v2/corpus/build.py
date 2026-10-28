@@ -7,6 +7,8 @@ as E-CAPTIVE with animals that are alive (zoo, aquarium, enclosure). Dead specim
 fish, otoliths), laboratory and farm animals stay excluded. `eligible_strict` keeps the original scope.
 Also excluded (decision 2026-10-27): papers the extractor included although it coded the subject as specimen or
 livestock/pet, and papers without a publication year in 2014-2026 (criteria E-CAPTIVE, E-AGRI, E-YEAR).
+The excluded papers that keep the protocol code E-CAPTIVE are then dead specimens only; they are written as
+E-MUSEUM (the code used in the paper).
 
 captivity: wild / captive / wild_and_captive / not_reported. From subject_type where it is unambiguous
 (wild_free_ranging -> wild, captive_or_zoo -> captive); otherwise from the supplementary pass
@@ -106,6 +108,8 @@ if __name__ == "__main__":
     df.loc[dropped & ~df["year"].between(2014, 2026).fillna(False).astype(bool), "criterion"] = "E-YEAR"
     df["eligible_strict"] = df["include"] & in_scope
     df["eligible"] = (df["include"] | (df["criterion"] == "E-CAPTIVE")) & in_scope
+    # in the widened scope the protocol code E-CAPTIVE only excludes dead specimens: reported as E-MUSEUM
+    df.loc[~df["eligible"] & (df["criterion"] == "E-CAPTIVE"), "criterion"] = "E-MUSEUM"
 
     def tag(row):
         if row.subject_type in SUBJECT_TAG:
