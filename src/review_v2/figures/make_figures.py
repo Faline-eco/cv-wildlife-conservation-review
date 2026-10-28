@@ -247,7 +247,7 @@ def fig_captivity(p):
 def taxa_figs(t, n):
     tg = t["target"]
     cls = papers_per(tg.dropna(subset=["taxon_class"]), "taxon_class", n)
-    barh(cls, "class", n, top=20)
+    barh(cls, "class", n, top=10)
     for c in ("Mammalia", "Aves", "Actinopterygii", "Insecta", "Reptilia", "Amphibia", "Anthozoa"):
         if c in cls.index:
             num(f"class{c}", fmt_int(cls.loc[c, "papers"]))
@@ -287,7 +287,7 @@ def algorithms(t, p, n):
     named = named.assign(family=named["family"].replace({"CNN": "Custom CNN"}))
     num("papersOwnModel", fmt_int(a[a["family"] == "own model"]["doi"].nunique()))
     fam = papers_per(named, "family", n)
-    barh(fam, "algorithms", n, top=20)
+    barh(fam, "algorithms", n, top=10)
     top_numbers("topAlgo", fam, 8)
     ty = a.merge(p[["doi", "year"]], on="doi").drop_duplicates(["doi", "type"])
     years = list(range(FIRST_YEAR, p["year"].max() + 1))
