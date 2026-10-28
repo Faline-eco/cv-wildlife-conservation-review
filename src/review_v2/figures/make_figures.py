@@ -401,10 +401,10 @@ def prisma_figure(p_all):
         "manual": (X1, 0.915, 0.135, SRC, "Manual search",
                    f"Library search 2014–2024,\nby hand\nRecords: {fmt_int(MANUAL_RECORDS)}, "
                    f"included: {fmt_int(MANUAL_INCLUDED)}"),
-        "index": (XC, 0.915, 0.135, SRC, "Index search, 2014–2026",
+        "index": (XC, 0.685, 0.145, SRC, "Index search, 2014–2026",
                   "\n".join(f"{label.get(k, k)}: {fmt_int(v)}" for k, v in src.items())
                   + f"\nAfter de-duplication: {fmt_int(runs.get('index_2014_2026', 0))}"),
-        "library": (XR, 0.915, 0.135, SRC, "Library search, 2024–2026",
+        "library": (XR, 0.685, 0.145, SRC, "Library search, 2024–2026",
                     "Crawled exports\n" + "\n".join(f"{label.get(k, k)}: {fmt_int(v)}" for k, v in libs.items())
                     + f"\nNew records: {fmt_int(runs.get('libraries_2024_2026', 0))}"),
         "initial": (X1, 0.685, 0.145, SRC, "Initial search",
@@ -469,7 +469,7 @@ def prisma_figure(p_all):
     arrow(edge("initial", "right"), edge("followup", "left"))                           # seeds of the follow-up search
     arrow(edge("index", "bottom"), (XC, top_screen))
     x0, y0 = edge("library", "bottom")
-    arrow((x0, y0), (x0, 0.575), (XC + 0.06, 0.575), (XC + 0.06, top_screen))
+    arrow((x0, y0), (x0, 0.58), (XC + 0.06, 0.58), (XC + 0.06, top_screen))
     arrow(edge("followup", "bottom"), (X2, boxes["screen"][1]), edge("screen", "left"))
     xm = X1 - W / 2 - 0.03                                                              # left lane for the manual search
     arrow(edge("manual", "left"), (xm, boxes["manual"][1]), (xm, boxes["assessed"][1]), edge("assessed", "left"))
