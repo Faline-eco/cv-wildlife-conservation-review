@@ -196,7 +196,10 @@ def generate_html(
             filter_options[col] = get_unique_list_values(df, col)
         else:
             unique_vals = df[col].dropna().unique()
-            filter_options[col] = sorted([str(v) for v in unique_vals if str(v).strip()])
+            # columns with (almost) only unique values (doi, title) get no dropdown, only the text search;
+            # thousands of <option> elements make the filter builder slow
+            filter_options[col] = [] if len(unique_vals) > 0.5 * len(df) else \
+                sorted([str(v) for v in unique_vals if str(v).strip()])
         columns_with_empty[col] = has_empty_values(df, col)
 
     data_for_js = []
@@ -550,6 +553,28 @@ def generate_html(
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             overflow: hidden;
+        }}
+
+        .pager {{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px;
+            flex-wrap: wrap;
+        }}
+
+        .pager button {{
+            padding: 6px 12px;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }}
+
+        .pager button:disabled {{
+            opacity: 0.4;
+            cursor: default;
         }}
 
         .table-scroll {{
@@ -1093,6 +1118,7 @@ def generate_html(
                 <tbody id="table-body"></tbody>
             </table>
         </div>
+        <div class="pager" id="pager"></div>
     </div>
 
     <!-- Diagrams View -->
@@ -2757,9 +2783,37 @@ def generate_html(
             return true;
         }}
 
-        function renderTable() {{
+        const PAGE_SIZE = 100;
+        let currentPage = 0;
+        let lastFiltered = null;
+
+        function goToPage(p) {{
+            currentPage = p;
+            renderTable(true);
+            document.querySelector('.table-scroll').scrollTop = 0;
+        }}
+
+        function renderPager(total) {{
+            const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+            const from = total ? currentPage * PAGE_SIZE + 1 : 0;
+            const to = Math.min(total, (currentPage + 1) * PAGE_SIZE);
+            document.getElementById('pager').innerHTML =
+                `<button onclick="goToPage(0)" ${{currentPage === 0 ? 'disabled' : ''}}>&laquo;</button>` +
+                `<button onclick="goToPage(${{currentPage - 1}})" ${{currentPage === 0 ? 'disabled' : ''}}>&lsaquo; Previous</button>` +
+                `<span>Rows ${{from}}–${{to}} of ${{total}} (page ${{currentPage + 1}} of ${{pages}})</span>` +
+                `<button onclick="goToPage(${{currentPage + 1}})" ${{currentPage >= pages - 1 ? 'disabled' : ''}}>Next &rsaquo;</button>` +
+                `<button onclick="goToPage(${{pages - 1}})" ${{currentPage >= pages - 1 ? 'disabled' : ''}}>&raquo;</button>`;
+        }}
+
+        function renderTable(keepPage = false) {{
             const tbody = document.getElementById('table-body');
-            const filteredData = filterData();
+            if (!keepPage || lastFiltered === null) {{
+                lastFiltered = filterData();
+                if (!keepPage) currentPage = 0;
+            }}
+            const allFiltered = lastFiltered;
+            currentPage = Math.min(currentPage, Math.max(0, Math.ceil(allFiltered.length / PAGE_SIZE) - 1));
+            const filteredData = allFiltered.slice(currentPage * PAGE_SIZE, (currentPage + 1) * PAGE_SIZE);
 
             document.querySelectorAll('#papers-table th').forEach(th => {{
                 const col = th.dataset.column;
@@ -2792,7 +2846,8 @@ def generate_html(
                 }}).join('') + '</tr>';
             }}).join('');
 
-            document.getElementById('visible-count').textContent = filteredData.length;
+            document.getElementById('visible-count').textContent = allFiltered.length;
+            renderPager(allFiltered.length);
         }}
 
         function filterData() {{
@@ -2839,7 +2894,7 @@ def generate_html(
             }} else {{
                 visibleColumns.add(column);
             }}
-            renderTable();
+            renderTable(true);
         }}
 
         function escapeHtml(text) {{
