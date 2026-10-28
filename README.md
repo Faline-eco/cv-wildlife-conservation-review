@@ -61,6 +61,10 @@ Re-running the search, the screening, the extraction or the LLM-based checks nee
 
 **Not included, for copyright reasons:** the full texts, the abstracts, and the verbatim quotes from the papers. The extraction records and the validation files keep, for every value, whether its quote was found in the PDF (`evidence.status`, `verified`), the page and the section, but not the quote itself. The removed fields are `quote`, `abstract`, `text` and `examples`. With the PDFs, `src/review_v2/extraction/verify.py` rebuilds the evidence check.
 
+### License, archive and citation
+
+The code and data are released under the MIT license (`LICENSE`). The article is under double-blind review; an archived release of this repository with a DOI (Zenodo, metadata in `.zenodo.json`) will be created upon acceptance, and the citation will be added here.
+
 ---
 
 ## First version (v1)
