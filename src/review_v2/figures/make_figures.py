@@ -24,7 +24,7 @@ import matplotlib.patches as mpatches  # noqa: E402
 import matplotlib.pyplot as plt  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from review_v2.search.merge import ROOT  # noqa: E402
+from review_v2.search.merge import ROOT, norm_doi  # noqa: E402
 
 V2 = ROOT / "review_output" / "v2"
 CORPUS = V2 / "corpus"
@@ -199,18 +199,20 @@ def trend(df, col, name, table, title, categories=None):
 
 def fig_years(p):
     years = list(range(FIRST_YEAR, p["year"].max() + 1))
-    ct = pd.crosstab(p["year"], p["in_old_corpus"]).reindex(years, fill_value=0)
+    tot = p["year"].value_counts().reindex(years, fill_value=0)
     fig, ax = plt.subplots(figsize=(FULL_W, 4))
     c = sns.color_palette("tab10")
-    ax.bar(years, ct.get(True, 0), color=c[0], label="In the first-round corpus")
-    ax.bar(years, ct.get(False, 0), bottom=ct.get(True, 0), color=c[1], label="Added in this revision")
-    tot = ct.sum(1)
+    bars = ax.bar(years, tot.values, color=c[0])
+    for b, y in zip(bars, years):
+        if y > LAST_FULL_YEAR:   # incomplete year
+            b.set_facecolor("white")
+            b.set_edgecolor(c[0])
+            b.set_hatch("///")
     for y, n in tot.items():
         ax.text(y, n + 8, fmt_int(n), ha="center", fontsize=8)
     ax.set_xticks(years)
     ax.set_xticklabels([str(y) if y <= LAST_FULL_YEAR else f"{y}*" for y in years], rotation=45)
     ax.set_ylabel("Papers")
-    ax.legend()
     save(fig, "years")
     for y in years:
         num(f"papersYear{y}", fmt_int(tot[y]))
@@ -370,6 +372,23 @@ def prisma_figure(p_all):
     num("prismaNotRetrieved", fmt_int(not_retrieved))
     num("prismaAssessed", fmt_int(assessed))
     num("prismaOldNotRefound", fmt_int(len(old)))
+    # papers of the earlier search that went to full text without re-screening (already known): found by hand
+    # (manual arm) or by the earlier automated citation search; how many of the latter the new searches found again
+    manual = {norm_doi(d) for d in pd.read_parquet(ROOT / "review_output" / "gapminder" / "2026130_manual.parquet")
+              ["doi"] if isinstance(d, str)}
+    old_manual = old[old["doi"].isin(manual)]
+    old_auto = old[~old["doi"].isin(manual)]
+    found = set()
+    for f in ("records.csv", "library_records.csv"):
+        found |= {norm_doi(d) for d in pd.read_csv(V2 / "search" / f, usecols=["doi"], low_memory=False)["doi"]
+                  if isinstance(d, str)}
+    for hop in ("hop1", "hop2"):
+        found |= {norm_doi(json.loads(x).get("doi") or "") for x in
+                  open(V2 / "citations" / hop / "works.jsonl", encoding="utf-8")}
+    num("prismaKnownManual", fmt_int(len(old_manual)))
+    num("prismaKnownAuto", fmt_int(len(old_auto)))
+    num("prismaKnownAutoRefound", fmt_int(old_auto["doi"].isin(found).sum()))
+    num("prismaCheckSample", fmt_int(len(check)))
     label = {"scopus": "Scopus", "openalex": "OpenAlex", "pubmed": "PubMed", "ieee": "IEEE Xplore",
              "sciencedirect": "ScienceDirect", "wiley": "Wiley", "acm": "ACM"}
     n_excl_ft = len(p_all) - p_all["eligible"].sum()
@@ -391,13 +410,16 @@ def prisma_figure(p_all):
                      f"{fmt_int(runs.get('citations_hop2', 0))}"),
         "screen": (XC, 0.70, 0.095, MAIN, "Title/abstract screening",
                    f"Two LLM screeners, adjudicator\nfor disagreements\nRecords screened: {fmt_int(len(ta))}"),
-        "excluded": (XR, 0.70, 0.06, EXCL, "Excluded", f"{fmt_int((ta['final'] == 'exclude').sum())} records"),
+        "excluded": (XR, 0.70, 0.075, EXCL, "Excluded", f"{fmt_int((ta['final'] == 'exclude').sum())} records\n"
+                                                        f"({fmt_int(len(check))} coded in full text as a check)"),
         "sought": (XC, 0.565, 0.07, MAIN, "Full texts sought",
                    f"{fmt_int(len(passed))} (include {fmt_int((ta['final'] == 'include').sum())}, "
                    f"unclear {fmt_int((ta['final'] == 'fulltext').sum())})"),
         "notret": (XR, 0.565, 0.06, EXCL, "Not retrieved", f"{fmt_int(not_retrieved)} records"),
-        "old": (XL, 0.43, 0.105, SRC, "First-round corpus\nnot found again",
-                f"By the new search: {fmt_int(len(old))}\nCheck sample of exclusions: {fmt_int(len(check))}"),
+        "auto": (XL, 0.575, 0.118, SRC, "Earlier automated\ncitation search",
+                 f"Known papers, not re-screened:\n{fmt_int(len(old_auto))} "
+                 f"({fmt_int(old_auto['doi'].isin(found).sum())} found again\nby the new searches)"),        "manual": (XL, 0.41, 0.085, SRC, "Earlier hand search",
+                   f"Papers found and coded\nby hand: {fmt_int(len(old_manual))}"),
         "assessed": (XC, 0.43, 0.07, MAIN, "Full texts assessed and coded",
                      f"Frozen extraction protocol: {fmt_int(assessed)}"),
         "exft": (XR, 0.40, 0.23, EXCL, f"Excluded at full text: {fmt_int(n_excl_ft)}",
@@ -443,7 +465,9 @@ def prisma_figure(p_all):
     arrow(edge("screen", "bottom"), edge("sought", "top"))
     arrow(edge("sought", "right"), edge("notret", "left"))
     arrow(edge("sought", "bottom"), edge("assessed", "top"))
-    arrow(edge("old", "right"), edge("assessed", "left"))
+    gap = (XL + W / 2 + XC - W / 2) / 2   # vertical lane between the left and the centre column
+    arrow(edge("auto", "right"), (gap, boxes["auto"][1]), (gap, 0.45), (XC - W / 2, 0.45))
+    arrow(edge("manual", "right"), (XC - W / 2, boxes["manual"][1]))
     arrow(edge("assessed", "right"), (XR - W / 2, boxes["assessed"][1]))
     arrow(edge("assessed", "bottom"), edge("included", "top"))
     save(fig, "prisma")
