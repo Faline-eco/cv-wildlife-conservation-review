@@ -519,7 +519,7 @@ def habitat_by_origin(t, n):
     bars = ax.barh([labels.get(i, i) for i in g.index][::-1], 100 * g["no_habitat"].values[::-1],
                    color=sns.color_palette("tab10")[0])
     for b, k in zip(bars, g["papers"].values[::-1]):
-        ax.text(b.get_width() + 0.5, b.get_y() + b.get_height() / 2, f"n = {fmt_int(k)}", va="center", fontsize=8)
+        ax.text(b.get_width() + 0.5, b.get_y() + b.get_height() / 2, fmt_int(k), va="center", fontsize=8)
     ax.set_xlabel("Papers without a reported habitat (%)")
     ax.set_xlim(0, 100)
     save(fig, "habitat_missing_by_origin")
