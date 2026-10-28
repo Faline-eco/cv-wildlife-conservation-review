@@ -6,7 +6,8 @@ For each earlier review, its reference list is taken from OpenAlex (looked up by
 for the studies it reviewed. References published 2014-2026 are matched by DOI to (a) the eligible corpus, (b) the
 papers coded in full text, (c) the records screened at title and abstract. A reference in (c) but not in the corpus
 was found by our search and excluded; a reference outside (c) was not found by our search. Reviews without a reference
-list in OpenAlex are reported as such.
+list in OpenAlex are taken from validation/review_overlap_manual/<key>.txt if present (DOIs from the reference
+list of the PDF), otherwise reported as such.
 Output: validation/review_overlap.json, validation/review_overlap_refs.csv
 """
 import json
@@ -78,16 +79,24 @@ if __name__ == "__main__":
     res, refs = {}, []
     for key, doi, title in REVIEWS:
         w = lookup(doi, title)
-        if not w or not w["referenced_works"]:
+        manual = OUT / "review_overlap_manual" / f"{key}.txt"
+        if (not w or not w["referenced_works"]) and manual.exists():
+            # reference list read from the PDF: reference number, year, DOI (already 2014-2026)
+            rows = [x.split("\t") for x in manual.read_text(encoding="utf-8").splitlines()
+                    if x.strip() and not x.startswith("#")]
+            d = {norm_doi(x[2]) for x in rows}
+            r = {"found": True, "source": "pdf reference list", "refs": len(rows)}
+        elif not w or not w["referenced_works"]:
             res[key] = {"found": bool(w), "refs": 0}
             print(f"{key:28s} no reference list in OpenAlex")
             continue
-        ws = works([short(x) for x in w["referenced_works"]])
-        window = [x for x in ws if x.get("publication_year") and 2014 <= x["publication_year"] <= 2026
-                  and x.get("doi")]
-        d = {norm_doi(x["doi"]) for x in window}
-        r = {"found": True, "openalex": short(w["id"]), "refs": len(w["referenced_works"]),
-             "refs_2014_2026": len(d), "in_corpus": len(d & eligible), "coded_not_eligible": len(d & coded - eligible),
+        else:
+            ws = works([short(x) for x in w["referenced_works"]])
+            window = [x for x in ws if x.get("publication_year") and 2014 <= x["publication_year"] <= 2026
+                      and x.get("doi")]
+            d = {norm_doi(x["doi"]) for x in window}
+            r = {"found": True, "openalex": short(w["id"]), "refs": len(w["referenced_works"])}
+        r |= {"refs_2014_2026": len(d), "in_corpus": len(d & eligible), "coded_not_eligible": len(d & coded - eligible),
              "screened_not_coded": len(d & screened - coded), "not_found": len(d - screened - coded)}
         res[key] = r
         refs += [{"review": key, "doi": x, "status": "eligible" if x in eligible else "coded, not eligible"
