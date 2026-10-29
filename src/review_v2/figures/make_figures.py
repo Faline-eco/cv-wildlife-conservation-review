@@ -30,6 +30,7 @@ V2 = ROOT / "review_output" / "v2"
 CORPUS = V2 / "corpus"
 FIG = ROOT / "paper" / "images" / "results_v2"
 TAB = ROOT / "paper" / "tables_v2"
+MIN_SETTINGS = 30   # joint results: rows (platforms, bands) with fewer settings are not shown or reported
 FULL_W = 9.5   # inches; shown at full text width (6.5 in), so fonts keep about the size of the first version
 NUMBERS = ROOT / "paper" / "numbers.tex"
 FIRST_YEAR, LAST_FULL_YEAR = 2014, 2025
@@ -93,9 +94,9 @@ def top_numbers(prefix, c, k=5):
         num(f"{prefix}{letter}Pct", f"{100 * r['share']:.1f}")
 
 
-def save(fig, name):
+def save(fig, name, tight=True):
     FIG.mkdir(parents=True, exist_ok=True)
-    fig.savefig(FIG / f"{name}.pdf", bbox_inches="tight")
+    fig.savefig(FIG / f"{name}.pdf", bbox_inches="tight" if tight else None)
     plt.close(fig)
 
 
@@ -123,7 +124,11 @@ def barh(c, name, xlabel_n, top=None, italic=False, hatch=None):
 
 def stacked_share(pairs, row, col, name, row_order=None, col_order=None, unit="settings", prefix=None):
     """100% stacked bars of col within each row value; labels: n pairs (n papers).
-    With prefix, every cell becomes a macro \\<prefix><Row><Col>Pct (share of col within row)."""
+    Rows with fewer than MIN_SETTINGS settings are left out. With prefix, every cell becomes a macro
+    \\<prefix><Row><Col>Pct (share of col within row). Without name, only the macros are written."""
+    if "setting" in pairs:
+        n_set = pairs.drop_duplicates(["doi", "setting", row]).groupby(row).size()
+        pairs = pairs[pairs[row].isin(n_set[n_set >= MIN_SETTINGS].index)]
     ct = pd.crosstab(pairs[row], pairs[col])
     papers = pairs.groupby(row)["doi"].nunique()
     if row_order is not None:
@@ -137,6 +142,8 @@ def stacked_share(pairs, row, col, name, row_order=None, col_order=None, unit="s
             num(f"{prefix}{key(r)}Links", fmt_int(ct.loc[r].sum()))
             for c in share.columns[ct.loc[r] > 0]:
                 num(f"{prefix}{key(r)}{key(c)}Pct", f"{share.loc[r, c]:.1f}")
+    if name is None:
+        return
     fig, ax = plt.subplots(figsize=(13, 5.5))
     bottom = np.zeros(len(share))
     colors = sns.color_palette("tab20", len(share.columns))
@@ -267,6 +274,44 @@ def taxa_figs(t, n):
     num("papersDomesticOnly", fmt_int(tg.groupby("doi")["domestic"].all().sum()))
 
 
+def linkage_check(t):
+    """Check (8): the joint results recomputed from papers with a single setting, in which all values belong to the
+    same data source. Differences in percentage points over platforms with at least MIN_SETTINGS settings in both
+    sets and categories with at least 10% of the links of the platform."""
+    st, ss = t["settings"], t["setting_species"]
+    k = st.groupby("doi")["setting"].nunique()
+    single = set(k[k == 1].index)
+    num("linkSinglePapers", fmt_int(len(single)))
+    num("linkSettingPapers", fmt_int(len(k)))
+    num("linkSinglePct", f"{100 * len(single) / len(k):.0f}")
+    tg = t["target"][["doi", "name", "taxon_class"]]
+    pc = ss.merge(tg, on=["doi", "name"]).merge(st[["doi", "setting", "platform"]], on=["doi", "setting"])
+    pc = pc.dropna(subset=["taxon_class"]).drop_duplicates(["doi", "setting", "taxon_class"])
+    diffs, out = [], {}
+    for df, col in ((st, "habitat"), (pc, "taxon_class")):
+        n_all = df.drop_duplicates(["doi", "setting"]).groupby("platform").size()
+        n_one = df[df["doi"].isin(single)].drop_duplicates(["doi", "setting"]).groupby("platform").size()
+        rows = [r for r in n_all.index if n_all[r] >= MIN_SETTINGS and n_one.get(r, 0) >= MIN_SETTINGS]
+        a = pd.crosstab(df["platform"], df[col], normalize="index") * 100
+        b = pd.crosstab(df[df["doi"].isin(single)]["platform"], df[df["doi"].isin(single)][col],
+                        normalize="index").reindex(index=a.index, columns=a.columns).fillna(0) * 100
+        for r in rows:
+            for c in a.columns[a.loc[r] >= 10]:
+                diffs.append(abs(a.loc[r, c] - b.loc[r, c]))
+        out[col] = b
+    num("linkMedianDiff", f"{np.median(diffs):.1f}")
+    num("linkMaxDiff", f"{max(diffs):.1f}")
+    num("linkCells", fmt_int(len(diffs)))
+    num("linkCameraTrapMammaliaPct", f"{out['taxon_class'].loc['Camera Trap', 'Mammalia']:.1f}")
+    num("linkUavMammaliaPct", f"{out['taxon_class'].loc['Unmanned aerial vehicle (UAV; e.g. drone)', 'Mammalia']:.1f}")
+    num("linkStationaryUnderwaterFishPct",
+        f"{out['taxon_class'].loc['Stationary underwater camera', 'Actinopterygii']:.1f}")
+    uw = st[st["doi"].isin(single) & st["platform"].isin(
+        ["Stationary underwater camera", "Remotely operated underwater vehicle (ROV)",
+         "Autonomous Underwater Vehicle (AUV)"]) & ~st["habitat"].isin(["Not reported", "Other"])]
+    num("linkUnderwaterMarinePct", f"{100 * (uw['habitat'] == 'Marine').mean():.0f}")
+
+
 def platform_class(t):
     st, ss, tg = t["settings"], t["setting_species"], t["target"][["doi", "name", "taxon_class"]].rename(
         columns={"taxon_class": "gbif_class"})
@@ -280,6 +325,62 @@ def platform_class(t):
                   col_order=list(top) + ["Other classes"], unit="setting-class links", prefix="pc")
 
 
+def tasks_models(tasks, named, n, top=10):
+    """Tasks and model families as two half-width panels with shared task colours: each model-family bar has the
+    colour of the most frequent primary task of the papers that use the family (a paper with k primary tasks counts
+    1/k for each)."""
+    tc = papers_per(tasks, "task", n)
+    pal = [c for i, c in enumerate(sns.color_palette("tab10")) if i != 7] + ["#393b79"]
+    colour, k = {}, 0
+    for t in tc.index:
+        if t == "Other":
+            colour[t] = sns.color_palette("tab10")[7]
+        else:
+            colour[t], k = pal[k], k + 1
+    NONE = "No primary task"
+    colour[NONE] = "#dddddd"
+    h = 0.32 * len(tc) + 1
+    MARGINS = dict(left=0.33, right=0.97, top=0.98, bottom=0.13)   # identical for both panels (no tight bbox)
+    gap = lambda m: 0.008 * 115 * m   # label gap as in barh, relative to the longest bar
+
+    fig, ax = plt.subplots(figsize=(FULL_W / 2, h), gridspec_kw=MARGINS)
+    lab = [short(x) for x in tc.index][::-1]
+    bars = ax.barh(lab, 100 * tc["share"].values[::-1], color=[colour[t] for t in tc.index][::-1])
+    for b, v in zip(bars, tc["papers"].values[::-1]):
+        ax.text(b.get_width() + gap(tc["share"].max()), b.get_y() + b.get_height() / 2, fmt_int(v),
+                va="center", fontsize=8)
+    ax.set_xlabel(f"Share of papers (%; n = {fmt_int(n)})")
+    ax.set_xlim(0, 100 * tc["share"].max() * 1.22)
+    save(fig, "cv_tasks", tight=False)
+
+    fam = papers_per(named, "family", n).head(top)
+    w = tasks.drop_duplicates(["doi", "task"])
+    w = w.assign(weight=1 / w.groupby("doi")["task"].transform("size"))
+    pairs = named[named["family"].isin(fam.index)].drop_duplicates(["doi", "family"])[["doi", "family"]]
+    m = pairs.merge(w[["doi", "task", "weight"]], on="doi", how="left")
+    m["task"] = m["task"].fillna(NONE)
+    m["weight"] = m["weight"].fillna(1.0)
+    ct = m.pivot_table(index="family", columns="task", values="weight", aggfunc="sum", fill_value=0)
+    ct = ct.reindex(index=fam.index, columns=[t for t in list(tc.index) + [NONE] if t in ct.columns])
+    for f, r in ct.iterrows():   # \tm<Family><Task>Pct: share of the family's papers per primary task
+        for t, v in r.items():
+            num("tm" + re.sub(r"[^A-Za-z]", "", short(f).title()) + re.sub(r"[^A-Za-z]", "", short(t).title())
+                + "Pct", f"{100 * v / fam.loc[f, 'papers']:.0f}")
+    major = ct.drop(columns=[NONE], errors="ignore").idxmax(axis=1)
+    fig, ax = plt.subplots(figsize=(FULL_W / 2, h), gridspec_kw=MARGINS)
+    lab = [short(x) for x in fam.index][::-1]
+    bars = ax.barh(lab, 100 * fam["share"].values[::-1], color=[colour[major[f]] for f in fam.index][::-1])
+    for b, v in zip(bars, fam["papers"].values[::-1]):
+        ax.text(b.get_width() + gap(fam["share"].max()), b.get_y() + b.get_height() / 2, fmt_int(v),
+                va="center", fontsize=8)
+    ax.set_xlabel(f"Share of papers (%; n = {fmt_int(n)})")
+    ax.set_xlim(0, 100 * fam["share"].max() * 1.22)
+    used = [t for t in tc.index if t in set(major)]
+    ax.legend(handles=[mpatches.Patch(color=colour[t], label=short(t)) for t in used], title="Most frequent task",
+              loc="lower right", fontsize=7.5, title_fontsize=7.5, frameon=False)
+    save(fig, "algorithms", tight=False)
+
+
 def algorithms(t, p, n):
     a = t["algorithms"]
     # "own model" (new architecture without a recognisable base) is not a family; CNN = custom CNN
@@ -287,7 +388,7 @@ def algorithms(t, p, n):
     named = named.assign(family=named["family"].replace({"CNN": "Custom CNN"}))
     num("papersOwnModel", fmt_int(a[a["family"] == "own model"]["doi"].nunique()))
     fam = papers_per(named, "family", n)
-    barh(fam, "algorithms", n, top=10)
+    tasks_models(t["tasks"][t["tasks"]["role"] == "primary"], named, n)
     top_numbers("topAlgo", fam, 8)
     ty = a.merge(p[["doi", "year"]], on="doi").drop_duplicates(["doi", "type"])
     years = list(range(FIRST_YEAR, p["year"].max() + 1))
@@ -895,7 +996,6 @@ if __name__ == "__main__":
     spec = papers_per(t["setting_spectra"], "spectrum", n)
     barh(spec, "spectra", n)
     tasks = t["tasks"][t["tasks"]["role"] == "primary"]
-    barh(papers_per(tasks, "task", n), "cv_tasks", n)
     ctry = t["setting_countries"]
     cc = papers_per(ctry[ctry["country"] != "Global / web"], "country", n)
     barh(cc, "countries", n, top=25)
@@ -911,11 +1011,12 @@ if __name__ == "__main__":
 
     stacked_share(st, "platform", "habitat", "imaging_method_habitat", row_order=plat.index, prefix="ph")
     sh = t["setting_spectra"].merge(st[["doi", "setting", "habitat"]], on=["doi", "setting"])
-    stacked_share(sh, "spectrum", "habitat", "spectrum_habitat", row_order=spec.index, prefix="sh")
+    stacked_share(sh, "spectrum", "habitat", None, row_order=spec.index, prefix="sh")
     th = tasks[["doi", "task"]].drop_duplicates().merge(st[["doi", "habitat"]].drop_duplicates(), on="doi")
     stacked_share(th, "task", "habitat", "cv_task_habitat", unit="paper-level task-habitat links")
     taxa_figs(t, n)
     platform_class(t)
+    linkage_check(t)
     algorithms(t, p, n)
     datasets(t, n)
 
