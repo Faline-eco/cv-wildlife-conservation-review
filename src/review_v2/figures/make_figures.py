@@ -122,6 +122,21 @@ def barh(c, name, xlabel_n, top=None, italic=False, hatch=None):
     save(fig, name)
 
 
+HALF_MARGINS = dict(left=0.33, right=0.97, top=0.98, bottom=0.13)
+
+
+def half_barh(c, name, n, colours, h):
+    """Bar chart for one of two side-by-side subfigures: same page size and margins for both panels, no tight bbox."""
+    fig, ax = plt.subplots(figsize=(FULL_W / 2, h), gridspec_kw=HALF_MARGINS)
+    bars = ax.barh([short(x) for x in c.index][::-1], 100 * c["share"].values[::-1], color=colours[::-1])
+    for b, v in zip(bars, c["papers"].values[::-1]):
+        ax.text(b.get_width() + 0.008 * 115 * c["share"].max(), b.get_y() + b.get_height() / 2, fmt_int(v),
+                va="center", fontsize=8)
+    ax.set_xlabel(f"Share of papers (%; n = {fmt_int(n)})")
+    ax.set_xlim(0, 100 * c["share"].max() * 1.22)
+    save(fig, name, tight=False)
+
+
 def stacked_share(pairs, row, col, name, row_order=None, col_order=None, unit="settings", prefix=None):
     """100% stacked bars of col within each row value; labels: n pairs (n papers).
     Rows with fewer than MIN_SETTINGS settings are left out. With prefix, every cell becomes a macro
@@ -142,11 +157,11 @@ def stacked_share(pairs, row, col, name, row_order=None, col_order=None, unit="s
             num(f"{prefix}{key(r)}Links", fmt_int(ct.loc[r].sum()))
             for c in share.columns[ct.loc[r] > 0]:
                 num(f"{prefix}{key(r)}{key(c)}Pct", f"{share.loc[r, c]:.1f}")
+    colors = sns.color_palette("tab20", len(share.columns))
     if name is None:
-        return
+        return dict(zip(share.columns, colors))
     fig, ax = plt.subplots(figsize=(13, 5.5))
     bottom = np.zeros(len(share))
-    colors = sns.color_palette("tab20", len(share.columns))
     for c, colr in zip(share.columns, colors):
         ax.bar(range(len(share)), share[c], bottom=bottom, label=short(c), color=colr, edgecolor="white", lw=0.5)
         bottom += share[c].values
@@ -156,6 +171,7 @@ def stacked_share(pairs, row, col, name, row_order=None, col_order=None, unit="s
     ax.set_ylabel(f"Share of {unit} (%)")
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.22), ncol=4, fontsize=9, frameon=True)
     save(fig, name)
+    return dict(zip(share.columns, colors))
 
 
 def trend(df, col, name, table, title, categories=None):
@@ -254,7 +270,6 @@ def fig_captivity(p):
 def taxa_figs(t, n):
     tg = t["target"]
     cls = papers_per(tg.dropna(subset=["taxon_class"]), "taxon_class", n)
-    barh(cls, "class", n, top=10)
     for c in ("Mammalia", "Aves", "Actinopterygii", "Insecta", "Reptilia", "Amphibia", "Anthozoa"):
         if c in cls.index:
             num(f"class{c}", fmt_int(cls.loc[c, "papers"]))
@@ -272,6 +287,7 @@ def taxa_figs(t, n):
     num("speciesDistinct", fmt_int(sp["gbif_species"].nunique()))
     num("papersWithSpecies", fmt_int(sp["doi"].nunique()))
     num("papersDomesticOnly", fmt_int(tg.groupby("doi")["domestic"].all().sum()))
+    return cls
 
 
 def linkage_check(t):
@@ -321,7 +337,7 @@ def platform_class(t):
     top = m["gbif_class"].value_counts().head(9).index
     m["class"] = m["gbif_class"].where(m["gbif_class"].isin(top), "Other classes")
     order = m["platform"].value_counts().index
-    stacked_share(m, "platform", "class", "platform_class", row_order=order,
+    return stacked_share(m, "platform", "class", "platform_class", row_order=order,
                   col_order=list(top) + ["Other classes"], unit="setting-class links", prefix="pc")
 
 
@@ -992,7 +1008,6 @@ if __name__ == "__main__":
     plat = papers_per(st, "platform", n)
     barh(plat, "imaging_method", n)
     hab = papers_per(st, "habitat", n)
-    barh(hab, "habitats", n)
     spec = papers_per(t["setting_spectra"], "spectrum", n)
     barh(spec, "spectra", n)
     tasks = t["tasks"][t["tasks"]["role"] == "primary"]
@@ -1009,13 +1024,18 @@ if __name__ == "__main__":
             num(k, fmt_int(r["papers"]))
             num(k + "Pct", f"{100 * r['share']:.1f}")
 
-    stacked_share(st, "platform", "habitat", "imaging_method_habitat", row_order=plat.index, prefix="ph")
+    hab_colours = stacked_share(st, "platform", "habitat", "imaging_method_habitat", row_order=plat.index,
+                                prefix="ph")
     sh = t["setting_spectra"].merge(st[["doi", "setting", "habitat"]], on=["doi", "setting"])
     stacked_share(sh, "spectrum", "habitat", None, row_order=spec.index, prefix="sh")
     th = tasks[["doi", "task"]].drop_duplicates().merge(st[["doi", "habitat"]].drop_duplicates(), on="doi")
     stacked_share(th, "task", "habitat", "cv_task_habitat", unit="paper-level task-habitat links")
-    taxa_figs(t, n)
-    platform_class(t)
+    cls = taxa_figs(t, n).head(10)
+    class_colours = platform_class(t)
+    # classes and habitats as a pair of subfigures, in the colours of the platform-class and platform-habitat figures
+    h = 0.32 * max(len(cls), len(hab)) + 1
+    half_barh(cls, "class", n, [class_colours.get(c, class_colours["Other classes"]) for c in cls.index], h)
+    half_barh(hab, "habitats", n, [hab_colours[x] for x in hab.index], h)
     linkage_check(t)
     algorithms(t, p, n)
     datasets(t, n)
