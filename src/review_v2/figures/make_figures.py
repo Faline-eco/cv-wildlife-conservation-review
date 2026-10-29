@@ -412,7 +412,7 @@ def prisma_figure(p_all):
         "initial": (X1, 0.685, 0.145, SRC, "Initial search",
                     f"OpenCitations, forward\nand backward, 2014–2024\nIncluded: {fmt_int(len(initial))}"),
         "followup": (X2, 0.685, 0.145, SRC, "Follow-up search",
-                     f"OpenAlex, two hops\nHop 1: {fmt_int(seeds)} seeds,\n{fmt_int(works)} works\n"
+                     f"OpenAlex, forward and\nbackward, two hops\nHop 1: {fmt_int(seeds)} seeds,\n{fmt_int(works)} works\n"
                      f"Hop 2: {fmt_int(seeds2)} seeds,\n{fmt_int(works2)} new works\nNew records: "
                      f"{fmt_int(runs.get('citations_hop1', 0) + runs.get('citations_hop2', 0))}"),
         "screen": (XC, 0.485, 0.12, MAIN, "Title/abstract\nscreening",
